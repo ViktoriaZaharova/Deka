@@ -1,0 +1,346 @@
+@import 'fonts'
+@import 'vars'
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  font-weight: normal
+  background: #fff
+  color: $dark
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+  width: fit-content
+
+  &:hover, &:focus
+    text-decoration: none
+
+input, textarea, select
+  outline: none
+  box-shadow: none
+  appearance: none
+  padding: 0 0 10px
+  box-sizing: border-box
+  font-family: $default-font
+  border: none
+  border-bottom: 1px solid $stroke
+  border-radius: 0
+  width: 100%
+  height: 34px
+  background: transparent
+  color: $light-pink
+  font-size: 16px
+  font-weight: normal
+  cursor: pointer
+  &::placeholder
+    color: $light-pink
+
+  &:hover, &:focus, &:active, &.active
+    outline: none
+    box-shadow: none
+    border-bottom-width: 2px
+    font-weight: 500
+    color: #fff
+    &::placeholder
+      color: #fff
+  &.error
+    border-bottom-color: #FF2929
+    color: $light-pink
+    &:placeholder
+      color: #fff
+
+input[type="radio"], input[type="checkbox"]
+  width: auto
+  height: auto
+  appearance: auto
+  margin: 0 5px 0 0
+  display: inline
+
+label
+  display: block
+  width: 100%
+  margin: 0 0 13px
+
+  &:last-child
+    margin: 0
+
+textarea
+  resize: none
+  padding: 12px 17px
+  height: 103px
+
+button, .btn
+  outline: none
+  transition: .3s ease
+  cursor: pointer
+  box-shadow: none
+  font-family: $default-font
+  padding: 0
+  margin: 0
+  border: none
+  border-radius: 0
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  padding: 12px 32px
+  font-size: 16px
+  font-weight: 500
+  height: 56px
+  border-radius: 8px
+  transition: 0.3s ease
+
+.btn-accent
+  background: $violet
+  color: #fff
+  &.active, &:active
+    background: $violet-active
+    color: #fff
+  &:hover, &:focus
+    background: $violet
+    color: #fff
+  &.disabled, &:disabled
+    background: $stroke
+    color: #fff
+
+.btn-border
+  background: $white
+  border: 1px solid $stroke
+  color: $violet
+  &.active, &:active
+    background: $white
+    border-color: $violet
+    color: $violet
+  &:hover, &:focus
+    background: $violet
+    color: #fff
+    border-color: $violet
+  &.disabled, &:disabled
+    background: $stroke
+    color: #fff
+    border-color: $stroke
+
+.btn-pink
+  background: $light-pink
+  color: $violet
+  fill: $violet
+  &.active, &:active
+    background: $violet-active
+    color: $white
+    fill: $white
+  &:hover, &:focus
+    background: $violet
+    color: $white
+    fill: $white
+  &.disabled, &:disabled
+    background: rgba($white, .4)
+    color: $white
+    fill: $white
+
+.svg-icon
+  display: inline-block
+  width: 100%
+  height: 100%
+
+strong, b
+  font-weight: bold
+  display: inline-block
+
+ul, ol
+  padding: 0 0 0 20px
+
+.my-ul
+  list-style: none
+  padding: 0
+
+.list-dots
+  list-style-type: disc
+
+h1, .h1
+  font-size: 38px
+  line-height: 48px
+  width: 100%
+  margin: 0 0 40px
+
+h2, .h2
+  font-size: 32px
+  line-height: 40px
+  width: 100%
+  margin: 0 0 20px
+
+h3, .h3
+  font-size: 22px
+  line-height: 28px
+  width: 100%
+  margin: 0
+
+h4, .h4
+  font-size: 18px
+  line-height: 26px
+  width: 100%
+  margin: 0
+
+h5, .h5
+  font-size: 18px
+  line-height: 26px
+  width: 100%
+  margin: 0
+
+.menu
+  font-size: 16px
+  line-height: 26px
+
+.bold-text, .text
+  font-size: 16px
+  line-height: 24px
+
+.small-text
+  font-size: 14px
+  line-height: 22px
+
+.description
+  font-size: 12px
+  line-height: 18px
+
+.mb-30
+  margin-bottom: 30px  
+
+//  plugins
+.slick-slider
+  width: 100%
+
+.slick-slide
+  outline: none
+
+.slick-arrow
+  position: absolute
+  z-index: 1
+  opacity: 1
+  padding: 0
+  width: 48px
+  height: 48px
+  border-radius: 50%
+  padding: 12px
+  top: 50%
+  transform: translate(0,-50%)
+  @include d-flex
+  &.slick-disabled
+    background: rgba(#fff, .4)
+    fill: #fff
+    color: #fff
+
+.slick-prev
+  left: 31px
+
+.slick-next
+  right: 31px  
+    
+.slick-dots
+  position: absolute
+  z-index: 2
+  width: 100%
+  left: 50%
+  transform: translate(-50%,0)
+  bottom: 50px
+  padding: 0 30px
+  list-style: none 
+  display: flex
+  align-items: center
+  justify-content: center
+  li
+    width: 10px
+    height: 10px
+    border-radius: 5px
+    background: $stroke
+    margin: 0 5px 0 0
+    cursor: pointer
+    transition: .3s ease
+    &:last-child
+      margin: 0
+    &.slick-active
+      width: 20px
+      background: $violet
+    button
+      display: none   
+
+//checkbox my
+.label-checkbox
+  position: relative
+  display: flex
+  align-items: flex-start
+  color: rgba(255, 255, 255, 0.5)
+  font-size: 14px
+  margin: 15px 0 0
+  line-height: 1.14
+
+.inp-check
+  display: none
+
+.checkbox-custom
+  margin: 0 12px 0 0
+  position: relative
+  border-radius: 6px
+  background-color: #fff
+  width: 16px
+  height: 16px
+  min-width: 16px
+  cursor: pointer
+
+.inp-check:checked ~ .checkbox-custom
+  background: #fff url("../img/check-black.svg") no-repeat center
+  background-size: 8px
+//checkbox my end

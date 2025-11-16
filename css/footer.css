@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "GolosText";
+  font-weight: 900;
+  font-style: normal;
+  src: url("../fonts/GolosText/GolosText-Black.eot");
+  src: url("../fonts/GolosText/GolosText-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/GolosText/GolosText-Black.woff") format("woff"), url("../fonts/GolosText/GolosText-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GolosText";
+  font-weight: 800;
+  font-style: normal;
+  src: url("../fonts/GolosText/GolosText-ExtraBold.eot");
+  src: url("../fonts/GolosText/GolosText-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/GolosText/GolosText-ExtraBold.woff") format("woff"), url("../fonts/GolosText/GolosText-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GolosText";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/GolosText/GolosText-Bold.eot");
+  src: url("../fonts/GolosText/GolosText-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/GolosText/GolosText-Bold.woff") format("woff"), url("../fonts/GolosText/GolosText-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GolosText";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/GolosText/GolosText-SemiBold.eot");
+  src: url("../fonts/GolosText/GolosText-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/GolosText/GolosText-SemiBold.woff") format("woff"), url("../fonts/GolosText/GolosText-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GolosText";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/GolosText/GolosText-Medium.eot");
+  src: url("../fonts/GolosText/GolosText-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/GolosText/GolosText-Medium.woff") format("woff"), url("../fonts/GolosText/GolosText-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GolosText";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/GolosText/GolosText-Regular.eot");
+  src: url("../fonts/GolosText/GolosText-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/GolosText/GolosText-Regular.woff") format("woff"), url("../fonts/GolosText/GolosText-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GolosText";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/GolosText/GolosText-Regular.eot");
+  src: url("../fonts/GolosText/GolosText-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/GolosText/GolosText-Regular.woff") format("woff"), url("../fonts/GolosText/GolosText-Regular.ttf") format("truetype");
+}
