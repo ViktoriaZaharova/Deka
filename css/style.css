@@ -430,6 +430,13 @@ h5, .h5 {
   fill: #fff;
   color: #fff;
 }
+.slick-arrow.btn-accent {
+  fill: #fff;
+}
+.slick-arrow.btn-accent.slick-disabled {
+  background: #F7F4FF;
+  fill: #5A3FC3;
+}
 
 .slick-prev {
   left: 31px;
@@ -478,6 +485,87 @@ h5, .h5 {
 }
 .slick-dots li button {
   display: none;
+}
+
+.slider-stretch .slick-list {
+  margin: 0 -15px;
+}
+.slider-stretch .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.slider-stretch .slick-slide {
+  height: auto;
+  margin: 0 15px;
+}
+
+.slider-style2 .slick-dots {
+  position: relative;
+  bottom: 0;
+  margin: 30px auto 0;
+}
+
+.video-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.video-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 650px;
+  height: 249px;
+  background: url("../img/video-bg.svg") no-repeat center;
+  background-size: 100%;
+  z-index: 1;
+}
+.video-wrapper:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.2) url("../img/play-icon.svg") no-repeat center;
+  background-size: 23px;
+  backdrop-filter: blur(10px);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.video-wrapper:hover:after {
+  background: #6242E0 url("../img/play-icon.svg") no-repeat center;
+  background-size: 23px;
+}
+.video-wrapper:focus:after {
+  background: #5A3FC3 url("../img/play-icon.svg") no-repeat center;
+  background-size: 23px;
+}
+.video-wrapper__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
 }
 
 .label-checkbox {

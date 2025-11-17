@@ -257,7 +257,7 @@ h5, .h5
   line-height: 18px
 
 .mb-30
-  margin-bottom: 30px  
+  margin-bottom: 30px
 
 //  plugins
 .slick-slider
@@ -282,13 +282,18 @@ h5, .h5
     background: rgba(#fff, .4)
     fill: #fff
     color: #fff
+  &.btn-accent
+    fill: #fff  
+    &.slick-disabled
+      background: $light-pink
+      fill: $violet
 
 .slick-prev
   left: 31px
 
 .slick-next
-  right: 31px  
-    
+  right: 31px
+
 .slick-dots
   position: absolute
   z-index: 2
@@ -297,7 +302,7 @@ h5, .h5
   transform: translate(-50%,0)
   bottom: 50px
   padding: 0 30px
-  list-style: none 
+  list-style: none
   display: flex
   align-items: center
   justify-content: center
@@ -315,7 +320,69 @@ h5, .h5
       width: 20px
       background: $violet
     button
-      display: none   
+      display: none
+
+.slider-stretch
+  .slick-list
+    margin: 0 -15px
+  .slick-track
+    display: flex
+    align-items: stretch
+  .slick-slide
+    height: auto
+    margin: 0 15px
+
+.slider-style2
+  .slick-dots
+    position: relative
+    bottom: 0
+    margin: 30px auto 0
+
+
+.video-wrapper
+  width: 100%
+  overflow: hidden
+  position: relative
+  z-index: 1
+  border-radius: 10px
+  cursor: pointer
+  @include d-flex
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    width: 650px
+    height: 249px
+    background: url('../img/video-bg.svg') no-repeat center
+    background-size: 100%
+    z-index: 1
+  &:after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    border-radius: 50%
+    width: 100px
+    height: 100px
+    background: rgba(#000, .2) url('../img/play-icon.svg') no-repeat center
+    background-size: 23px
+    backdrop-filter: blur(10px)
+    transition: .3s ease
+
+  &:hover
+    &:after
+      background: $violet-active url('../img/play-icon.svg') no-repeat center
+      background-size: 23px
+  &:focus
+    &:after
+      background: $violet url('../img/play-icon.svg') no-repeat center
+      background-size: 23px
+  &__img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 10px
 
 //checkbox my
 .label-checkbox
