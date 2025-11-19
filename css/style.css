@@ -339,6 +339,7 @@ ul, ol {
 h1, .h1 {
   font-size: 38px;
   line-height: 48px;
+  font-weight: 500;
   width: 100%;
   margin: 0 0 40px;
 }
@@ -346,6 +347,7 @@ h1, .h1 {
 h2, .h2 {
   font-size: 32px;
   line-height: 40px;
+  font-weight: 500;
   width: 100%;
   margin: 0 0 20px;
 }
@@ -353,6 +355,7 @@ h2, .h2 {
 h3, .h3 {
   font-size: 22px;
   line-height: 28px;
+  font-weight: 600;
   width: 100%;
   margin: 0;
 }
@@ -360,6 +363,7 @@ h3, .h3 {
 h4, .h4 {
   font-size: 18px;
   line-height: 26px;
+  font-weight: 600;
   width: 100%;
   margin: 0;
 }
@@ -367,6 +371,7 @@ h4, .h4 {
 h5, .h5 {
   font-size: 18px;
   line-height: 26px;
+  font-weight: 500;
   width: 100%;
   margin: 0;
 }
@@ -376,7 +381,7 @@ h5, .h5 {
   line-height: 26px;
 }
 
-.bold-text, .text {
+.box-text, .text, .bold-text {
   font-size: 16px;
   line-height: 24px;
 }
@@ -386,7 +391,7 @@ h5, .h5 {
   line-height: 22px;
 }
 
-.description {
+.description-text {
   font-size: 12px;
   line-height: 18px;
 }
@@ -403,6 +408,14 @@ h5, .h5 {
   margin-top: 100px;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
 a.color-light-grey {
   color: #B6B0D6;
 }
@@ -410,8 +423,45 @@ a.color-light-grey:hover {
   color: #5A3FC3;
 }
 
+a.color-accent {
+  color: #5A3FC3;
+  fill: #5A3FC3;
+}
+a.color-accent:active, a.color-accent.active {
+  color: #6242E0;
+  fill: #6242E0;
+}
+a.color-accent:hover, a.color-accent:focus {
+  color: #5A3FC3;
+  fill: #5A3FC3;
+}
+
 .text-decoration {
   text-decoration: underline;
+}
+
+.container {
+  max-width: 1350px;
+  padding: 0 15px;
+}
+
+.row {
+  margin: 0 -15px;
+}
+.row > * {
+  padding: 0 15px;
+}
+
+.container-fluid {
+  padding: 0 15px;
+}
+
+.link-read-more {
+  font-weight: 500;
+}
+.link-read-more svg {
+  width: 24px;
+  height: 24px;
 }
 
 .slick-slider {
@@ -465,14 +515,18 @@ a.color-light-grey:hover {
   right: 31px;
 }
 
+.slick-arrow-v2.slick-prev {
+  left: -78px;
+}
+.slick-arrow-v2.slick-next {
+  right: -78px;
+}
+
 .slick-dots {
-  position: absolute;
-  z-index: 2;
+  position: relative;
+  margin: 30px auto 0;
   width: 100%;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  bottom: 50px;
+  bottom: 0;
   padding: 0 30px;
   list-style: none;
   display: -webkit-box;

@@ -49,3 +49,29 @@ $('.popular-category-slider').slick({
     }
   ]
 });
+
+$('.reviews-slider').slick({
+    slidesToShow: 3,
+    dots: true,
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-prev btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
+    nextArrow: '<button type="button" class="slick-next btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
+});
+
+// reviews loader text
+$(document).ready(function () {
+  $('.reviews-read-more').on('click', function (e) {
+    e.preventDefault();
+
+    const $btn = $(this);
+    const $text = $btn.closest('.reviews-card__body').find('.box-text');
+
+    $text.toggleClass('box-text-open');
+
+    if ($text.hasClass('box-text-open')) {
+      $btn.find('span').text('Скрыть');
+    } else {
+      $btn.find('span').text('Читать полностью');
+    }
+  });
+});

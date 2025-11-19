@@ -213,30 +213,35 @@ ul, ol
 h1, .h1
   font-size: 38px
   line-height: 48px
+  font-weight: 500
   width: 100%
   margin: 0 0 40px
 
 h2, .h2
   font-size: 32px
   line-height: 40px
+  font-weight: 500
   width: 100%
   margin: 0 0 20px
 
 h3, .h3
   font-size: 22px
   line-height: 28px
+  font-weight: 600
   width: 100%
   margin: 0
 
 h4, .h4
   font-size: 18px
   line-height: 26px
+  font-weight: 600
   width: 100%
   margin: 0
 
 h5, .h5
   font-size: 18px
   line-height: 26px
+  font-weight: 500
   width: 100%
   margin: 0
 
@@ -244,7 +249,7 @@ h5, .h5
   font-size: 16px
   line-height: 26px
 
-.bold-text, .text
+.box-text, .text, .bold-text
   font-size: 16px
   line-height: 24px
 
@@ -252,7 +257,7 @@ h5, .h5
   font-size: 14px
   line-height: 22px
 
-.description
+.description-text
   font-size: 12px
   line-height: 18px
 
@@ -262,16 +267,50 @@ h5, .h5
 .m-100
   margin: 100px 0
 
-.mt-100 
+.mt-100
   margin-top: 100px
+
+.font-medium
+  font-weight: 500  
+
+.font-bold
+  font-weight: 700   
 
 a.color-light-grey
   color: $light-grey
   &:hover
     color: $violet
 
+a.color-accent
+  color: $violet
+  fill: $violet
+  &:active, &.active
+    color: $violet-active
+    fill: $violet-active
+  &:hover, &:focus
+    color: $violet
+    fill: $violet
+
 .text-decoration
-  text-decoration: underline      
+  text-decoration: underline
+
+.container
+  max-width: 1350px
+  padding: 0 15px
+
+.row
+  margin: 0 -15px
+  >*
+    padding: 0 15px
+
+.container-fluid
+  padding: 0 15px
+
+.link-read-more
+  font-weight: 500
+  svg
+    width: 24px
+    height: 24px
 
 //  plugins
 .slick-slider
@@ -297,7 +336,7 @@ a.color-light-grey
     fill: #fff
     color: #fff
   &.btn-accent
-    fill: #fff  
+    fill: #fff
     &.slick-disabled
       background: $light-pink
       fill: $violet
@@ -308,13 +347,17 @@ a.color-light-grey
 .slick-next
   right: 31px
 
+.slick-arrow-v2
+  &.slick-prev
+    left: -78px
+  &.slick-next
+    right: -78px    
+
 .slick-dots
-  position: absolute
-  z-index: 2
+  position: relative
+  margin: 30px auto 0
   width: 100%
-  left: 50%
-  transform: translate(-50%,0)
-  bottom: 50px
+  bottom: 0
   padding: 0 30px
   list-style: none
   display: flex
@@ -351,7 +394,6 @@ a.color-light-grey
     position: relative
     bottom: 0
     margin: 30px auto 0
-
 
 .video-wrapper
   width: 100%

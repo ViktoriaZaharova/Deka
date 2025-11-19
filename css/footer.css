@@ -16,4 +16,9 @@ footer {
   padding: 26px 0;
   background: #fff;
   color: #B6B0D6;
+  font-weight: 500;
+}
+
+.link-developer span {
+  color: #5A3FC3;
 }
