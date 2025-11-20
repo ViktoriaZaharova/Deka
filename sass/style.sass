@@ -46,6 +46,9 @@ body
   background: #fff
   color: $dark
 
+html, body
+  overflow-x: hidden  
+
 img
   display: block
   max-width: 100%
@@ -301,6 +304,11 @@ a.color-accent
   &:hover, &:focus
     color: $violet
     fill: $violet
+
+a.color-inherit
+  color: inherit
+  &:hover
+    color: $violet    
 
 .bg-green
   background: $green    

@@ -103,6 +103,15 @@ $('.hits-slider').slick({
 });
 
 
+$('.sales-slider').slick({
+    slidesToShow: 1,
+    arrows: true,
+    dots: true,
+    variableWidth: true,
+    prevArrow: '<button type="button" class="slick-prev btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
+    nextArrow: '<button type="button" class="slick-next btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
+});
+
 // reviews loader text
 $(document).ready(function () {
   $('.reviews-read-more').on('click', function (e) {

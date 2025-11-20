@@ -179,7 +179,6 @@
 .reviews-read-more
     margin: 32px 0 0
 
-
 // hits section
 .hits-card
     position: relative
@@ -187,7 +186,7 @@
     height: 100%
     z-index: 1
     border-radius: 20px
-    
+
     background: #fff
     &__img
         width: 100%
@@ -215,19 +214,25 @@
             max-width: 130px
     &__body
         border: 1px solid $stroke
-        margin: -8px 0 0 
+        margin: -8px 0 0
         padding: 38px 30px 30px
         width: 100%
     &__title
         color: $dark
         &:hover
-            color: $violet   
+            color: $violet
     .price-wrapper
-        margin: 14px 0 20px            
+        margin: 14px 0 20px
 
 .price-wrapper
     display: flex
-    align-items: center    
+    align-items: center
+    flex-wrap: wrap
+
+.old-price
+    margin: 5px 0 0
+    text-decoration: line-through
+    color: $light-grey
 
 .price
     color: $violet
@@ -252,11 +257,103 @@
         padding: 10px 14px
 
         &:last-child
-            margin: 0            
-
+            margin: 0
 
 // news section
 .news-blog-card
     width: 100%
-    height: 100%    
+    height: 100%
+    background: $light-pink
+    padding: 30px
+    border-radius: 40px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    position: relative
+    z-index: 1
+    &__date
+        background: #fff
+        border-radius: 40px
+        padding: 10px 15px
+        font-size: 14px
+        font-weight: 500
+        color: $light-grey
+    &__title
+        margin: 20px 0
+        max-width: 460px
 
+    .box-text
+        padding: 0 65px 0 0
+    .link-arrow
+        position: absolute
+        bottom: 30px
+        right: 30px
+        z-index: 2
+        padding: 19px
+
+// sales section
+.sales-card
+    width: 525px
+    min-width: 525px
+    display: flex
+    align-items: stretch
+    border-radius: 20px
+    border: 1px solid $stroke
+    padding: 30px
+    &__img
+        display: flex
+        align-items: center
+        width: 238px
+        .image
+            max-width: 160px
+    &__body
+        width: calc( 100% - 238px )
+        padding: 0 0 0 40px
+        display: flex
+        flex-direction: column
+        
+    .list-labels
+        position: relative
+        top: 0
+        right: 0
+        padding: 0
+        justify-content: flex-start
+        margin: 0 0 20px
+        font-size: 14px
+    .price-wrapper
+        margin: 20px 0
+    .btn
+        margin: auto 0 0
+
+
+// callback section
+.callback-wrapper
+    display: flex
+    align-items: center
+    position: relative
+    z-index: 1
+    &__img
+        position: absolute
+        z-index: 2
+        top: 50px
+        left: 0
+        max-width: 619px
+        width: 100%
+        height: 378px
+        overflow: hidden
+        border-radius: 20px
+        @include d-flex    
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 20px
+    &__content
+        padding: 50px 50px 50px 338px
+        max-width: 983px
+        width: 100%
+        margin: 0 0 0 auto
+        position: relative
+        z-index: 1
+        border-radius: 20px
+        background: $purple        

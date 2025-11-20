@@ -97,6 +97,10 @@ body {
   color: #2F2940;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -447,6 +451,13 @@ a.color-accent:active, a.color-accent.active {
 a.color-accent:hover, a.color-accent:focus {
   color: #5A3FC3;
   fill: #5A3FC3;
+}
+
+a.color-inherit {
+  color: inherit;
+}
+a.color-inherit:hover {
+  color: #5A3FC3;
 }
 
 .bg-green {
