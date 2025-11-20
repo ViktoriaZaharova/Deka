@@ -256,18 +256,22 @@ button:hover, button:focus, .btn:hover, .btn:focus {
 .btn-accent {
   background: #5A3FC3;
   color: #fff;
+  fill: #fff;
 }
 .btn-accent.active, .btn-accent:active {
   background: #6242E0;
   color: #fff;
+  fill: #fff;
 }
 .btn-accent:hover, .btn-accent:focus {
   background: #5A3FC3;
   color: #fff;
+  fill: #fff;
 }
 .btn-accent.disabled, .btn-accent:disabled {
   background: #E6DEF4;
   color: #fff;
+  fill: #fff;
 }
 
 .btn-border {
@@ -376,6 +380,11 @@ h5, .h5 {
   margin: 0;
 }
 
+.link {
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .menu {
   font-size: 16px;
   line-height: 26px;
@@ -398,6 +407,10 @@ h5, .h5 {
 
 .mb-30 {
   margin-bottom: 30px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
 }
 
 .m-100 {
@@ -436,6 +449,10 @@ a.color-accent:hover, a.color-accent:focus {
   fill: #5A3FC3;
 }
 
+.bg-green {
+  background: #5AD28E;
+}
+
 .text-decoration {
   text-decoration: underline;
 }
@@ -462,6 +479,13 @@ a.color-accent:hover, a.color-accent:focus {
 .link-read-more svg {
   width: 24px;
   height: 24px;
+}
+
+.link-arrow {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  padding: 23px;
 }
 
 .slick-slider {
