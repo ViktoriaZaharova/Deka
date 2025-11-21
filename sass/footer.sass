@@ -20,3 +20,19 @@ footer
 .link-developer
     span
         color: $violet    
+
+.list-social
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+    li
+        margin: 0 10px 10px 0
+        &:last-child
+            margin-right: 0
+        a
+            border-radius: 50%
+            width: 36px
+            height: 36px
+            min-width: 36px
+            background: #fff
+            @include d-flex        
