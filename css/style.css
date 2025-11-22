@@ -421,6 +421,14 @@ h5, .h5 {
   line-height: 18px;
 }
 
+.mb-14 {
+  margin-bottom: 14px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
 .mb-30 {
   margin-bottom: 30px;
 }
@@ -470,6 +478,10 @@ a.color-inherit {
 }
 a.color-inherit:hover {
   color: #5A3FC3;
+}
+
+.color-dark {
+  color: #2F2940;
 }
 
 .bg-green {

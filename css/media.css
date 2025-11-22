@@ -42,3 +42,10 @@
     padding: 10px 24px;
   }
 }
+@media only screen and (min-width: 992px) {
+  .collapse.d-lg-block {
+    display: block !important;
+    height: auto !important;
+    visibility: visible;
+  }
+}
