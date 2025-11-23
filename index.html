@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deka</title>
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+  <!-- add plugins css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/fancybox.css">
+  <!-- add plugins css end -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex align-items-center flex-wrap">
+            <div class="dropdown location-box">
+              <button class="btn btn-location dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span class="btn-location__icon"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#navigation-bottom"></use>
+                  </svg></span>
+                Санкт-Петербург
+                <span class="dropdown-arrow"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                  </svg></span>
+              </button>
+              <div class="dropdown-menu">
+                <ul class="my-ul location-list">
+                  <li><a class="dropdown-item" href="#">Москва</a></li>
+                  <li><a class="dropdown-item" href="#">Санкт-Петербург</a></li>
+                  <li><a class="dropdown-item" href="#">Новосибирск</a></li>
+                </ul>
+              </div>
+            </div>
+            <nav class="nav-menu">
+              <div class="my-ul menu">
+                <li class="menu-item"><a href="catalog.html" class="menu-link">Каталог</a></li>
+                <li class="menu-item"><a href="reviews.html" class="menu-link">Отзывы</a></li>
+                <li class="menu-item dropdown"><a href="help.html" class="menu-link"
+                    data-bs-toggle="dropdown">Поддержка
+                  <span class="dropdown-arrow"><svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                            </svg></span>
+                  </a>
+                  <div class="dropdown-menu">
+                    <ul class="dropdown-menu-list my-ul">
+                      <li><a class="dropdown-item" href="help.html">Поддержка</a></li>
+                      <li><a class="dropdown-item" href="education.html">Обучение</a></li>
+                      <li><a class="dropdown-item" href="service.html">Техническая поддержка и сервис</a></li>
+                      <li><a class="dropdown-item" href="marketing.html">Маркетинговая поддержка</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item"><a href="about.html" class="menu-link">О компании</a></li>
+                <li class="menu-item"><a href="contacts.html" class="menu-link">Контакты</a></li>
+                <li class="menu-item"><a href="search-models.html" class="menu-link">Ищем моделей</a></li>
+                <li class="menu-item dropdown"><a href="patients.html" class="menu-link"
+                    data-bs-toggle="dropdown">Пациентам <span class="dropdown-arrow"><svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                            </svg></span></a>
+                  <div class="dropdown-menu">
+                    <ul class="dropdown-menu-list my-ul">
+                      <li><a class="dropdown-item" href="gallery.html">Галерея До/после</a></li>
+                      <li><a class="dropdown-item" href="maps-procedure.html">Где сделать процедуру</a></li>
+                      <li><a class="dropdown-item" href="question.html">Вопрос-ответ</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </div>
+            </nav>
+            <ul class="my-ul list-social">
+              <li><a href="#"><img src="img/icon-ru.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icon-dzen.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icon-tg.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icon-youtube.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icon-vk.svg" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex align-items-center flex-wrap">
+            <a href="index.html" class="logo logo-header">
+              <span class="logo-icon"><img src="img/logo-footer.svg" alt="DEKA"></span>
+              <span class="logo-description">Лазерное оборудование из Италии <br>
+                от официального дистрибьютора</span>
+            </a>
+
+            <div class="search-wrapper">
+              <form method="post" class="form-search">
+                <label><input type="text" placeholder="Поиск по каталогу" name="search"></label>
+                <button type="submit" class="form-search__btn"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#search-icon"></use>
+                  </svg></button>
+                <a href="#" class="form-search__btn-close"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#close-icon"></use>
+                  </svg></a>
+              </form>
+              <div class="search-result-box"></div>
+            </div>
+
+            <a href="tel:+78002221841" class="phone">8 (800) 222-18-41</a>
+            <a href="#" class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#callbackModal">Заказать обратный
+              звонок</a>
+
+            <a href="basket.html" class="btn-basket">
+              <svg class="svg-icon">
+                <use xlink:href="img/sprite.svg#basket-icon"></use>
+              </svg>
+              <span class="btn-basket__count">10</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex align-items-center flex-wrap">
+            <nav class="nav-menu-category">
+              <ul class="menu-category my-ul">
+                <li class="menu-category__item"><a href="estet-medical.html" class="menu-category__link">Эстетическая
+                    медицина</a></li>
+                <li class="menu-category__item"><a href="gynecology.html" class="menu-category__link">Гинекология</a>
+                </li>
+                <li class="menu-category__item"><a href="dermatology.html" class="menu-category__link">Дерматология</a>
+                </li>
+                <li class="menu-category__item"><a href="#" class="menu-category__link">Флебология</a></li>
+                <li class="menu-category__item"><a href="#" class="menu-category__link">Аксессуары</a></li>
+                <li class="menu-category__item"><a href="#" class="menu-category__link">Deka Expert Club</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="home-slider w-100">
+    <div class="slide">
+      <div class="home-slider__item">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="home-slider__item-content">
+                <h2>LUXEA ®</h2>
+                <h1>Новая звезда <br>
+                  в галактике <br>
+                  косметологии</h1>
+
+                <a href="#" class="btn btn-accent">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="home-slider__item">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="home-slider__item-content">
+                <div class="h2">LUXEA ®</div>
+                <div class="h1">Новая звезда 2<br>
+                  в галактике <br>
+                  косметологии</div>
+
+                <a href="#" class="btn btn-accent">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="home-slider__item">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="home-slider__item-content">
+                <h2>LUXEA ®</h2>
+                <h1>Новая звезда <br>
+                  в галактике <br>
+                  косметологии</h1>
+
+                <a href="#" class="btn btn-accent">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="home-slider__item">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="home-slider__item-content">
+                <div class="h2">LUXEA ®</div>
+                <div class="h1">Новая звезда 2<br>
+                  в галактике <br>
+                  косметологии</div>
+
+                <a href="#" class="btn btn-accent">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="popular-category">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="h1">Популярные категории</h2>
+        </div>
+
+        <div class="col-12">
+          <div class="popular-category-slider slider-stretch slider-style2">
+            <div class="slide">
+              <div class="product-card">
+                <a href="product.html" class="product-card__img"><img src="img/product1.png" alt=""></a>
+                <div class="product-card__body">
+                  <a href="product.html" class="product-card__name">Александритовые лазеры</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="product-card">
+                <a href="product.html" class="product-card__img"><img src="img/product2.png" alt=""></a>
+                <div class="product-card__body">
+                  <a href="product.html" class="product-card__name">Фракционные СО2 лазеры</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="product-card">
+                <a href="product.html" class="product-card__img"><img src="img/product3.png" alt=""></a>
+                <div class="product-card__body">
+                  <a href="product.html" class="product-card__name">Аппараты для удаления тату</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="product-card">
+                <a href="product.html" class="product-card__img"><img src="img/product1.png" alt=""></a>
+                <div class="product-card__body">
+                  <a href="product.html" class="product-card__name">Аппараты для удаления сосудов</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="product-card">
+                <a href="product.html" class="product-card__img"><img src="img/product4.png" alt=""></a>
+                <div class="product-card__body">
+                  <a href="product.html" class="product-card__name">Аппараты для коррекции фигуры</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="product-card">
+                <a href="product.html" class="product-card__img"><img src="img/product2.png" alt=""></a>
+                <div class="product-card__body">
+                  <a href="product.html" class="product-card__name">Фракционные СО2 лазеры</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-company">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <h2 class="h1">О Deka</h2>
+          <div class="about-company__content mb-30">
+            <p>Группа компаний DEKA - единственный официальный дистрибьютор итальянской медицинской группы DEKA M.E.L.A.
+              S.R.L. Italy</p>
+          </div>
+          <div class="text">
+            <p>DEKA M.E.L.A. s.r.l. Italy – мировой производитель высоко-технологичного лазерного медицинского
+              оборудования для косметологии, дерматологии, эстетической хирургии, стоматологии, гинекологии.
+              Производственный комплекс компании DEKA находится во Флоренции (Италия)</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <a href="https://youtu.be/LXb3EKWsInQ?si=U36PC-rPnx23X7C6" class="about-company__video video-wrapper"
+            data-fancybox="video">
+            <img src="img/video-preview.jpg" class="video-wrapper__img" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="advantages-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="h1">Преимущества</h2>
+            </div>
+            <div class="col-12 col-sm-6 mb-30">
+              <div class="advantages-box">
+                <div class="advantages-box__icon"><img src="img/adv-icon1.svg" alt=""></div>
+                <div class="advantages-box__text">
+                  <p>Гарантия 12 месяцев</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 mb-30">
+              <div class="advantages-box">
+                <div class="advantages-box__icon"><img src="img/adv-icon2.svg" alt=""></div>
+                <div class="advantages-box__text">
+                  <p>Обучение врачей</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 mb-30">
+              <div class="advantages-box">
+                <div class="advantages-box__icon"><img src="img/adv-icon3.svg" alt=""></div>
+                <div class="advantages-box__text">
+                  <p>Бесплатная <br>
+                    доставка</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 mb-30">
+              <div class="advantages-box">
+                <div class="advantages-box__icon"><img src="img/adv-icon4.svg" alt=""></div>
+                <div class="advantages-box__text">
+                  <p>Маркетинговая <br>
+                    поддержка</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="advantages-img w-100 d-flex flex-wrap align-items-center"><img src="img/advantages-img.png"
+              alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="advantages-row">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="advantages-wrapper w-100">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-lg-3 mb-30">
+                <div class="advantages-wrapper-item">
+                  <h3>10</h3>
+                  <p>мировых патентов на уникальные <br>
+                    технологии</p>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 mb-30">
+                <div class="advantages-wrapper-item">
+                  <h3>5000</h3>
+                  <p>человек ежедневно проходят <br>
+                    процедуры на лазерах DEKA в РФ</p>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 mb-30">
+                <div class="advantages-wrapper-item">
+                  <h3>120 000</h3>
+                  <p>аппаратов установлено в мире</p>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 mb-30">
+                <div class="advantages-wrapper-item">
+                  <h3>1293</h3>
+                  <p>лазеров установлено в РФ</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="reviews-section m-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="h1">Отзывы покупателей</h2>
+        </div>
+
+        <div class="col-12">
+          <div class="reviews-slider slider-stretch">
+            <div class="slide">
+              <div class="reviews-card">
+                <div class="reviews-card__head">
+                  <div class="reviews-card__doctor">
+                    <div class="reviews-card__avatar"><img src="img/avatar1.png" alt=""></div>
+                    <div class="reviews-card__name">
+                      <p>Карапетян Л.Р.</p>
+                    </div>
+                  </div>
+                  <div class="reviews-card__position description-text">
+                    <p>Зав. отделением косметологии, <br>
+                      вед. дерматокосметолог Европейского Медицинского </p>
+                  </div>
+                </div>
+                <div class="reviews-card__body">
+                  <a href="#" class="logo-clinik" target="_blank"><img src="img/logo-clinik1.svg" alt=""></a>
+                  <h4>Европейский медицинский центр
+                    (г. Москва)</h4>
+                  <div class="box-text">
+                    <p>Методика MonaLisa Touch была внедрена в Европейском Медицинском Центре с апреля 2011г.
+                      с приобретением лазерной системы SmartXide 2. Процедура достоверно показала свою высокую
+                      эффективность и безопасность при инволютивных изменениях, при жалобах на уменьшение интимной
+                      чувствительности и с профилактической целью. Успешно сотрудничая с гинекологами, нам удаётся
+                      проводить грамотный отбор и оценку пациенток и поддерживать стабильную запись на процедуры.</p>
+                  </div>
+
+                  <a href="#" class="color-accent reviews-read-more link-read-more"><span>Читать полностью</span><svg
+                      class="svg-icon">
+                      <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                    </svg></a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="reviews-card">
+                <div class="reviews-card__head">
+                  <div class="reviews-card__doctor">
+                    <div class="reviews-card__avatar"><img src="img/avatar1.png" alt=""></div>
+                    <div class="reviews-card__name">
+                      <p>Карапетян Л.Р.</p>
+                    </div>
+                  </div>
+                  <div class="reviews-card__position description-text">
+                    <p>Зав. отделением косметологии, <br>
+                      вед. дерматокосметолог Европейского Медицинского </p>
+                  </div>
+                </div>
+                <div class="reviews-card__body">
+                  <a href="#" class="logo-clinik" target="_blank"><img src="img/logo-clinik1.svg" alt=""></a>
+                  <h4>Европейский медицинский центр
+                    (г. Москва)</h4>
+                  <div class="box-text">
+                    <p>Методика MonaLisa Touch была внедрена в Европейском Медицинском Центре с апреля 2011г.
+                      с приобретением лазерной системы SmartXide 2. Процедура достоверно показала свою высокую
+                      эффективность и безопасность при инволютивных изменениях, при жалобах на уменьшение интимной
+                      чувствительности и с профилактической целью. Успешно сотрудничая с гинекологами, нам удаётся
+                      проводить грамотный отбор и оценку пациенток и поддерживать стабильную запись на процедуры.</p>
+                  </div>
+
+                  <a href="#" class="color-accent reviews-read-more link-read-more"><span>Читать полностью</span><svg
+                      class="svg-icon">
+                      <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                    </svg></a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="reviews-card">
+                <div class="reviews-card__head">
+                  <div class="reviews-card__doctor">
+                    <div class="reviews-card__avatar"><img src="img/avatar1.png" alt=""></div>
+                    <div class="reviews-card__name">
+                      <p>Карапетян Л.Р.</p>
+                    </div>
+                  </div>
+                  <div class="reviews-card__position description-text">
+                    <p>Зав. отделением косметологии, <br>
+                      вед. дерматокосметолог Европейского Медицинского </p>
+                  </div>
+                </div>
+                <div class="reviews-card__body">
+                  <a href="#" class="logo-clinik" target="_blank"><img src="img/logo-clinik1.svg" alt=""></a>
+                  <h4>Европейский медицинский центр
+                    (г. Москва)</h4>
+                  <div class="box-text">
+                    <p>Методика MonaLisa Touch была внедрена в Европейском Медицинском Центре с апреля 2011г.
+                      с приобретением лазерной системы SmartXide 2. Процедура достоверно показала свою высокую
+                      эффективность и безопасность при инволютивных изменениях, при жалобах на уменьшение интимной
+                      чувствительности и с профилактической целью. Успешно сотрудничая с гинекологами, нам удаётся
+                      проводить грамотный отбор и оценку пациенток и поддерживать стабильную запись на процедуры.</p>
+                  </div>
+
+                  <a href="#" class="color-accent reviews-read-more link-read-more"><span>Читать полностью</span><svg
+                      class="svg-icon">
+                      <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                    </svg></a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="reviews-card">
+                <div class="reviews-card__head">
+                  <div class="reviews-card__doctor">
+                    <div class="reviews-card__avatar"><img src="img/avatar1.png" alt=""></div>
+                    <div class="reviews-card__name">
+                      <p>Карапетян Л.Р.</p>
+                    </div>
+                  </div>
+                  <div class="reviews-card__position description-text">
+                    <p>Зав. отделением косметологии, <br>
+                      вед. дерматокосметолог Европейского Медицинского </p>
+                  </div>
+                </div>
+                <div class="reviews-card__body">
+                  <a href="#" class="logo-clinik" target="_blank"><img src="img/logo-clinik1.svg" alt=""></a>
+                  <h4>Европейский медицинский центр
+                    (г. Москва)</h4>
+                  <div class="box-text">
+                    <p>Методика MonaLisa Touch была внедрена в Европейском Медицинском Центре с апреля 2011г.
+                      с приобретением лазерной системы SmartXide 2. Процедура достоверно показала свою высокую
+                      эффективность и безопасность при инволютивных изменениях, при жалобах на уменьшение интимной
+                      чувствительности и с профилактической целью. Успешно сотрудничая с гинекологами, нам удаётся
+                      проводить грамотный отбор и оценку пациенток и поддерживать стабильную запись на процедуры.</p>
+                  </div>
+
+                  <a href="#" class="color-accent reviews-read-more link-read-more"><span>Читать полностью</span><svg
+                      class="svg-icon">
+                      <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                    </svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hits-section m-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="h1">Хиты продаж</h2>
+        </div>
+
+        <div class="col-12">
+          <div class="hits-slider slider-stretch">
+            <div class="slide">
+              <div class="hits-card">
+                <ul class="list-labels my-ul">
+                  <li class="list-labels__item bg-green">доступен в лизинг</li>
+                </ul>
+                <a href="product.html" class="hits-card__img"><img src="img/hits-img1.png" alt=""></a>
+                <div class="hits-card__body">
+                  <a href="product.html" class="hits-card__title h5">SmartXide
+                    (Технология PUNTO)</a>
+                  <div class="price-wrapper">
+                    <div class="price h3">1 380 000 ₽</div>
+                  </div>
+                  <a href="#" class="btn btn-accent btn-in-basket">В корзину</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="hits-card">
+                <ul class="list-labels my-ul">
+                  <li class="list-labels__item bg-green">доступен в лизинг</li>
+                </ul>
+                <a href="product.html" class="hits-card__img"><img src="img/hits-img1.png" alt=""></a>
+                <div class="hits-card__body">
+                  <a href="product.html" class="hits-card__title h5">SmartXide
+                    (Технология PUNTO)</a>
+                  <div class="price-wrapper">
+                    <div class="price h3">1 380 000 ₽</div>
+                  </div>
+                  <a href="#" class="btn btn-accent btn-in-basket">В корзину</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="hits-card">
+                <ul class="list-labels my-ul">
+                  <li class="list-labels__item bg-green">доступен в лизинг</li>
+                </ul>
+                <a href="product.html" class="hits-card__img"><img src="img/hits-img1.png" alt=""></a>
+                <div class="hits-card__body">
+                  <a href="product.html" class="hits-card__title h5">SmartXide
+                    (Технология PUNTO)</a>
+                  <div class="price-wrapper">
+                    <div class="price h3">1 380 000 ₽</div>
+                  </div>
+                  <a href="#" class="btn btn-accent btn-in-basket">В корзину</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="hits-card">
+                <ul class="list-labels my-ul">
+                  <li class="list-labels__item bg-green">доступен в лизинг</li>
+                </ul>
+                <a href="product.html" class="hits-card__img"><img src="img/hits-img1.png" alt=""></a>
+                <div class="hits-card__body">
+                  <a href="product.html" class="hits-card__title h5">SmartXide
+                    (Технология PUNTO)</a>
+                  <div class="price-wrapper">
+                    <div class="price h3">1 380 000 ₽</div>
+                  </div>
+                  <a href="#" class="btn btn-accent btn-in-basket">В корзину</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="hits-card">
+                <ul class="list-labels my-ul">
+                  <li class="list-labels__item bg-green">доступен в лизинг</li>
+                </ul>
+                <a href="product.html" class="hits-card__img"><img src="img/hits-img1.png" alt=""></a>
+                <div class="hits-card__body">
+                  <a href="product.html" class="hits-card__title h5">SmartXide
+                    (Технология PUNTO)</a>
+                  <div class="price-wrapper">
+                    <div class="price h3">1 380 000 ₽</div>
+                  </div>
+                  <a href="#" class="btn btn-accent btn-in-basket">В корзину</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="hits-card">
+                <ul class="list-labels my-ul">
+                  <li class="list-labels__item bg-green">доступен в лизинг</li>
+                </ul>
+                <a href="product.html" class="hits-card__img"><img src="img/hits-img1.png" alt=""></a>
+                <div class="hits-card__body">
+                  <a href="product.html" class="hits-card__title h5">SmartXide
+                    (Технология PUNTO)</a>
+                  <div class="price-wrapper">
+                    <div class="price h3">1 380 000 ₽</div>
+                  </div>
+                  <a href="#" class="btn btn-accent btn-in-basket">В корзину</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="news-blog">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6">
+          <h2 class="h1">Новое в блоге</h2>
+        </div>
+        <div class="col-12 col-md-6">
+          <a href="news.html" class="link color-accent text-decoration font-medium mb-40 ms-auto">Все публикации</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-6 mb-30">
+          <div class="news-blog-card">
+            <div class="news-blog-card__date">08.12.2022</div>
+            <a href="article.html" class="news-blog-card__title h3">Состоялся 15-й Санкт-Петербургский венозный
+              форум</a>
+            <div class="box-text">
+              <p>На выставке были представлены лазер Synchro FT с IPL фотонасадкой и многофункциональная платформа Luxea
+                с сосудистой насадкой Sparks.</p>
+            </div>
+            <a href="article.html" class="link-arrow btn btn-accent"><svg class="svg-icon">
+                <use xlink:href="img/sprite.svg#arrow-diagonal"></use>
+              </svg></a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 mb-30">
+          <div class="news-blog-card">
+            <div class="news-blog-card__date">08.12.2022</div>
+            <a href="article.html" class="news-blog-card__title h3">Состоялся 15-й Санкт-Петербургский венозный
+              форум</a>
+            <div class="box-text">
+              <p>На выставке были представлены лазер Synchro FT с IPL фотонасадкой и многофункциональная платформа Luxea
+                с сосудистой насадкой Sparks.</p>
+            </div>
+            <a href="article.html" class="link-arrow btn btn-accent"><svg class="svg-icon">
+                <use xlink:href="img/sprite.svg#arrow-diagonal"></use>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sales-section m-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="h1">Акции и скидки</h2>
+        </div>
+
+        <div class="col-12">
+          <div class="sales-slider slider-stretch">
+            <div class="slide">
+              <div class="sales-card">
+                <a href="product.html" class="sales-card__img">
+                  <img src="img/logo-vertical.svg" alt="" class="logo-vertical">
+                  <img src="img/sale-img1.png" alt="" class="image"></a>
+                <div class="sales-card__body">
+                  <ul class="list-labels my-ul">
+                    <li class="list-labels__item bg-green">доступен в лизинг</li>
+                  </ul>
+                  <a href="product.html" class="hits-card__title h5">SmartXide (Технология PUNTO)</a>
+                  <div class="price-wrapper">
+                    <div class="price h3">1 380 000 ₽</div>
+                    <div class="old-price h5">1 440 000 ₽</div>
+                  </div>
+                  <a href="#" class="btn btn-accent btn-in-basket">В корзину</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="sales-card">
+                <a href="product.html" class="sales-card__img">
+                  <img src="img/logo-vertical.svg" alt="" class="logo-vertical">
+                  <img src="img/sale-img1.png" alt="" class="image"></a>
+                <div class="sales-card__body">
+                  <ul class="list-labels my-ul">
+                    <li class="list-labels__item bg-green">доступен в лизинг</li>
+                  </ul>
+                  <a href="product.html" class="hits-card__title h5">SmartXide (Технология PUNTO)</a>
+                  <div class="price-wrapper">
+                    <div class="price h3">1 380 000 ₽</div>
+                    <div class="old-price h5">1 440 000 ₽</div>
+                  </div>
+                  <a href="#" class="btn btn-accent btn-in-basket">В корзину</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="sales-card">
+                <a href="product.html" class="sales-card__img">
+                  <img src="img/logo-vertical.svg" alt="" class="logo-vertical">
+                  <img src="img/sale-img1.png" alt="" class="image"></a>
+                <div class="sales-card__body">
+                  <ul class="list-labels my-ul">
+                    <li class="list-labels__item bg-green">доступен в лизинг</li>
+                  </ul>
+                  <a href="product.html" class="hits-card__title h5">SmartXide (Технология PUNTO)</a>
+                  <div class="price-wrapper">
+                    <div class="price h3">1 380 000 ₽</div>
+                    <div class="old-price h5">1 440 000 ₽</div>
+                  </div>
+                  <a href="#" class="btn btn-accent btn-in-basket">В корзину</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="sales-card">
+                <a href="product.html" class="sales-card__img">
+                  <img src="img/logo-vertical.svg" alt="" class="logo-vertical">
+                  <img src="img/sale-img1.png" alt="" class="image"></a>
+                <div class="sales-card__body">
+                  <ul class="list-labels my-ul">
+                    <li class="list-labels__item bg-green">доступен в лизинг</li>
+                  </ul>
+                  <a href="product.html" class="hits-card__title h5">SmartXide (Технология PUNTO)</a>
+                  <div class="price-wrapper">
+                    <div class="price h3">1 380 000 ₽</div>
+                    <div class="old-price h5">1 440 000 ₽</div>
+                  </div>
+                  <a href="#" class="btn btn-accent btn-in-basket">В корзину</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="callback-section m-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="callback-wrapper w-100%">
+            <div class="callback-wrapper__img"><img src="img/callback-img.png" alt=""></div>
+            <div class="callback-wrapper__content">
+              <h2>Получить бесплатную консультацию
+                по подбору лазерного оборудования</h2>
+              <div class="box-text mb-40">
+                <p>Оставьте контактные данные и мы свяжемся с вами в ближайшее время</p>
+              </div>
+
+              <form method="post" class="form-callback">
+                <label>
+                  <input type="text" placeholder="Имя*" name="name" required>
+                </label>
+                <label>
+                  <input type="text" placeholder="Телефон*" name="phone" required>
+                </label>
+                <label>
+                  <input type="text" placeholder="E-mail*" name="mail" required>
+                </label>
+                <div class="form-footer">
+                  <button type="submit" class="btn btn-accent">Получить консультацию</button>
+                  <label class="label-checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <span class="label-checkbox__custom"></span>
+                    <span class="label-checkbox__text">Заполняя форму, вы принимаете условия <a href="#" target="_blank"
+                        class="text-decoration color-inherit">политики конфиденциальности</a></span>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <a href="index.html" class="logo logo-footer">
+              <span class="logo-icon"><img src="img/logo-footer.svg" alt="DEKA"></span>
+              <span class="logo-description">Лазерное оборудование из Италии <br>
+                от официального дистрибьютора</span>
+            </a>
+
+            <ul class="my-ul list-social">
+              <li><a href="#"><img src="img/icon-ru.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icon-dzen.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icon-tg.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icon-youtube.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icon-vk.svg" alt=""></a></li>
+            </ul>
+
+            <a href="#" class="btn btn-accent mb-40" data-bs-toggle="modal" data-bs-target="#callbackModal">Заказать
+              звонок</a>
+
+            <div class="footer-address-box">
+              <p class="font-medium color-dark">DEKA в РФ</p>
+              <p>123100, г. Москва, улица Сергея Макеева, 7с2</p>
+              <div class="footer-address-wrapper"><a href="tel:+78003221841">8 (800) 322-18-41</a><a
+                  href="mailto:order@dekalaser.ru">order@dekalaser.ru</a></div>
+            </div>
+
+            <div class="footer-address-box">
+              <p class="font-medium color-dark">DEKA в Италии</p>
+              <p>17 – 50041 Calenzano, Firenze (Italy)</p>
+              <div class="footer-address-wrapper">
+                <div class="phone-column">
+                  <a href="tel:+39055.88.74.942">(+39) 055.88.74.942</a>
+                  <a href="tel:+39055.88.32.884">(+39) 055.88.32.884</a>
+                </div>
+                <a href="#">P.IVA 04190470486</a>
+              </div>
+            </div>
+
+            <div class="company-logos">
+              <a href="index.html" class="logo logo-footer company-logos-box">
+                <span class="logo-icon"><img src="img/directalab.png" alt="DEKA"></span>
+                <span class="logo-description">Терапевтическая космоцевтика</span>
+              </a>
+              <a href="index.html" class="logo logo-footer company-logos-box">
+                <span class="logo-icon"><img src="img/skinelly.png" alt="DEKA"></span>
+                <span class="logo-description">Инъекционная косметология <br>и гинекология</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-8">
+            <div class="row">
+              <div class="col-12 col-lg-3 col-xl-4 mb-20">
+                <div class="menu-footer-column">
+                  <button class="footer-title-btn" type="button" data-bs-toggle="collapse"
+                    data-bs-target="[data-collapse='sections1']">
+                    Разделы
+                    <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                      </svg></span>
+                  </button>
+
+
+                  <div class="collapse" data-collapse="sections1">
+                    <ul class="menu-footer-list my-ul">
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="catalog.html">Каталог</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="reviews.html">Отзывы</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link" href="about.html">О
+                          компании</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="contacts.html">Контакты</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="search-models.html">Ищем моделей</a></li>
+                      <li class="menu-footer-list__item dropdown"><a class="menu-footer-list__link"
+                          data-bs-toggle="dropdown" href="patients.html">Пациентам
+                          <span class="dropdown-arrow"><svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                            </svg></span>
+                        </a>
+                        <div class="dropdown-menu">
+                          <ul class="dropdown-menu-list my-ul">
+                            <li><a class="dropdown-item" href="gallery.html">Галерея До/после</a></li>
+                            <li><a class="dropdown-item" href="maps-procedure.html">Где сделать процедуру</a></li>
+                            <li><a class="dropdown-item" href="question.html">Вопрос-ответ</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="menu-footer-column">
+                  <button class="footer-title-btn" type="button" data-bs-toggle="collapse"
+                    data-bs-target="[data-collapse='sections2']">
+                    Пациентам
+                    <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                      </svg></span>
+                  </button>
+
+
+                  <div class="collapse" data-collapse="sections2">
+                    <ul class="menu-footer-list my-ul">
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="maps-procedure.html">Где сделать
+                          процедуру</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="menu-footer-column">
+                  <button class="footer-title-btn h4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="[data-collapse='sections3']">
+                    Поддержка
+                    <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                      </svg></span>
+                  </button>
+
+                  <div class="collapse" data-collapse="sections3">
+                    <ul class="menu-footer-list my-ul">
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="education.html">Обучение</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="service.html">Техническая поддержка
+                          и сервис</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="marketing.html">Маркетинговая поддержка</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="master-class.html">Записаться на мастер-класс</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="delivery.html">Доставка</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="payment.html">Оплата</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-3 col-xl-4 mb-20">
+                <div class="menu-footer-column">
+                  <button class="footer-title-btn" type="button" data-bs-toggle="collapse"
+                    data-bs-target="[data-collapse='sections4']">
+                    Направления
+                    <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                      </svg></span>
+                  </button>
+
+
+                  <div class="collapse" data-collapse="sections4">
+                    <ul class="menu-footer-list my-ul">
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="estet-medical.html">Эстетическая медицина</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="gynecology.html">Гинекология</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="dermatology.html">Дерматология</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="phlebology.html">Флебология</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="accessories.html">Аксессуары</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link" href="deka-expert.html">Deka
+                          Expert Club</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="menu-footer-column">
+                  <button class="footer-title-btn" type="button" data-bs-toggle="collapse"
+                    data-bs-target="[data-collapse='sections5']">
+                    Блог
+                    <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                      </svg></span>
+                  </button>
+
+
+                  <div class="collapse" data-collapse="sections5">
+                    <ul class="menu-footer-list my-ul">
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link" href="news.html">Новости</a>
+                      </li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="articles.html">Статьи</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6 col-xl-4">
+                <div class="menu-footer-column">
+                  <button class="footer-title-btn" type="button" data-bs-toggle="collapse"
+                    data-bs-target="[data-collapse='sections6']">
+                    Оборудование
+                    <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                      </svg></span>
+                  </button>
+
+
+                  <div class="collapse" data-collapse="sections6">
+                    <ul class="menu-footer-list my-ul">
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="equipment1.html">Александритовые лазеры</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link" href="equipment2.html">Для
+                          удаления сосудов</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link" href="equipment3.html">Для
+                          омоложения кожи</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link" href="equipment4.html">CO2
+                          лазеры</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="equipment5.html">Аппараты для эпиляции</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="equipment6.html">Аппараты для коррекции фигуры</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="equipment7.html">Диодные лазеры</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="equipment8.html">Многопрофильная платформа</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="equipment9.html">Неодимовые лазеры</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="equipment10.html">Аппараты для удаления тату</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="equipment11.html">Аппараты для флебологии</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-cookie">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Настоящий сайт использует cookie-файлы. Продолжая использование сайта, вы даете свое согласие на
+              обработку данных.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex align-items-center flex-wrap">
+            <div class="copyright">© 2023 DEKA</div>
+            <a href="#" class="link-politiks color-light-grey text-decoration m-auto" target="_blank">Политика
+              конфиденциальности</a>
+            <a href="#" class="link-developer color-light-grey" target="_blank">Разработка сайта — <span>Маркетинг на
+                100</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="overlay"></div>
+
+  <!-- add plugins js-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/fancybox.umd.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <!-- add plugins js end-->
+
+  <script src="js/common.js"></script>
+
+</body>
+
+</html>

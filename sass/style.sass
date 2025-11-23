@@ -1,0 +1,539 @@
+@import 'fonts'
+@import 'vars'
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  font-weight: normal
+  background: #fff
+  color: $dark
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+  width: fit-content
+
+  &:hover, &:focus
+    text-decoration: none
+
+input, textarea, select
+  outline: none
+  box-shadow: none
+  appearance: none
+  padding: 0 0 10px
+  box-sizing: border-box
+  font-family: $default-font
+  border: none
+  border-bottom: 1px solid $stroke
+  border-radius: 0
+  width: 100%
+  height: 34px
+  background: transparent
+  color: $light-pink
+  font-size: 16px
+  font-weight: normal
+  cursor: pointer
+  transtion: .3s ease
+  &::placeholder
+    color: $light-pink
+
+  &:hover, &:focus, &:active, &.active
+    outline: none
+    box-shadow: none
+    border-bottom-width: 2px
+    font-weight: 500
+    color: #fff
+    &::placeholder
+      color: #fff
+  &.error
+    border-bottom-color: #FF2929
+    color: $light-pink
+    &:placeholder
+      color: #fff
+
+input[type="radio"], input[type="checkbox"]
+  width: auto
+  height: auto
+  appearance: auto
+  margin: 0 5px 0 0
+  display: inline
+
+label
+  display: block
+  width: 100%
+  margin: 0 0 30px
+
+  &:last-child
+    margin: 0
+
+textarea
+  resize: none
+  padding: 12px 17px
+  height: 103px
+
+.form-footer
+  width: 100%
+  display: flex
+  align-items: flex-start
+  margin: 10px 0 0
+
+button, .btn
+  outline: none
+  transition: .3s ease
+  cursor: pointer
+  box-shadow: none
+  font-family: $default-font
+  padding: 0
+  margin: 0
+  border: none
+  border-radius: 0
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  padding: 12px 32px
+  font-size: 16px
+  font-weight: 500
+  height: 56px
+  border-radius: 8px
+  transition: 0.3s ease
+
+.btn-accent
+  background: $violet
+  color: #fff
+  fill: #fff
+  &.active, &:active
+    background: $violet-active
+    color: #fff
+    fill: #fff
+  &:hover, &:focus
+    background: $violet
+    color: #fff
+    fill: #fff
+  &.disabled, &:disabled
+    background: $stroke
+    color: #fff
+    fill: #fff
+
+.btn-border
+  background: $white
+  border: 1px solid $stroke
+  color: $violet
+  &.active, &:active
+    background: $white
+    border-color: $violet
+    color: $violet
+  &:hover, &:focus
+    background: $violet
+    color: #fff
+    border-color: $violet
+  &.disabled, &:disabled
+    background: $stroke
+    color: #fff
+    border-color: $stroke
+
+.btn-pink
+  background: $light-pink
+  color: $violet
+  fill: $violet
+  &.active, &:active
+    background: $violet-active
+    color: $white
+    fill: $white
+  &:hover, &:focus
+    background: $violet
+    color: $white
+    fill: $white
+  &.disabled, &:disabled
+    background: rgba($white, .4)
+    color: $white
+    fill: $white
+
+.svg-icon
+  display: inline-block
+  width: 100%
+  height: 100%
+
+strong, b
+  font-weight: bold
+  display: inline-block
+
+ul, ol
+  padding: 0 0 0 20px
+
+.my-ul
+  list-style: none
+  padding: 0
+
+.list-dots
+  list-style-type: disc
+
+h1, .h1
+  font-size: 38px
+  line-height: 48px
+  font-weight: 500
+  width: 100%
+  margin: 0 0 40px
+
+h2, .h2
+  font-size: 32px
+  line-height: 40px
+  font-weight: 500
+  width: 100%
+  margin: 0 0 20px
+
+h3, .h3
+  font-size: 22px
+  line-height: 28px
+  font-weight: 600
+  width: 100%
+  margin: 0
+
+h4, .h4
+  font-size: 18px
+  line-height: 26px
+  font-weight: 600
+  width: 100%
+  margin: 0
+
+h5, .h5
+  font-size: 18px
+  line-height: 26px
+  font-weight: 500
+  width: 100%
+  margin: 0
+
+.link
+  font-size: 18px
+  font-weight: 500
+
+.menu
+  font-size: 16px
+  line-height: 26px
+
+.box-text, .text, .bold-text
+  font-size: 16px
+  line-height: 24px
+
+.small-text
+  font-size: 14px
+  line-height: 22px
+
+.description-text
+  font-size: 12px
+  line-height: 18px
+
+.mb-14
+  margin-bottom: 14px 
+
+.mb-20
+  margin-bottom: 20px  
+
+.mb-30
+  margin-bottom: 30px
+
+.mb-40
+  margin-bottom: 40px
+
+.m-100
+  margin: 100px 0
+
+.mt-100
+  margin-top: 100px
+
+.font-medium
+  font-weight: 500
+
+.font-bold
+  font-weight: 700
+
+a.color-light-grey
+  color: $light-grey
+  &:hover
+    color: $violet
+
+a.color-accent
+  color: $violet
+  fill: $violet
+  &:active, &.active
+    color: $violet-active
+    fill: $violet-active
+  &:hover, &:focus
+    color: $violet
+    fill: $violet
+
+a.color-inherit
+  color: inherit
+  &:hover
+    color: $violet
+
+.color-dark
+  color: $dark    
+
+.bg-green
+  background: $green
+
+.text-decoration
+  text-decoration: underline
+
+.container
+  max-width: 1350px
+  padding: 0 15px
+
+.row
+  margin: 0 -15px
+  >*
+    padding: 0 15px
+
+.container-fluid
+  padding: 0 15px
+
+.link-read-more
+  font-weight: 500
+  svg
+    width: 24px
+    height: 24px
+
+.link-arrow
+  border-radius: 50%
+  width: 60px
+  height: 60px
+  padding: 23px
+
+.dropdown
+  [data-bs-toggle="dropdown"]
+    position: relative
+    display: flex
+    align-items: center
+    &:after
+      display: none
+
+.dropdown-arrow
+  fill: $grey
+  width: 24px
+  height: 24px
+  margin: 0 0 0 5px
+  @include d-flex      
+
+//  plugins
+.slick-slider
+  width: 100%
+
+.slick-slide
+  outline: none
+
+.slick-arrow
+  position: absolute
+  z-index: 1
+  opacity: 1
+  padding: 0
+  width: 48px
+  height: 48px
+  border-radius: 50%
+  padding: 12px
+  top: 50%
+  transform: translate(0,-50%)
+  @include d-flex
+  &.slick-disabled
+    background: rgba(#fff, .4)
+    fill: #fff
+    color: #fff
+  &.btn-accent
+    fill: #fff
+    &.slick-disabled
+      background: $light-pink
+      fill: $violet
+
+.slick-prev
+  left: 31px
+
+.slick-next
+  right: 31px
+
+.slick-arrow-v2
+  &.slick-prev
+    left: -78px
+  &.slick-next
+    right: -78px
+
+.slick-dots
+  position: relative
+  margin: 30px auto 0
+  width: 100%
+  bottom: 0
+  padding: 0 30px
+  list-style: none
+  display: flex
+  align-items: center
+  justify-content: center
+  li
+    width: 10px
+    height: 10px
+    border-radius: 5px
+    background: $stroke
+    margin: 0 5px 0 0
+    cursor: pointer
+    transition: .3s ease
+    &:last-child
+      margin: 0
+    &.slick-active
+      width: 20px
+      background: $violet
+    button
+      display: none
+
+.slider-stretch
+  .slick-list
+    margin: 0 -15px
+  .slick-track
+    display: flex
+    align-items: stretch
+  .slick-slide
+    height: auto
+    margin: 0 15px
+
+.slider-style2
+  .slick-dots
+    position: relative
+    bottom: 0
+    margin: 30px auto 0
+
+.video-wrapper
+  width: 100%
+  overflow: hidden
+  position: relative
+  z-index: 1
+  border-radius: 10px
+  cursor: pointer
+  @include d-flex
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    width: 650px
+    height: 249px
+    background: url('../img/video-bg.svg') no-repeat center
+    background-size: 100%
+    z-index: 1
+  &:after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    border-radius: 50%
+    width: 100px
+    height: 100px
+    background: rgba(#000, .2) url('../img/play-icon.svg') no-repeat center
+    background-size: 23px
+    backdrop-filter: blur(10px)
+    transition: .3s ease
+
+  &:hover
+    &:after
+      background: $violet-active url('../img/play-icon.svg') no-repeat center
+      background-size: 23px
+  &:focus
+    &:after
+      background: $violet url('../img/play-icon.svg') no-repeat center
+      background-size: 23px
+  &__img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 10px
+
+//checkbox my
+.label-checkbox
+  position: relative
+  display: flex
+  align-items: flex-start
+  color: $stroke
+  font-size: 12px
+  line-height: 18px
+  font-weight: 500
+  font-family: $default-font
+  a
+    display: inline
+  input
+    display: none
+    &:checked ~ .label-checkbox__custom
+      background: #fff url("../img/checked.svg") no-repeat center
+      background-size: 12px
+      border-color: #fff
+    &.active, &:active
+      ~ .label-checkbox__custom
+          border-color: #fff
+          background: url("../img/checked.svg") no-repeat center
+          background-size: 12px
+  &__custom
+    margin: 0 10px 0 0
+    position: relative
+    border-radius: 4px
+    border: 1.5px solid #fff
+    background: transparent
+    width: 20px
+    height: 20px
+    min-width: 20px
+    cursor: pointer
+    
+
+
+.inp-check
+//checkbox my end
