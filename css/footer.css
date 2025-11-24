@@ -114,6 +114,7 @@ footer {
 .logo-footer .logo-description {
   padding: 0 0 0 14px;
   margin: 0 0 0 14px;
+  max-width: 209px;
 }
 
 .company-logos-box {
@@ -192,4 +193,5 @@ footer {
 }
 .menu-footer-list a:hover {
   color: #5A3FC3;
+  text-indent: 15px;
 }

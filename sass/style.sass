@@ -84,7 +84,7 @@ input, textarea, select
   font-size: 16px
   font-weight: normal
   cursor: pointer
-  transtion: .3s ease
+  transition: .3s ease
   &::placeholder
     color: $light-pink
 
@@ -280,10 +280,10 @@ h5, .h5
   line-height: 18px
 
 .mb-14
-  margin-bottom: 14px 
+  margin-bottom: 14px
 
 .mb-20
-  margin-bottom: 20px  
+  margin-bottom: 20px
 
 .mb-30
   margin-bottom: 30px
@@ -324,7 +324,7 @@ a.color-inherit
     color: $violet
 
 .color-dark
-  color: $dark    
+  color: $dark
 
 .bg-green
   background: $green
@@ -357,7 +357,7 @@ a.color-inherit
   padding: 23px
 
 .dropdown
-  [data-bs-toggle="dropdown"]
+  [data-bs-toggle='dropdown']
     position: relative
     display: flex
     align-items: center
@@ -369,7 +369,59 @@ a.color-inherit
   width: 24px
   height: 24px
   margin: 0 0 0 5px
-  @include d-flex      
+  @include d-flex
+
+.dropdown-toggle
+  padding: 0
+  border-radius: 0
+  border: none
+  color: $grey
+  fill: $grey
+  font-size: 16px
+  line-height: 20px
+  &.show
+    .dropdown-arrow
+      transform: rotate(180deg)
+
+.dropdown-menu
+  border: none
+  border-radius: 0 0 10px 10px
+  background: #fff
+  padding: 20px
+  box-shadow: 0px 3px 14px 0px #29224624
+  font-size: 16px
+  line-height: 24px
+  font-weight: 500
+
+.dropdown-item
+  padding: 0
+  margin: 0 0 14px
+  color: $dark
+  font-weight: 500
+  &:hover, &:focus
+    background: transparent
+    color: $violet
+  &:last-child
+    margin: 0
+
+.dropdown-menu-list
+  li
+    margin: 0 0 14px
+    &:last-child
+      margin: 0
+
+.scrollbar-my
+  &::-webkit-scrollbar
+    width: 4px
+    background-color: $light-pink
+  &::-webkit-scrollbar-thumb
+    background-color: $light-pink
+    border-radius: 5px
+    -webkit-box-shadow: inset 0 0 4px $light-pink
+  &::-webkit-scrollbar-track
+    -webkit-box-shadow: inset 0 0 4px $light-pink
+    border-radius: 5px
+    background-color: $light-pink
 
 //  plugins
 .slick-slider
@@ -519,9 +571,9 @@ a.color-inherit
       border-color: #fff
     &.active, &:active
       ~ .label-checkbox__custom
-          border-color: #fff
-          background: url("../img/checked.svg") no-repeat center
-          background-size: 12px
+        border-color: #fff
+        background: url("../img/checked.svg") no-repeat center
+        background-size: 12px
   &__custom
     margin: 0 10px 0 0
     position: relative
@@ -532,8 +584,6 @@ a.color-inherit
     height: 20px
     min-width: 20px
     cursor: pointer
-    
-
 
 .inp-check
 //checkbox my end

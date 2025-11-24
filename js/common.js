@@ -153,3 +153,67 @@ $(function () {
   // Выполняем только один раз при загрузке
   initFooterCollapse();
 });
+
+
+// search 
+$(function () {
+
+  const $form = $('.form-search');
+  const $input = $form.find('input[name="search"]');
+  const $btnSearch = $form.find('.form-search__btn');
+  const $btnClose = $form.find('.form-search__btn-close');
+  const $resultBox = $('.search-result-box');
+
+  function updateButtons() {
+    const hasText = $input.val().trim().length > 0;
+
+    if (hasText) {
+      $btnSearch.hide();
+      $btnClose.addClass('visible');
+    } else {
+      $btnSearch.show();
+      $btnClose.removeClass('visible');
+    }
+  }
+
+  function openSearch() {
+    $form.addClass('active');
+    $resultBox.fadeIn(150);
+    updateButtons();
+  }
+
+  function closeSearch() {
+    $form.removeClass('active');
+    $resultBox.fadeOut(150);
+
+    $input.val('');
+    updateButtons();
+  }
+
+  // Фокус или ввод текста
+  $input.on('focus input', function () {
+    openSearch();       // всегда открываем
+    updateButtons();    // показываем нужные иконки
+  });
+
+  // Клик на крестик
+  $btnClose.on('click', function (e) {
+    e.preventDefault();
+    closeSearch();
+  });
+
+  // Клик вне блока поиска
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest('.search-wrapper').length) {
+      closeSearch();
+    }
+  });
+
+  // Не закрывать при движении мыши (твоё условие оставил, но поправил)
+  $resultBox.on('mouseleave', function () {
+    if ($input.val().trim() === '') {
+      closeSearch();
+    }
+  });
+
+});
