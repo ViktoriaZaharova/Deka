@@ -10,8 +10,17 @@ $('.home-slider').slick({
     dots: true,
     infinite: false,
     arrows: true,
+    autoplay: true,
     prevArrow: '<button type="button" class="slick-prev btn-pink"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
     nextArrow: '<button type="button" class="slick-next btn-pink"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
+    responsive: [
+    {
+      breakpoint: 1440,
+      settings: {
+        arrows: false,
+      }
+    },
+  ]
 });
 
 $('.popular-category-slider').slick({
@@ -19,13 +28,14 @@ $('.popular-category-slider').slick({
     arrows: true,
     dots: true,
     infinite: false,
+    autoplay: true,
     prevArrow: '<button type="button" class="slick-prev btn-accent"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
     nextArrow: '<button type="button" class="slick-next btn-accent"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
     responsive: [
     {
       breakpoint: 1200,
       settings: {
-        slidesToShow: 4,
+        slidesToShow: 4,      
       }
     },
     {
@@ -38,6 +48,9 @@ $('.popular-category-slider').slick({
       breakpoint: 768,
       settings: {
         slidesToShow: 2,
+        arrows: false,
+        variableWidth: true,
+        infinite: true,
       }
     },
     {
@@ -54,13 +67,22 @@ $('.reviews-slider').slick({
     slidesToShow: 3,
     dots: true,
     arrows: true,
+    autoplay: true,
     prevArrow: '<button type="button" class="slick-prev btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
     nextArrow: '<button type="button" class="slick-next btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
     responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 992,
       settings: {
         slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        variableWidth: true,
       }
     },
     {
@@ -77,6 +99,7 @@ $('.hits-slider').slick({
     slidesToShow: 4,
     arrows: true,
     dots: true,
+    autoplay: true,
     prevArrow: '<button type="button" class="slick-prev btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
     nextArrow: '<button type="button" class="slick-next btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
     responsive: [
@@ -89,7 +112,10 @@ $('.hits-slider').slick({
     {
       breakpoint: 768,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
+        arrows: false,
+        variableWidth: true,
+        infinite: true,
       }
     },
     {
@@ -108,8 +134,20 @@ $('.sales-slider').slick({
     arrows: true,
     dots: true,
     variableWidth: true,
+    autoplay: true,
     prevArrow: '<button type="button" class="slick-prev btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
     nextArrow: '<button type="button" class="slick-next btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
+    responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        variableWidth: true,
+        infinite: true,
+      }
+    }
+  ]
 });
 
 // reviews loader text
@@ -130,28 +168,54 @@ $(document).ready(function () {
   });
 });
 
-
-
 // footer collapse
 $(function () {
-  function initFooterCollapse() {
-    var isDesktop = window.innerWidth >= 992;
 
+  let lastIsDesktop = window.innerWidth >= 992;
+
+  function applyState(isDesktop) {
     $("[data-collapse]").each(function () {
-      var collapse = $(this);
+      const collapse = $(this);
+      const target = collapse.data("collapse");
+      const btn = $("[data-bs-target=\"[data-collapse='" + target + "']\"]");
 
       if (isDesktop) {
-        // при загрузке на ПК — открыть
         collapse.addClass("show");
+        btn.removeClass("collapsed");
       } else {
-        // при загрузке на мобилке — закрыть
         collapse.removeClass("show");
+        btn.addClass("collapsed");
       }
     });
   }
 
-  // Выполняем только один раз при загрузке
-  initFooterCollapse();
+  // Инициализация при загрузке
+  applyState(lastIsDesktop);
+
+  // Отслеживаем resize
+  $(window).on("resize", function () {
+    const isDesktop = window.innerWidth >= 992;
+
+    // меняем состояние только при переходе мобильная/десктоп
+    if (isDesktop !== lastIsDesktop) {
+      applyState(isDesktop);
+      lastIsDesktop = isDesktop;
+    }
+  });
+
+  // Bootstrap-collpase события для поворота стрелки
+  $("[data-collapse]").on("show.bs.collapse", function () {
+    const target = $(this).data("collapse");
+    const btn = $("[data-bs-target=\"[data-collapse='" + target + "']\"]");
+    btn.removeClass("collapsed");
+  });
+
+  $("[data-collapse]").on("hide.bs.collapse", function () {
+    const target = $(this).data("collapse");
+    const btn = $("[data-bs-target=\"[data-collapse='" + target + "']\"]");
+    btn.addClass("collapsed");
+  });
+
 });
 
 

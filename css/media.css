@@ -1,5 +1,184 @@
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 1300px) {
+  .callback-wrapper__img {
+    max-width: 500px;
+  }
+  .callback-wrapper__content {
+    width: calc(100% - 250px);
+    max-width: none;
+    padding: 50px 50px 50px 280px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .container {
+    padding: 0 24px;
+  }
+  .row {
+    margin: 0 -12px;
+  }
+  .m-100 {
+    margin: 80px 0;
+  }
+  .btn {
+    height: 48px;
+    padding: 10px 24px;
+  }
+  .slick-dots {
+    padding: 0 12px;
+  }
+  .home-slider {
+    background: url("../img/home-slide1-tablet.jpg") no-repeat center;
+    background-size: cover;
+    padding: 58px 0;
+  }
+  .home-slider .slick-dots {
+    bottom: 30px;
+  }
+  .home-slider h2 {
+    margin: 0 0 15px;
+  }
+  .home-slider h1, .home-slider .h1 {
+    margin: 0 0 20px;
+  }
+  .home-slider h1, .home-slider h2, .home-slider .h1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .popular-category {
+    margin: 80px 0;
+  }
+  .about-company__content {
+    max-width: none;
+  }
+  .about-company {
+    margin: 80px 0;
+  }
+  .about-company .text {
+    margin: 0 0 30px;
+  }
+  .about-company__video {
+    height: 403px;
+  }
+  .advantages-section {
+    padding: 80px 0 146px;
+    background-size: 400px;
+  }
+  .advantages-img {
+    max-width: 624px;
+    margin: 0 auto;
+  }
+  .advantages-wrapper {
+    padding: 40px 40px 10px;
+  }
+  .advantages-row {
+    margin: -146px auto 0;
+  }
+  .reviews-read-more {
+    margin: 14px 0 0;
+  }
+  .news-blog-card .link-arrow {
+    height: 60px;
+    width: 60px;
+  }
+  .sales-section {
+    margin: 50px 0 80px;
+  }
+  .callback-wrapper {
+    padding: 40px 0 0;
+  }
+  .callback-wrapper__img {
+    width: calc(100% - 100px);
+    max-width: none;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .callback-wrapper__content {
+    max-width: none;
+    width: 100%;
+    background: #BDA2F6;
+    padding: 380px 50px 50px 50px;
+  }
+  .form-callback {
+    max-width: none;
+  }
+  .form-callback .label-checkbox {
+    max-width: 282px;
+  }
+  .menu-footer-column {
+    margin: 0 0 20px;
+  }
+  .company-logos {
+    display: none;
+  }
+  .footer-top {
+    padding: 50px 0 20px;
+  }
+  .footer-bottom {
+    padding: 20px 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .popular-category .product-card {
+    width: 240px;
+  }
+  .reviews-slider, .popular-category-slider, .hits-slider, .sales-slider {
+    width: calc(100% + 15px);
+  }
+  .reviews-slider .slick-dots {
+    margin: 30px 0 0;
+  }
+  .reviews-card {
+    width: 420px;
+    padding: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .reviews-card .logo-clinik {
+    display: none;
+  }
+  .reviews-card__head {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    border-top: 1px solid #fff;
+    padding: 20px 0 0;
+    margin: 20px 0 0;
+  }
+  .reviews-card__body {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  .reviews-card__avatar {
+    display: none;
+  }
+  .reviews-card__name {
+    margin: 0;
+    padding: 0;
+  }
+  .reviews-card__position {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: normal;
+  }
+  .hits-card {
+    width: 307px;
+  }
+  .sales-card {
+    width: 525px;
+  }
+  .link-politiks {
+    max-width: 175px;
+  }
+}
 @media only screen and (max-width: 576px) {
   h1, .h1 {
     font-size: 28px;
@@ -40,6 +219,14 @@
   .btn {
     height: 48px;
     padding: 10px 24px;
+  }
+  .company-logos {
+    display: block;
+  }
+  .footer-cookie {
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 22px;
   }
 }
 @media only screen and (min-width: 992px) {

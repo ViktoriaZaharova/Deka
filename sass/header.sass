@@ -57,12 +57,20 @@ header
             color: $violet
             border-color: $violet
 
-.phone
-    color: $dark
-    font-weight: 500
+.header-contacts
     margin: 0 20px 0 0
-    &:hover
-        color: $violet
+    display: flex
+    align-items: center
+    &__link
+        color: $dark
+        font-weight: 500
+        &:hover
+            color: $violet
+    .mail
+        display: none
+        border-left: 1px solid $stroke
+        padding: 0 0 0 15px
+        margin: 0 0 0 15px
 
 .location-box
     display: flex

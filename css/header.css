@@ -80,13 +80,27 @@ header .list-social {
   border-color: #5A3FC3;
 }
 
-.phone {
+.header-contacts {
+  margin: 0 20px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header-contacts__link {
   color: #2F2940;
   font-weight: 500;
-  margin: 0 20px 0 0;
 }
-.phone:hover {
+.header-contacts__link:hover {
   color: #5A3FC3;
+}
+.header-contacts .mail {
+  display: none;
+  border-left: 1px solid #E6DEF4;
+  padding: 0 0 0 15px;
+  margin: 0 0 0 15px;
 }
 
 .location-box {
