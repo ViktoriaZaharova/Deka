@@ -11,7 +11,7 @@
   }
 }
 @media only screen and (max-width: 992px) {
-  .container {
+  .container, .container-fluid {
     padding: 0 24px;
   }
   .row {
@@ -183,6 +183,7 @@
   h1, .h1 {
     font-size: 28px;
     line-height: 34px;
+    margin: 0 0 20px;
   }
   h2, .h2 {
     font-size: 20px;
@@ -200,11 +201,14 @@
     font-size: 16px;
     line-height: 24px;
   }
+  .link {
+    font-size: 16px;
+  }
   .bold-text {
     font-size: 14px;
     line-height: 22px;
   }
-  .text {
+  .box-text, .text, .bold-text {
     font-size: 14px;
     line-height: 22px;
   }
@@ -220,6 +224,24 @@
     height: 48px;
     padding: 10px 24px;
   }
+  .mb-30 {
+    margin-bottom: 20px;
+  }
+  .container, .container-fluid {
+    padding: 0 20px;
+  }
+  .row {
+    margin: 0 -10px;
+  }
+  .row > * {
+    padding: 0 10px;
+  }
+  .m-100 {
+    margin: 40px 0;
+  }
+  .slick-dots {
+    margin: 20px auto 0;
+  }
   .company-logos {
     display: block;
   }
@@ -227,6 +249,83 @@
     padding: 10px 0;
     font-size: 14px;
     line-height: 22px;
+  }
+  .home-slider {
+    padding: 30px 10px 311px;
+    background: url("../img/home-slide1-mobile.jpg") no-repeat center;
+    background-size: cover;
+  }
+  .home-slider h2, .home-slider .h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .popular-category {
+    margin: 40px 0;
+  }
+  .popular-category .product-card {
+    width: 100%;
+  }
+  .reviews-slider, .popular-category-slider, .hits-slider, .sales-slider {
+    width: 100%;
+  }
+  .about-company {
+    margin: 40px 0;
+  }
+  .about-company .text {
+    margin: 0 0 20px;
+  }
+  .about-company__content {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .about-company__video {
+    height: 158px;
+  }
+  .video-wrapper:after {
+    width: 60px;
+    height: 60px;
+    background-size: 16px;
+  }
+  .advantages-section {
+    padding: 40px 0 317px;
+    background: #F7F4FF;
+  }
+  .advantages-section .mb-30 {
+    margin-bottom: 14px;
+  }
+  .advantages-row {
+    margin: -317px auto 0;
+  }
+  .advantages-wrapper {
+    padding: 20px;
+  }
+  .advantages-wrapper .mb-30 {
+    margin-bottom: 14px;
+  }
+  .advantages-wrapper .mb-30:last-child {
+    margin-bottom: 0;
+  }
+  .advantages-wrapper h3 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .advantages-wrapper-item {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .reviews-card {
+    width: 100%;
+    padding: 20px;
+  }
+  .hits-card {
+    width: 100%;
+  }
+  .hits-card__body {
+    padding: 28px 20px 20px;
+  }
+  .news-blog .link {
+    margin: 0 0 20px !important;
   }
 }
 @media only screen and (min-width: 992px) {
