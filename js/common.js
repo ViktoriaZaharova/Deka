@@ -292,3 +292,65 @@ $(function () {
   });
 
 });
+
+
+// header fixed
+$(function () {
+
+  const $header = $('header');
+  const $headerTop = $('.header-top');
+  const $headerBottom = $('.header-bottom');
+
+  let headerFullHeight = 0;
+  let collapsePoint = 0;
+  let isCollapsed = false;
+
+  // Пересчитываем высоту шапки
+  function recalc() {
+    headerFullHeight = $header.outerHeight(true);
+    collapsePoint = headerFullHeight;
+    $('body').css('padding-top', headerFullHeight + 'px');
+  }
+
+  $(window).on('load', function () {
+    recalc();
+  });
+
+  let resizeTimer;
+  $(window).on('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      recalc();
+    }, 150);
+  });
+
+  // Скролл
+  $(window).on('scroll', function () {
+    const scrollTop = $(this).scrollTop();
+
+    if (scrollTop >= collapsePoint) {
+      if (!isCollapsed) {
+        // скрываем верх и низ
+        $headerTop.fadeOut();
+        $headerBottom.fadeOut();
+
+        // добавляем класс на весь header
+        $header.addClass('header-fixed');
+
+        isCollapsed = true;
+      }
+    } else {
+      if (isCollapsed) {
+        // возвращаем верх и низ
+        $headerTop.fadeIn();
+        $headerBottom.fadeIn();
+
+        // убираем класс
+        $header.removeClass('header-fixed');
+
+        isCollapsed = false;
+      }
+    }
+  });
+
+});

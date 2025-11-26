@@ -1,8 +1,14 @@
 @import "vars"
 
 header
+    z-index: 5
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
     background: #fff
     border-bottom: 1px solid $stroke
+    transition: all .25s ease
     .list-social
         margin: 0 0 0 auto
 
@@ -11,10 +17,51 @@ header
     padding: 0
 
 .header-center
-    padding: 20px 0 0
+    padding: 20px 0
+    background: #fff
+    z-index: 3
+    width: 100%
 
 .header-bottom
     margin: 0 0 -1px
+
+
+.header-fixed
+    .header-center
+        .btn-callback
+            display: none    
+    .header-contacts .mail  
+        display: block  
+    .btn-burger
+        display: flex
+    .search-wrapper
+        max-width: 295px        
+
+.btn-burger
+    margin: 0 0 0 30px
+    width: 60px
+    height: 60px
+    min-width: 60px
+    border-radius: 50%
+    padding: 18px
+    background: $light-pink
+    fill: $violet
+    align-items: center
+    justify-content: center
+    display: none
+    &__icon-close
+        display: none
+    &.click
+        &__icon-open
+            display: none
+        &__icon-close
+            display: block
+    &:hover, &:focus
+        background: $violet
+        fill: #fff  
+    &.active, &:active
+        background: $violet-active
+        fill: #fff      
 
 .logo
     display: flex
@@ -49,7 +96,7 @@ header
         font-weight: 500
         color: $dark
         line-height: 26px
-        padding: 18.5px 0
+        padding: 0 0 17px
         text-transform: uppercase
         border-bottom: 3px solid transparent
         &:hover, &.active, &:active

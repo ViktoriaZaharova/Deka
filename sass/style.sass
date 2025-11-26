@@ -411,17 +411,20 @@ a.color-inherit
       margin: 0
 
 .scrollbar-my
+  scrollbar-width: thin
+  scrollbar-color: #6337ee #F7F4FF
+
   &::-webkit-scrollbar
     width: 4px
-    background-color: $light-pink
   &::-webkit-scrollbar-thumb
-    background-color: $light-pink
+    background: #6337ee
     border-radius: 5px
-    -webkit-box-shadow: inset 0 0 4px $light-pink
+    &:hover
+      background: #4e2bc7
   &::-webkit-scrollbar-track
-    -webkit-box-shadow: inset 0 0 4px $light-pink
+    background-color: #F7F4FF !important
     border-radius: 5px
-    background-color: $light-pink
+
 
 //  plugins
 .slick-slider

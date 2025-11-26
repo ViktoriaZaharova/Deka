@@ -1,6 +1,13 @@
 header {
+  z-index: 5;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
   background: #fff;
   border-bottom: 1px solid #E6DEF4;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 header .list-social {
   margin: 0 0 0 auto;
@@ -12,11 +19,64 @@ header .list-social {
 }
 
 .header-center {
-  padding: 20px 0 0;
+  padding: 20px 0;
+  background: #fff;
+  z-index: 3;
+  width: 100%;
 }
 
 .header-bottom {
   margin: 0 0 -1px;
+}
+
+.header-fixed .header-center .btn-callback {
+  display: none;
+}
+.header-fixed .header-contacts .mail {
+  display: block;
+}
+.header-fixed .btn-burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header-fixed .search-wrapper {
+  max-width: 295px;
+}
+
+.btn-burger {
+  margin: 0 0 0 30px;
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  padding: 18px;
+  background: #F7F4FF;
+  fill: #5A3FC3;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+.btn-burger__icon-close {
+  display: none;
+}
+.btn-burger.click__icon-open {
+  display: none;
+}
+.btn-burger.click__icon-close {
+  display: block;
+}
+.btn-burger:hover, .btn-burger:focus {
+  background: #5A3FC3;
+  fill: #fff;
+}
+.btn-burger.active, .btn-burger:active {
+  background: #6242E0;
+  fill: #fff;
 }
 
 .logo {
@@ -70,7 +130,7 @@ header .list-social {
   font-weight: 500;
   color: #2F2940;
   line-height: 26px;
-  padding: 18.5px 0;
+  padding: 0 0 17px;
   text-transform: uppercase;
   border-bottom: 3px solid transparent;
 }
