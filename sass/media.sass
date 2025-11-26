@@ -157,6 +157,14 @@
     .link-politiks
         max-width: 175px
 
+@media only screen and (max-width: 676px)
+    .link-politiks
+        max-width: none
+        margin: 10px 0 14px !important
+
+    .copyright, .link-developer
+        width: 100%    
+
 @media only screen and (max-width: 576px)
     h1, .h1
         font-size: 28px
@@ -180,7 +188,7 @@
         line-height: 24px
 
     .link
-        font-size: 16px    
+        font-size: 16px
 
     .bold-text
         font-size: 14px
@@ -203,7 +211,7 @@
         padding: 10px 24px
 
     .mb-30
-        margin-bottom: 20px    
+        margin-bottom: 20px
 
     .container, .container-fluid
         padding: 0 20px
@@ -214,13 +222,70 @@
             padding: 0 10px
 
     .m-100
-        margin: 40px 0   
+        margin: 40px 0
+
+    .mb-40
+        margin-bottom: 30px
+
+    label
+        margin: 0 0 14px
+        &:last-child
+            margin: 0
+
+    .form-footer
+        flex-direction: column
+        align-items: flex-start
+        margin: 20px 0 0
+
+    footer
+        .list-social
+            margin: 30px 0 20px
+
+    .footer-address-box
+        margin: 0 0 20px
+        font-size: 14px
+        line-height: 22px
+        &:last-child
+            margin: 0
+        p
+            margin: 0 0 10px
+            &:last-child
+                margin: 0
+
+    .footer-address-wrapper
+        flex-direction: column
+        align-items: flex-start
+        a
+            &:last-child
+                margin: 10px 0 0
+                padding: 0
+                border: none
+
+    .phone-column
+        a
+            &:last-child
+                margin: 0
+
+    .company-logos-box
+        margin: 0 0 20px
+        &:last-child
+            margin: 0 0 20px
+        .logo-icon img
+            width: 120px
+
+    .menu-footer-column
+        margin: 0 0 14px
+        &:last-child
+            margin: 0 0 14px        
 
     .slick-dots
-        margin: 20px auto 0         
+        margin: 20px auto 0
 
     .company-logos
         display: block
+
+    .footer-top
+        padding: 40px 0 16px
 
     .footer-cookie
         padding: 10px 0
@@ -245,13 +310,13 @@
         width: 100%
 
     .about-company
-        margin: 40px 0 
+        margin: 40px 0
         .text
             margin: 0 0 20px
         &__content
             padding: 20px
             font-size: 14px
-            line-height: 20px 
+            line-height: 20px
         &__video
             height: 158px
 
@@ -294,8 +359,73 @@
 
     .news-blog
         .link
-            margin: 0 0 20px !important    
-    
+            margin: 0 0 20px !important
+
+    .news-blog-card
+        padding: 20px
+        .box-text
+            padding: 0
+            br
+                display: none
+        &__title
+            margin: 14px 0
+        .link-arrow
+            position: relative
+            z-index: 1
+            right: 0
+            bottom: 0
+            width: 52px
+            height: 52px
+            padding: 17px
+            margin: 14px 0 0
+
+    .sales-card
+        width: 100%
+        min-width: auto
+        padding: 20px
+        flex-direction: column
+        align-items: flex-start
+        position: relative
+        &__img
+            width: 100%
+            justify-content: center
+        &__body
+            width: 100%
+            padding: 20px 0 0
+        .list-labels
+            position: absolute
+            top: 0
+            left: 0
+            padding: 20px
+            justify-content: flex-end
+        .price-wrapper
+            margin: 14px 0 20px
+            flex-direction: row
+            align-items: flex-start
+            display: flex
+        .price
+            width: fit-content
+        .old-price
+            margin: 0 0 0 10px
+            width: fit-content
+
+    .callback-wrapper__content
+        padding: 140px 20px 20px 20px
+        h2, .h2
+            margin: 0 0 10px
+        .box-text
+            margin: 0 0 20px
+
+    .callback-wrapper__img
+        width: calc( 100% - 40px )
+        height: 162px
+        border-radius: 10px
+
+    .form-callback [type=submit]
+        margin: 0 0 10px
+
+    .form-callback .label-checkbox
+        max-width: none
 
 @media only screen and (max-width: 480px)
 

@@ -179,6 +179,15 @@
     max-width: 175px;
   }
 }
+@media only screen and (max-width: 676px) {
+  .link-politiks {
+    max-width: none;
+    margin: 10px 0 14px !important;
+  }
+  .copyright, .link-developer {
+    width: 100%;
+  }
+}
 @media only screen and (max-width: 576px) {
   h1, .h1 {
     font-size: 28px;
@@ -239,11 +248,82 @@
   .m-100 {
     margin: 40px 0;
   }
+  .mb-40 {
+    margin-bottom: 30px;
+  }
+  label {
+    margin: 0 0 14px;
+  }
+  label:last-child {
+    margin: 0;
+  }
+  .form-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 20px 0 0;
+  }
+  footer .list-social {
+    margin: 30px 0 20px;
+  }
+  .footer-address-box {
+    margin: 0 0 20px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .footer-address-box:last-child {
+    margin: 0;
+  }
+  .footer-address-box p {
+    margin: 0 0 10px;
+  }
+  .footer-address-box p:last-child {
+    margin: 0;
+  }
+  .footer-address-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer-address-wrapper a:last-child {
+    margin: 10px 0 0;
+    padding: 0;
+    border: none;
+  }
+  .phone-column a:last-child {
+    margin: 0;
+  }
+  .company-logos-box {
+    margin: 0 0 20px;
+  }
+  .company-logos-box:last-child {
+    margin: 0 0 20px;
+  }
+  .company-logos-box .logo-icon img {
+    width: 120px;
+  }
+  .menu-footer-column {
+    margin: 0 0 14px;
+  }
+  .menu-footer-column:last-child {
+    margin: 0 0 14px;
+  }
   .slick-dots {
     margin: 20px auto 0;
   }
   .company-logos {
     display: block;
+  }
+  .footer-top {
+    padding: 40px 0 16px;
   }
   .footer-cookie {
     padding: 10px 0;
@@ -326,6 +406,104 @@
   }
   .news-blog .link {
     margin: 0 0 20px !important;
+  }
+  .news-blog-card {
+    padding: 20px;
+  }
+  .news-blog-card .box-text {
+    padding: 0;
+  }
+  .news-blog-card .box-text br {
+    display: none;
+  }
+  .news-blog-card__title {
+    margin: 14px 0;
+  }
+  .news-blog-card .link-arrow {
+    position: relative;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    width: 52px;
+    height: 52px;
+    padding: 17px;
+    margin: 14px 0 0;
+  }
+  .sales-card {
+    width: 100%;
+    min-width: auto;
+    padding: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative;
+  }
+  .sales-card__img {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .sales-card__body {
+    width: 100%;
+    padding: 20px 0 0;
+  }
+  .sales-card .list-labels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .sales-card .price-wrapper {
+    margin: 14px 0 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .sales-card .price {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .sales-card .old-price {
+    margin: 0 0 0 10px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .callback-wrapper__content {
+    padding: 140px 20px 20px 20px;
+  }
+  .callback-wrapper__content h2, .callback-wrapper__content .h2 {
+    margin: 0 0 10px;
+  }
+  .callback-wrapper__content .box-text {
+    margin: 0 0 20px;
+  }
+  .callback-wrapper__img {
+    width: calc(100% - 40px);
+    height: 162px;
+    border-radius: 10px;
+  }
+  .form-callback [type=submit] {
+    margin: 0 0 10px;
+  }
+  .form-callback .label-checkbox {
+    max-width: none;
   }
 }
 @media only screen and (min-width: 992px) {
