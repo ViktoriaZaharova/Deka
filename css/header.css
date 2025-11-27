@@ -35,7 +35,7 @@ header .list-social {
 .header-fixed .header-contacts .mail {
   display: block;
 }
-.header-fixed .btn-burger {
+.header-fixed .dropdown-burger {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,9 +43,16 @@ header .list-social {
 .header-fixed .search-wrapper {
   max-width: 295px;
 }
+.header-fixed .header-contacts {
+  margin: 0;
+}
+
+.dropdown-burger {
+  margin: 0 0 0 30px;
+  display: none;
+}
 
 .btn-burger {
-  margin: 0 0 0 30px;
   width: 60px;
   height: 60px;
   min-width: 60px;
@@ -59,24 +66,50 @@ header .list-social {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .btn-burger__icon-close {
   display: none;
+  fill: none;
+  stroke: #5A3FC3;
 }
-.btn-burger.click__icon-open {
+.btn-burger svg {
+  width: 24px;
+  height: 24px;
+}
+.btn-burger.show .btn-burger__icon-open {
   display: none;
 }
-.btn-burger.click__icon-close {
+.btn-burger.show .btn-burger__icon-close {
   display: block;
 }
 .btn-burger:hover, .btn-burger:focus {
   background: #5A3FC3;
   fill: #fff;
 }
+.btn-burger:hover .btn-burger__icon-close, .btn-burger:focus .btn-burger__icon-close {
+  stroke: #fff;
+}
 .btn-burger.active, .btn-burger:active {
   background: #6242E0;
   fill: #fff;
+}
+.btn-burger.active .btn-burger__icon-close, .btn-burger:active .btn-burger__icon-close {
+  stroke: #fff;
+}
+
+.dropdown-menu-toggle {
+  padding: 20px 20px 0;
+  z-index: 5;
+  margin: 20px 0 0 !important;
+  min-width: 828px;
+  right: 0 !important;
+  left: auto !important;
+  -webkit-transform: none !important;
+          transform: none !important;
+  top: 100% !important;
 }
 
 .logo {
@@ -422,4 +455,29 @@ header .list-social {
 }
 .search-result-box__link:hover, .search-result-box__link:focus {
   color: #5A3FC3;
+}
+
+.btn-search-mobile {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #F7F4FF;
+  padding: 18px;
+  fill: #5A3FC3;
+}
+.btn-search-mobile.active, .btn-search-mobile:active {
+  background: #6242E0;
+  fill: #fff;
+}
+.btn-search-mobile:hover, .btn-search-mobile:focus {
+  background: #5A3FC3;
+  fill: #fff;
 }

@@ -304,53 +304,85 @@ $(function () {
   let headerFullHeight = 0;
   let collapsePoint = 0;
   let isCollapsed = false;
+  const breakpoint = 1200;
 
-  // Пересчитываем высоту шапки
   function recalc() {
     headerFullHeight = $header.outerHeight(true);
     collapsePoint = headerFullHeight;
+
     $('body').css('padding-top', headerFullHeight + 'px');
   }
 
+  // Мобильный режим — всё фиксировано
+  function applyMobileMode() {
+    isCollapsed = false;
+
+    // Сбрасываем анимации + показываем всё
+    $headerTop.stop(true, true).show();
+    $headerBottom.stop(true, true).show();
+
+    // фиксируем
+    $header.addClass('header-fixed');
+  }
+
+  // Десктоп — перед скроллом шапка обычная
+  function resetDesktopMode() {
+    isCollapsed = false;
+
+    // Останавливаем анимации и показываем всё
+    $headerTop.stop(true, true).show();
+    $headerBottom.stop(true, true).show();
+
+    // Удаляем фикс. класс 100%
+    $header.removeClass('header-fixed');
+  }
+
+  // Скролл для десктопа
+  function handleDesktopScroll() {
+    const scrollTop = $(window).scrollTop();
+
+    if (scrollTop >= collapsePoint) {
+      if (!isCollapsed) {
+        $headerTop.stop(true, true).fadeOut(200);
+        $headerBottom.stop(true, true).fadeOut(200);
+        $header.addClass('header-fixed');
+        isCollapsed = true;
+      }
+    } else {
+      if (isCollapsed) {
+        $headerTop.stop(true, true).fadeIn(200);
+        $headerBottom.stop(true, true).fadeIn(200);
+        $header.removeClass('header-fixed');
+        isCollapsed = false;
+      }
+    }
+  }
+
+  // Переключение мобильный/десктоп
+  function updateMode() {
+    if (window.innerWidth <= breakpoint) {
+      $(window).off('scroll', handleDesktopScroll);
+      applyMobileMode();
+    } else {
+      resetDesktopMode();
+      $(window).on('scroll', handleDesktopScroll);
+    }
+  }
+
+  // Инициализация
   $(window).on('load', function () {
     recalc();
+    updateMode();
   });
 
+  // Resize
   let resizeTimer;
   $(window).on('resize', function () {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
       recalc();
+      updateMode();
     }, 150);
-  });
-
-  // Скролл
-  $(window).on('scroll', function () {
-    const scrollTop = $(this).scrollTop();
-
-    if (scrollTop >= collapsePoint) {
-      if (!isCollapsed) {
-        // скрываем верх и низ
-        $headerTop.fadeOut();
-        $headerBottom.fadeOut();
-
-        // добавляем класс на весь header
-        $header.addClass('header-fixed');
-
-        isCollapsed = true;
-      }
-    } else {
-      if (isCollapsed) {
-        // возвращаем верх и низ
-        $headerTop.fadeIn();
-        $headerBottom.fadeIn();
-
-        // убираем класс
-        $header.removeClass('header-fixed');
-
-        isCollapsed = false;
-      }
-    }
   });
 
 });

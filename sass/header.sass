@@ -32,13 +32,18 @@ header
             display: none    
     .header-contacts .mail  
         display: block  
-    .btn-burger
+    .dropdown-burger
         display: flex
     .search-wrapper
-        max-width: 295px        
+        max-width: 295px 
+    .header-contacts
+        margin: 0     
+
+.dropdown-burger
+    margin: 0 0 0 30px    
+    display: none          
 
 .btn-burger
-    margin: 0 0 0 30px
     width: 60px
     height: 60px
     min-width: 60px
@@ -48,20 +53,39 @@ header
     fill: $violet
     align-items: center
     justify-content: center
-    display: none
+    display: flex
     &__icon-close
         display: none
-    &.click
-        &__icon-open
+        fill: none
+        stroke: $violet
+    svg
+        width: 24px
+        height: 24px    
+    &.show
+        .btn-burger__icon-open
             display: none
-        &__icon-close
+        .btn-burger__icon-close
             display: block
     &:hover, &:focus
         background: $violet
         fill: #fff  
+        .btn-burger__icon-close
+            stroke: #fff
     &.active, &:active
         background: $violet-active
-        fill: #fff      
+        fill: #fff  
+        .btn-burger__icon-close
+            stroke: #fff    
+
+.dropdown-menu-toggle
+    padding: 20px 20px 0
+    z-index: 5
+    margin: 20px 0 0 !important
+    min-width: 828px
+    right: 0 !important
+    left: auto !important
+    transform: none !important
+    top: 100% !important
 
 .logo
     display: flex
@@ -291,3 +315,21 @@ header
             margin: 0
         &:hover, &:focus
             color: $violet
+
+.btn-search-mobile
+    width: 60px
+    height: 60px
+    min-width: 60px
+    border-radius: 50%
+    display: none
+    align-items: center
+    justify-content: center
+    background: $light-pink
+    padding: 18px
+    fill: $violet
+    &.active, &:active
+        background: $violet-active
+        fill: #fff  
+    &:hover, &:focus
+        background: $violet
+        fill: #fff  
