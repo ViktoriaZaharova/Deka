@@ -306,35 +306,37 @@ $(function () {
   let isCollapsed = false;
   const breakpoint = 1200;
 
+  // корректный пересчёт: показываем всё, снимаем фиксации, мерим, затем восстанавливаем нужное состояние
   function recalc() {
-    headerFullHeight = $header.outerHeight(true);
+    // остановим анимации и временно покажем всё, чтобы измерение было корректным
+    $headerTop.stop(true, true).show();
+    $headerBottom.stop(true, true).show();
+    $header.removeClass('header-fixed');
+
+    // даём браузеру одну итерацию, но это синхронное измерение
+    headerFullHeight = $header.outerHeight(true) || 0;
     collapsePoint = headerFullHeight;
 
+    // ставим padding-top для body — всегда, чтобы не было скачков
     $('body').css('padding-top', headerFullHeight + 'px');
   }
 
   // Мобильный режим — всё фиксировано
   function applyMobileMode() {
     isCollapsed = false;
-
-    // Сбрасываем анимации + показываем всё
     $headerTop.stop(true, true).show();
     $headerBottom.stop(true, true).show();
-
-    // фиксируем
     $header.addClass('header-fixed');
+    // padding уже выставлен в recalc
   }
 
-  // Десктоп — перед скроллом шапка обычная
+  // Десктоп — сброс перед скроллом
   function resetDesktopMode() {
     isCollapsed = false;
-
-    // Останавливаем анимации и показываем всё
     $headerTop.stop(true, true).show();
     $headerBottom.stop(true, true).show();
-
-    // Удаляем фикс. класс 100%
     $header.removeClass('header-fixed');
+    // padding уже выставлен в recalc
   }
 
   // Скролл для десктопа
@@ -361,16 +363,53 @@ $(function () {
   // Переключение мобильный/десктоп
   function updateMode() {
     if (window.innerWidth <= breakpoint) {
+      // отключаем десктоп-скролл
       $(window).off('scroll', handleDesktopScroll);
       applyMobileMode();
     } else {
+      // включаем десктоп-логику и приводим состояние в соответствие
       resetDesktopMode();
       $(window).on('scroll', handleDesktopScroll);
+      // сразу применим стейт на случай, если страница загрузилась не на верхней позиции
+      handleDesktopScroll();
     }
   }
 
-  // Инициализация
+  // Инициализация: вызываем recalc в нескольких ситуациях, чтобы поймать окончательную высоту
+  function init() {
+    // первый быстрый пересчёт (DOM готов)
+    recalc();
+    updateMode();
+
+    // повторный пересчёт после полной загрузки ресурсов (картинок)
+    $(window).one('load', function () {
+      recalc();
+      updateMode();
+    });
+
+    // если поддерживается API шрифтов — дождёмся их
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () {
+        // через микротик, чтобы браузер успел применить
+        setTimeout(function () {
+          recalc();
+          updateMode();
+        }, 30);
+      }).catch(function () {
+        // игнорируем ошибки
+      });
+    }
+
+    // ещё один защитный пересчёт через небольшой таймаут (на всякий случай)
+    setTimeout(function () {
+      recalc();
+      updateMode();
+    }, 120);
+  }
+
+  // Вешаем всё
   $(window).on('load', function () {
+    // уже обрабатывается в init, но оставим для надёжности
     recalc();
     updateMode();
   });
@@ -380,9 +419,46 @@ $(function () {
   $(window).on('resize', function () {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
+      // при ресайзе сначала пересчитаем, затем обновим режим
       recalc();
       updateMode();
     }, 150);
   });
 
+  // Запуск
+  init();
+
+});
+
+$(function () {
+  const $header = $('header');
+  const $dropdown = $('.dropdown-menu-toggle');
+
+  function updateDropdownHeight() {
+    if (window.innerWidth <= 576) {
+      const headerHeight = $header.outerHeight();
+      const viewportHeight = window.innerHeight;
+
+      const maxHeight = viewportHeight - headerHeight;
+
+      $dropdown.css({
+        'max-height': maxHeight + 'px',
+        'overflow-y': 'auto'
+      });
+    } else {
+      // на больших экранах прокрутка не нужна
+      $dropdown.css({
+        'max-height': '',
+        'overflow-y': ''
+      });
+    }
+  }
+
+  // запускаем при загрузке
+  updateDropdownHeight();
+
+  // на ресайзе пересчитываем
+  $(window).on('resize', function () {
+    updateDropdownHeight();
+  });
 });

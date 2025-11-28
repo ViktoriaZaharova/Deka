@@ -600,23 +600,28 @@ a.color-inherit:hover {
   margin: 0;
 }
 
-.scrollbar-my {
-  scrollbar-width: thin;
-  scrollbar-color: #6337ee #F7F4FF;
-}
 .scrollbar-my::-webkit-scrollbar {
-  width: 4px;
-}
-.scrollbar-my::-webkit-scrollbar-thumb {
-  background: #6337ee;
-  border-radius: 5px;
-}
-.scrollbar-my::-webkit-scrollbar-thumb:hover {
-  background: #4e2bc7;
+  width: 7px;
+  height: 7px;
 }
 .scrollbar-my::-webkit-scrollbar-track {
-  background-color: #F7F4FF !important;
-  border-radius: 5px;
+  background-color: #4e2bc7;
+  width: 6px;
+}
+.scrollbar-my::-webkit-scrollbar-track-piece {
+  background-color: #F7F4FF;
+}
+.scrollbar-my::-webkit-scrollbar-thumb {
+  background-color: #4e2bc7;
+  width: 6px;
+  border-radius: 6px;
+}
+.scrollbar-my::-webkit-scrollbar-corner {
+  background-color: #F7F4FF;
+}
+.scrollbar-my::-webkit-resizer {
+  background-color: #4e2bc7;
+  width: 6px;
 }
 
 .slick-slider {

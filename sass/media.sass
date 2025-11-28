@@ -60,7 +60,7 @@
         display: flex
 
     .header-top, .header-bottom, .header-center .btn-callback
-        display: none !important  
+        display: none !important
 
     .header-contacts .mail
         display: block
@@ -174,16 +174,16 @@
 
     .logo-header
         .logo-description
-            display: none    
+            display: none
 
     .dropdown-burger
-        position: initial 
+        position: initial
 
     .dropdown-menu-toggle
         min-width: auto
         margin: 1px 0 0 !important
         width: 100%
-        
+
 @media only screen and (max-width: 768px)
     .popular-category
         .product-card
@@ -233,8 +233,19 @@
     .btn-burger, .btn-basket, .btn-search-mobile
         width: 50px
         height: 50px
-        min-width: 50px   
-        padding: 13px 
+        min-width: 50px
+        padding: 13px
+
+@media only screen and (max-width: 720px)
+    .header-fixed .header-contacts
+        margin: 0 14px 0 0
+
+    .dropdown-burger, .btn-basket
+        margin: 0 0 0 14px
+
+    .logo-header
+        .logo-icon img
+            width: 98px
 
 @media only screen and (max-width: 676px)
     .link-politiks
@@ -243,6 +254,45 @@
 
     .copyright, .link-developer
         width: 100%
+
+    .header-fixed .header-contacts, .btn-search-mobile, .header-contacts
+        display: none
+
+    .btn-burger, .btn-basket
+        width: 42px
+        height: 42px
+        min-width: 42px
+        padding: 11px
+
+    .btn-basket__count
+        width: 14px
+        height: 14px
+        font-size: 8px
+        line-height: 18px
+
+    .header-center
+        padding: 14px 0
+
+    .dropdown-menu-toggle
+        padding: 0
+
+    .dropdown-menu-body
+        padding: 20px 20px 16px
+
+    .dropdown-menu-footer
+        padding: 30px 20px
+        background: #F7F4FF
+        .header-contacts
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            margin: 0 0 14px
+            a
+                margin: 0 0 10px
+                padding: 0
+                border: none
+                &:last-child
+                    margin: 0
 
 @media only screen and (max-width: 576px)
     h1, .h1
@@ -505,6 +555,21 @@
 
     .form-callback .label-checkbox
         max-width: none
+
+    .dropdown-menu-toggle
+        position: fixed
+        left: 0
+        right: 0
+        top: auto
+        bottom: 0
+        width: 100%
+        background: #fff
+        overflow-y: auto
+        -webkit-overflow-scrolling: touch
+        z-index: 9999
+
+    body.menu-open
+        overflow: hidden
 
 @media only screen and (max-width: 480px)
 
