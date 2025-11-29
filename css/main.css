@@ -248,6 +248,10 @@
 .reviews-read-more {
   margin: 32px 0 0;
 }
+.reviews-read-more.click svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 
 .hits-card {
   position: relative;
@@ -539,4 +543,110 @@
 }
 .search-result-list__link:hover, .search-result-list__link.active {
   color: #5A3FC3;
+}
+
+.page-video {
+  margin: 30px 0 40px;
+}
+
+.video-card {
+  width: 100%;
+  height: 100%;
+  background: #F7F4FF;
+  border-radius: 10px;
+  padding: 20px;
+}
+.video-card__body {
+  width: 100%;
+  padding: 16px 0 0;
+}
+.video-card__title {
+  font-weight: 500;
+}
+.video-card__title:hover {
+  color: #5A3FC3;
+}
+.video-card .video-wrapper {
+  height: 270px;
+}
+.video-card .video-wrapper::before {
+  height: 180px;
+}
+.video-card .video-wrapper::after {
+  width: 80px;
+  height: 80px;
+  background-size: 20px;
+}
+
+.page-reviews {
+  margin: 30px 0 100px;
+}
+
+.geography-projects {
+  margin: 0 0 -50px;
+}
+
+.map {
+  width: 100%;
+  height: 530px;
+}
+
+.reviews-card-reverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.reviews-card-reverse .logo-clinik {
+  display: none;
+}
+.reviews-card-reverse .reviews-card__head {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  padding: 20px 0 0;
+  margin: 20px 0 0;
+  border-top: 1px solid #fff;
+}
+.reviews-card-reverse .reviews-card__body {
+  border: none;
+  padding: 0;
+}
+.reviews-card-reverse .reviews-card__name {
+  padding: 0;
+}
+.reviews-card-reverse .reviews-card__avatar {
+  display: none;
+}
+.reviews-card-reverse .reviews-read-more {
+  margin: 14px 0 0;
+}
+
+.video-reviews {
+  margin: 100px 0 70px;
+}
+
+.videor-reviews-card {
+  width: 100%;
+}
+.videor-reviews-card .video-wrapper {
+  height: 499px;
+}
+.videor-reviews-card .video-wrapper:after {
+  width: 80px;
+  height: 80px;
+  background-size: 20px;
+}
+.videor-reviews-card__content {
+  padding: 16px 0 0;
+}
+.videor-reviews-card h4 {
+  margin: 0 0 15px;
+}
+.videor-reviews-card .small-text {
+  color: #7A7194;
+  margin: 10px 0 0;
 }

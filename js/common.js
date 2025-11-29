@@ -161,6 +161,39 @@ $('.sales-slider').slick({
   ]
 });
 
+$('.video-reviews-slider').slick({
+    slidesToShow: 3,
+    dots: false,
+    arrows: true,
+    autoplay: true,
+    prevArrow: '<button type="button" class="slick-prev btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
+    nextArrow: '<button type="button" class="slick-next btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
+    responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        variableWidth: true,
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        variableWidth: false,
+      }
+    }
+  ]
+});
+
 // reviews loader text
 $(document).ready(function () {
   $('.reviews-read-more').on('click', function (e) {
@@ -172,9 +205,9 @@ $(document).ready(function () {
     $text.toggleClass('box-text-open');
 
     if ($text.hasClass('box-text-open')) {
-      $btn.find('span').text('Скрыть');
+      $btn.addClass('click').find('span').text('Скрыть');
     } else {
-      $btn.find('span').text('Читать полностью');
+      $btn.removeClass('click').find('span').text('Читать полностью');
     }
   });
 });
@@ -430,6 +463,7 @@ $(function () {
 
 });
 
+// dropdown-menu mobile height
 $(function () {
   const $header = $('header');
   const $dropdown = $('.dropdown-menu-toggle');
@@ -461,4 +495,40 @@ $(function () {
   $(window).on('resize', function () {
     updateDropdownHeight();
   });
+});
+
+
+// reviews load more
+$(function () {
+
+  const $items = $('.reviews-col');
+  const $btn = $('.btn-toggle-reviews');
+
+  const initialCount = 6;
+  const loadCount = 3;
+
+  // 1. Если элементов меньше 6 — скрыть кнопку
+  if ($items.length <= initialCount) {
+    $btn.hide();
+  }
+
+  // 2. Скрываем все, кроме первых 6
+  $items.hide().slice(0, initialCount).show();
+
+  // 3. Клик по кнопке "Показать ещё"
+  $btn.on('click', function (e) {
+    e.preventDefault();
+
+    // Находим количество уже показанных
+    const visibleCount = $items.filter(':visible').length;
+
+    // Показываем следующие 3
+    $items.slice(visibleCount, visibleCount + loadCount).fadeIn(200);
+
+    // Если больше нет скрытых — прячем кнопку
+    if (visibleCount + loadCount >= $items.length) {
+      $btn.hide();
+    }
+  });
+
 });
