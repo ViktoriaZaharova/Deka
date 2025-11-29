@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1310px) {
@@ -77,6 +78,13 @@
   }
   .header-fixed .header-contacts {
     margin: 0 20px 0 0;
+  }
+  .blog-card__img {
+    max-width: 400px;
+  }
+  .blog-card__body {
+    width: calc(100% - 400px);
+    padding: 0 0 0 20px;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -202,6 +210,41 @@
     margin: 1px 0 0 !important;
     width: 100%;
   }
+  .sidebar-news {
+    max-width: none;
+  }
+  .list-categorey-blog {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .list-categorey-blog li {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 20px 10px 0;
+  }
+  .list-categorey-blog li:last-child {
+    margin: 0 0 10px;
+  }
+  .list-categorey-blog a {
+    padding: 14px 24px;
+  }
+  .blog-card {
+    padding: 20px;
+  }
+  .blog-card__img {
+    max-width: none;
+  }
+  .blog-card__body {
+    width: 100%;
+    padding: 20px 0 0;
+  }
 }
 @media only screen and (max-width: 768px) {
   .popular-category .product-card {
@@ -281,6 +324,13 @@
   }
   .page-reviews {
     margin: 30px 0 80px;
+  }
+  .blog-card__img {
+    height: 186px;
+  }
+  .tag-item {
+    top: 10px;
+    left: 10px;
   }
 }
 @media only screen and (max-width: 720px) {
@@ -367,13 +417,10 @@
   .search-result-list__link {
     padding: 0 0 10px;
   }
-  .nav-pagination {
-    margin: 30px auto 0;
-  }
   .pagination .page-link {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -713,6 +760,31 @@
   }
   body.menu-open {
     overflow: hidden;
+  }
+  /* Кнопка */
+  .tabs-select-btn {
+    color: #6b38f5;
+    text-align: left;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  /* Прячем десктопное меню */
+  .list-categorey-blog {
+    display: none;
+    z-index: 10;
+    width: 100%;
+    margin: 10px 0 0;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .list-categorey-blog li {
+    width: 100%;
+  }
+  /* Показываем при открытии */
+  .tabs-wrapper.open .list-categorey-blog {
+    display: block;
   }
 }
 @media only screen and (min-width: 992px) {

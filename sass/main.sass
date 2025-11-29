@@ -467,5 +467,83 @@
         margin: 0 0 15px
     .small-text
         color: $grey
-        margin: 10px 0 0    
+        margin: 10px 0 0
 
+// news page
+.sidebar-news
+    max-width: 170px
+
+.tabs-wrapper
+    width: 100%
+    position: relative
+
+.list-categorey-blog
+    width: 100%
+    li
+        width: 100%
+        margin: 0 0 20px
+        &:last-child
+            margin: 0
+    a
+        width: 100%
+        padding: 10px
+
+.blog-card
+    width: 100%
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+    background: $light-pink
+    padding: 30px
+    border-radius: 20px
+    position: relative
+    z-index: 1
+    &__img
+        max-width: 492px
+        width: 100%
+        height: 300px
+        border-radius: 10px
+        position: relative
+        z-index: 1
+        @include d-flex
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 10px
+    &__body
+        width: calc( 100% - 492px )
+        padding: 0 0 0 40px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    .news-blog-card__title
+        margin: 14px 0
+    .link-read-more
+        margin: 14px 0 0
+
+.tag-item
+    position: absolute
+    z-index: 1
+    padding: 10px 15px
+    font-size: 14px
+    line-height: 14px
+    font-weight: bold
+    border-radius: 40px
+    color: #fff
+    top: 20px
+    left: 20px
+
+.tabs-select-btn
+    display: none
+    align-items: center
+    justify-content: center
+    color: $violet
+    fill: $violet
+    font-weight: 500
+    span
+        text-decoration: underline
+    svg
+        width: 24px
+        height: 24px
+        

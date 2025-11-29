@@ -71,6 +71,13 @@
     .header-fixed .header-contacts
         margin: 0 20px 0 0
 
+    .blog-card__img
+        max-width: 400px
+
+    .blog-card__body
+        width: calc( 100% - 400px )
+        padding: 0 0 0 20px
+
 @media only screen and (max-width: 992px)
     .container, .container-fluid
         padding: 0 24px
@@ -165,7 +172,7 @@
         display: none
 
     footer
-        margin: 80px 0 0    
+        margin: 80px 0 0
 
     .footer-top
         padding: 50px 0 20px
@@ -184,6 +191,30 @@
         min-width: auto
         margin: 1px 0 0 !important
         width: 100%
+
+    .sidebar-news
+        max-width: none
+
+    .list-categorey-blog
+        display: flex
+        align-items: flex-start
+        flex-wrap: wrap
+        li
+            width: fit-content
+            margin: 0 20px 10px 0
+            &:last-child
+                margin: 0 0 10px  
+        a
+            padding: 14px 24px              
+
+    .blog-card
+        padding: 20px
+        &__img
+            max-width: none
+        &__body
+            width: 100%
+            padding: 20px 0 0
+
 
 @media only screen and (max-width: 768px)
     .popular-category
@@ -247,12 +278,19 @@
         height: 450px
 
     .reviews-card-reverse
-        width: 100%   
+        width: 100%
 
     .page-reviews
         margin: 30px 0 80px
 
-        
+    .blog-card
+        &__img
+            height: 186px
+
+    .tag-item
+        top: 10px
+        left: 10px
+
 @media only screen and (max-width: 720px)
     .header-fixed .header-contacts
         margin: 0 14px 0 0
@@ -264,8 +302,6 @@
         .logo-icon img
             width: 98px
 
-    
-        
 @media only screen and (max-width: 676px)
     .link-politiks
         max-width: none
@@ -324,15 +360,12 @@
             &:last-child
                 margin: 0
         &__link
-            padding: 0 0 10px     
-
-    .nav-pagination
-        margin: 30px auto 0
+            padding: 0 0 10px
 
     .pagination .page-link
-        width: 40px
-        height: 40px
-        min-width: 40px               
+        width: 48px
+        height: 48px
+        min-width: 48px
 
 @media only screen and (max-width: 576px)
     h1, .h1
@@ -397,7 +430,7 @@
         margin-bottom: 30px
 
     .mb-60
-        margin-bottom: 30px    
+        margin-bottom: 30px
 
     label
         margin: 0 0 14px
@@ -614,6 +647,29 @@
 
     body.menu-open
         overflow: hidden
+
+    /* Кнопка */
+    .tabs-select-btn
+        color: #6b38f5
+        text-align: left
+        cursor: pointer
+        display: flex
+
+    /* Прячем десктопное меню */
+    .list-categorey-blog
+        display: none
+        z-index: 10
+        width: 100%
+        margin: 10px 0 0
+        transition: .3s ease
+        li
+            width: 100%
+
+    /* Показываем при открытии */
+    .tabs-wrapper.open .list-categorey-blog
+        display: block
+
+  
 
 @media only screen and (max-width: 480px)
 

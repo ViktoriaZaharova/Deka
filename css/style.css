@@ -497,6 +497,10 @@ a.color-inherit:hover {
   background: #5AD28E;
 }
 
+.bg-blue {
+  background: #55ADFF;
+}
+
 .text-decoration {
   text-decoration: underline;
 }
@@ -873,7 +877,6 @@ a.color-inherit:hover {
 
 .nav-pagination {
   width: 100%;
-  margin: 80px auto 0;
 }
 
 .pagination {
