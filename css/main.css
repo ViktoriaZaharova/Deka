@@ -518,3 +518,25 @@
 .form-callback .label-checkbox {
   max-width: 213px;
 }
+
+.search-result-list {
+  font-size: 22px;
+  line-height: 28px;
+  width: 100%;
+}
+.search-result-list__item {
+  border-bottom: 1px solid #E6DEF4;
+  margin: 0 0 40px;
+}
+.search-result-list__item:last-child {
+  margin: 0;
+}
+.search-result-list__link {
+  padding: 0 0 40px;
+  max-width: 871px;
+  width: 100%;
+  color: #2F2940;
+}
+.search-result-list__link:hover, .search-result-list__link.active {
+  color: #5A3FC3;
+}

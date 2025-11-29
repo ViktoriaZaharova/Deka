@@ -557,6 +557,92 @@ a.color-inherit
     object-fit: cover
     border-radius: 10px
 
+.page
+  margin: 30px 0 100px
+
+.nav-breadcrumb
+  width: 100%
+  margin: 0 0 30px  
+
+.breadcrumb
+  margin: 0
+  width: 100%
+  font-size: 12px
+  line-height: 18px
+  font-family: $default-font
+  font-weight: 500
+  margin: 0
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  a
+    color: $light-grey
+    fill: $light-grey
+    display: flex
+    align-items: center
+    svg
+      margin: 0 10px
+      width: 20px
+      height: 20px
+      min-width: 20px
+    &:hover, &:focus
+      color: $violet
+      fill: $violet
+  span
+    color: $grey  
+
+.breadcrumb-item+.breadcrumb-item
+  padding: 0        
+
+.breadcrumb-item.active
+  color: $grey   
+
+.breadcrumb-item+.breadcrumb-item::before
+  display: none
+
+.nav-pagination
+  width: 100%
+  margin: 80px auto 0
+
+.pagination
+  width: 100%
+  display: flex
+  align-items: stretch
+  justify-content: center 
+  font-size: 16px
+  line-height: 24px
+  li
+    margin: 0 10px 0 0
+    &:last-child
+      margin: 0
+        
+  .page-link
+    width: 50px
+    height: 50px
+    min-width: 50px
+    border-radius: 4px
+    border: none
+    background: $light-pink
+    color: $dark
+    fill: $dark
+    padding: 5px
+    @include d-flex
+    svg
+      width: 20px
+      height: 20px
+
+    &.active
+      background: $violet
+      color: #fff
+      fill: #fff
+    &:hover, &:focus
+      background: $violet-active
+      color: #fff
+      fill: #fff
+
+
+
+
 //checkbox my
 .label-checkbox
   position: relative
