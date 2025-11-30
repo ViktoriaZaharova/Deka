@@ -332,6 +332,18 @@
     top: 10px;
     left: 10px;
   }
+  .patient-card {
+    min-height: 616px;
+  }
+  .patient-card__img {
+    height: 302px;
+  }
+  .patient-card__body {
+    height: calc(100% - 302px);
+  }
+  .page-patients {
+    margin: 30px 0 50px;
+  }
 }
 @media only screen and (max-width: 720px) {
   .header-fixed .header-contacts {
@@ -785,6 +797,22 @@
   /* Показываем при открытии */
   .tabs-wrapper.open .list-categorey-blog {
     display: block;
+  }
+  .page-patients {
+    margin: 20px 0;
+  }
+  .patient-card {
+    min-height: 480px;
+  }
+  .patient-card__img {
+    height: 140px;
+  }
+  .patient-card__body {
+    padding: 14px 0 0;
+    height: calc(100% - 140px);
+  }
+  .patient-card .box-text {
+    margin: 10px 0 20px;
   }
 }
 @media only screen and (min-width: 992px) {
