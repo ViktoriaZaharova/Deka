@@ -411,6 +411,12 @@ h5, .h5 {
   font-size: 16px;
   line-height: 24px;
 }
+.box-text p, .text p, .bold-text p {
+  margin: 0 0 14px;
+}
+.box-text p:last-child, .text p:last-child, .bold-text p:last-child {
+  margin: 0;
+}
 
 .small-text {
   font-size: 14px;
@@ -1054,4 +1060,22 @@ a.color-inherit:hover {
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
   color: #fff;
+}
+
+.general-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 30px;
+  background: #F7F4FF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.general-card .btn {
+  margin: auto 0 0;
 }

@@ -826,7 +826,7 @@
     height: 56px;
     margin: 0 0 20px;
   }
-  .company-card__phone {
+  .attention-text {
     margin: 14px 0 20px;
     font-size: 14px;
     line-height: 22px;
@@ -837,6 +837,22 @@
   }
   .consultation-wrapper .box-text {
     display: none;
+  }
+  .general-card {
+    padding: 20px;
+  }
+  .model-card__img {
+    height: 120px;
+  }
+  .model-card__title {
+    margin: 0 0 10px;
+  }
+  .model-card__body {
+    padding: 14px 0 0;
+    height: calc(100% - 120px);
+  }
+  .model-card .box-text {
+    margin: 0 0 20px;
   }
 }
 @media only screen and (min-width: 992px) {

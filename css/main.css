@@ -866,7 +866,11 @@
 .company-card__logo img {
   max-height: 100%;
 }
-.company-card__phone {
+.company-card__phone:hover {
+  color: #5A3FC3;
+}
+
+.attention-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -879,10 +883,7 @@
   font-size: 16px;
   line-height: 24px;
 }
-.company-card__phone:hover {
-  color: #5A3FC3;
-}
-.company-card__phone::before {
+.attention-text::before {
   content: "";
   display: block;
   width: 20px;
@@ -906,4 +907,69 @@
 
 .form-consultation {
   max-width: 1126px;
+}
+
+.card-information {
+  width: 100%;
+}
+.card-information__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 0 14px;
+  line-height: 24px;
+  font-size: 16px;
+}
+.card-information__title img {
+  margin: 4px 10px 0 0;
+}
+
+.model-card__img {
+  width: 100%;
+  height: 221px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.model-card__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.model-card__body {
+  width: 100%;
+  height: calc(100% - 221px);
+  padding: 20px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.model-card__title {
+  color: #2F2940;
+  margin: 0 0 14px;
+}
+.model-card__title:hover {
+  color: #5A3FC3;
+}
+.model-card .box-text {
+  margin: 0 0 30px;
 }
