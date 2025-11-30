@@ -688,3 +688,65 @@ a.color-inherit
 
 .inp-check
 //checkbox my end
+
+
+// select
+.select2-container--default .select2-selection--single
+  background: transparent 
+  border: none
+  border-bottom: 1px solid $stroke
+  border-radius: 0  
+  height: 34px
+  color: #fff
+  padding: 0 0 10px
+  font-size: 16px
+  line-height: 24px
+  font-family: $default-font
+
+.select2-container--default .select2-selection--single .select2-selection__rendered
+  padding: 0 24px 0 0
+  color: #fff  
+
+.select2-container--default .select2-selection--single .select2-selection__arrow
+  background: url('../img/select-arrow.svg') no-repeat right top
+  background-size: 24px
+  width: 24px
+  height: 24px
+  top: 0
+  right: 0
+  opacity: 1
+  @include d-flex
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b
+  display: none  
+
+.select2-container--open .select2-dropdown--below
+  box-shadow: 0px 3px 14px 0px #29224624
+  border-radius: 0 0 10px 10px
+  border: none  
+  background: #fff
+  padding: 20px
+
+.select2-search--dropdown, .select2-container--default .select2-selection--single .select2-selection__clear
+  display: none
+
+.select2-results__option
+  padding: 0
+  margin: 0 0 14px
+  color: $dark
+  font-size: 16px
+  font-weight: 500
+  font-family: $default-font
+  &:last-child
+    margin: 0  
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable
+  background: transparent
+  color: $violet
+
+.select2-container--default .select2-results__option--selected
+  background: transparent
+  color: $violet-active
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder
+  color: #fff  

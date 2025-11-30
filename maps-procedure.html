@@ -411,7 +411,7 @@
         </div>
 
         <div class="col-12">
-          <div class="callback-wrapper w-100%">
+          <div class="callback-wrapper w-100 mb-60">
             <div class="callback-wrapper__img"><img src="img/callback-img.png" alt=""></div>
             <div class="callback-wrapper__content">
               <h2 class="mb-40">DEKA рядом. Поможем <br>
@@ -420,17 +420,19 @@
 
               <form method="post" class="form-callback">
                 <label>
-                  <select class="js-example-basic-single" name="city" placeholder="Выберите город*">
-                    <option value="AL">Alabama</option>
-                    ...
-                    <option value="WY">Wyoming</option>
+                  <select class="js-example-basic-single" name="city">
+                    <option value=""></option>
+                    <option value="Пенза">Пенза</option>
+                    <option value="Москва">Москва</option>
+                    <option value="Санкт-Петербург">Санкт-Петербург</option>
                   </select>
                 </label>
                 <label>
-                  <select class="js-example-basic-single" name="procedure" aria-placeholder="Выберите процедуру*">
-                    <option value="AL">Alabama</option>
-                    ...
-                    <option value="WY">Wyoming</option>
+                  <select class="js-example-basic-single" name="procedure">
+                    <option value=""></option>
+                    <option value="Эстетическая гинекология">Эстетическая гинекология</option>
+                    <option value="Удаление сосудов">Удаление сосудов</option>
+                    <option value="Коррекция фигуры">Коррекция фигуры</option>
                   </select>
                 </label>
 
@@ -444,10 +446,108 @@
 
       </div>
 
+      <div class="row">
+        <div class="col-12 col-md-6 mb-30">
+          <div class="company-card">
+            <a href="#" class="company-card__logo"><img src="img/logo1.svg" alt=""></a>
+            <div class="box-text">
+              <p>Многопрофильный медицинский центр Medical предоставляет любые виды лечения в сфере лазерного
+                омоложения, эстетической и пластической хирургии, дерматологии, косметологии, удаления волос, лечения
+                рубцов, устранения пигментных пятен и сосудов, а также в области гинекологии и стоматологии.</p>
+            </div>
+            <a href="tel:+74958016601" class="company-card__phone">Телефон для справок: 8 (495) 801 66 01</a>
+            <a href="#" class="btn btn-accent">Подробнее</a>
+          </div>
+        </div>
 
+
+        <div class="col-12 col-md-6 mb-30">
+          <div class="company-card">
+            <a href="#" class="company-card__logo"><img src="img/logo2.svg" alt=""></a>
+            <div class="box-text">
+              <p>В салоне LN Beauty Club лазерные системы DEKA применяются в сфере пластической хирургии, дерматологии,
+                косметологии, гинекологии и урологии. Салон работает в качестве эстетического центра и предоставляет
+                полный спектр услуг в области ногтевого сервиса, ухода за волосами, моделирования тела и косметологии.
+              </p>
+            </div>
+            <a href="tel:+74951502061" class="company-card__phone">Телефон для справок: 8 (495) 150 20 61</a>
+            <a href="#" class="btn btn-accent">Подробнее</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 mb-30">
+          <div class="company-card">
+            <a href="#" class="company-card__logo"><img src="img/logo3.svg" alt=""></a>
+            <div class="box-text">
+              <p>El.En Group – концерн, в который входят основные игроки лазерного рынка</p>
+            </div>
+            <a href="tel:+390558826807" class="company-card__phone">Телефон в Италии: +39 055 8826807</a>
+            <a href="#" class="btn btn-accent">Подробнее</a>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-md-6 mb-30">
+          <div class="company-card">
+            <a href="#" class="company-card__logo"><img src="img/logo-footer.svg" alt=""></a>
+            <div class="box-text">
+              <p>DEKA M.E.L.A. S.R.L. Italy – мировой производитель высокотехнологичного лазерного медицинского
+                оборудования для косметологии, дерматологии, эстетической хирургии, стоматологии, гинекологии.</p>
+            </div>
+            <a href="tel:+78043337197" class="company-card__phone">Телефон для справок: 8 (804) 333-71-97</a>
+            <a href="#" class="btn btn-accent">Подробнее</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
+  <div class="consultation-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="consultation-wrapper w-100">
+            <h3>Получить бесплатную консультацию</h3>
+            <div class="box-text mb-20">
+              <p>Оставьте контактные данные и мы свяжемся с вами в ближайшее время</p>
+            </div>
+
+            <form method="post" class="form-consultation w-100">
+              <div class="row align-items-end">
+                <div class="col-12 col-sm-6 col-lg-3 mb-20">
+                  <label>
+                    <input type="text" placeholder="Имя*" name="name" required>
+                  </label>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-20">
+                  <label>
+                    <input type="text" placeholder="Телефон*" name="phone" required>
+                  </label>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-20">
+                  <label>
+                    <input type="text" placeholder="E-mail*" name="mail" required>
+                  </label>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-20">
+                  <button type="submit" class="btn btn-accent">Заказать звонок</button>
+                </div>
+
+                <div class="col-12">
+                  <label class="label-checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <span class="label-checkbox__custom"></span>
+                    <span class="label-checkbox__text">Заполняя форму, вы принимаете условия <a href="#" target="_blank"
+                        class="text-decoration color-inherit">политики конфиденциальности</a></span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="footer-top">

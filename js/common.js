@@ -1,19 +1,19 @@
 $('[name="phone"]').mask('+7 (999) 999-99-99');
 
 Fancybox.bind("[data-fancybox]", {
-    // Your custom options
+  // Your custom options
 });
 
 $('.home-slider').slick({
-    slidesToShow: 1,
-    fade: true,
-    dots: true,
-    infinite: false,
-    arrows: true,
-    autoplay: true,
-    prevArrow: '<button type="button" class="slick-prev btn-pink"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
-    nextArrow: '<button type="button" class="slick-next btn-pink"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
-    responsive: [
+  slidesToShow: 1,
+  fade: true,
+  dots: true,
+  infinite: false,
+  arrows: true,
+  autoplay: true,
+  prevArrow: '<button type="button" class="slick-prev btn-pink"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
+  nextArrow: '<button type="button" class="slick-next btn-pink"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
+  responsive: [
     {
       breakpoint: 1440,
       settings: {
@@ -24,18 +24,18 @@ $('.home-slider').slick({
 });
 
 $('.popular-category-slider').slick({
-    slidesToShow: 5,
-    arrows: true,
-    dots: true,
-    infinite: false,
-    // autoplay: true,
-    prevArrow: '<button type="button" class="slick-prev btn-accent"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
-    nextArrow: '<button type="button" class="slick-next btn-accent"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
-    responsive: [
+  slidesToShow: 5,
+  arrows: true,
+  dots: true,
+  infinite: false,
+  // autoplay: true,
+  prevArrow: '<button type="button" class="slick-prev btn-accent"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
+  nextArrow: '<button type="button" class="slick-next btn-accent"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
+  responsive: [
     {
       breakpoint: 1200,
       settings: {
-        slidesToShow: 4,      
+        slidesToShow: 4,
       }
     },
     {
@@ -65,13 +65,13 @@ $('.popular-category-slider').slick({
 });
 
 $('.reviews-slider').slick({
-    slidesToShow: 3,
-    dots: true,
-    arrows: true,
-    autoplay: true,
-    prevArrow: '<button type="button" class="slick-prev btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
-    nextArrow: '<button type="button" class="slick-next btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
-    responsive: [
+  slidesToShow: 3,
+  dots: true,
+  arrows: true,
+  autoplay: true,
+  prevArrow: '<button type="button" class="slick-prev btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
+  nextArrow: '<button type="button" class="slick-next btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
+  responsive: [
     {
       breakpoint: 992,
       settings: {
@@ -98,13 +98,13 @@ $('.reviews-slider').slick({
 });
 
 $('.hits-slider').slick({
-    slidesToShow: 4,
-    arrows: true,
-    dots: true,
-    autoplay: true,
-    prevArrow: '<button type="button" class="slick-prev btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
-    nextArrow: '<button type="button" class="slick-next btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
-    responsive: [
+  slidesToShow: 4,
+  arrows: true,
+  dots: true,
+  autoplay: true,
+  prevArrow: '<button type="button" class="slick-prev btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
+  nextArrow: '<button type="button" class="slick-next btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
+  responsive: [
     {
       breakpoint: 992,
       settings: {
@@ -133,14 +133,14 @@ $('.hits-slider').slick({
 
 
 $('.sales-slider').slick({
-    slidesToShow: 1,
-    arrows: true,
-    dots: true,
-    variableWidth: true,
-    // autoplay: true,
-    prevArrow: '<button type="button" class="slick-prev btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
-    nextArrow: '<button type="button" class="slick-next btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
-    responsive: [
+  slidesToShow: 1,
+  arrows: true,
+  dots: true,
+  variableWidth: true,
+  // autoplay: true,
+  prevArrow: '<button type="button" class="slick-prev btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
+  nextArrow: '<button type="button" class="slick-next btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
+  responsive: [
     {
       breakpoint: 768,
       settings: {
@@ -162,13 +162,13 @@ $('.sales-slider').slick({
 });
 
 $('.video-reviews-slider').slick({
-    slidesToShow: 3,
-    dots: false,
-    arrows: true,
-    autoplay: true,
-    prevArrow: '<button type="button" class="slick-prev btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
-    nextArrow: '<button type="button" class="slick-next btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
-    responsive: [
+  slidesToShow: 3,
+  dots: false,
+  arrows: true,
+  autoplay: true,
+  prevArrow: '<button type="button" class="slick-prev btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
+  nextArrow: '<button type="button" class="slick-next btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
+  responsive: [
     {
       breakpoint: 992,
       settings: {
@@ -540,4 +540,17 @@ $(function () {
     e.preventDefault();
     $(this).parent().toggleClass('open');
   });
+});
+
+// select
+$('.js-example-basic-single[name="city"]').select2({
+  placeholder: "Выберите город*",
+  allowClear: true,
+  width: '100%'
+});
+
+$('.js-example-basic-single[name="procedure"]').select2({
+  placeholder: "Выберите процедуру*",
+  allowClear: true,
+  width: '100%'
 });

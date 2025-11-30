@@ -975,3 +975,83 @@ a.color-inherit:hover {
   min-width: 20px;
   cursor: pointer;
 }
+
+.select2-container--default .select2-selection--single {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #E6DEF4;
+  border-radius: 0;
+  height: 34px;
+  color: #fff;
+  padding: 0 0 10px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "GolosText", sans-serif;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding: 0 24px 0 0;
+  color: #fff;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  background: url("../img/select-arrow.svg") no-repeat right top;
+  background-size: 24px;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  right: 0;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  display: none;
+}
+
+.select2-container--open .select2-dropdown--below {
+  -webkit-box-shadow: 0px 3px 14px 0px rgba(41, 34, 70, 0.1411764706);
+          box-shadow: 0px 3px 14px 0px rgba(41, 34, 70, 0.1411764706);
+  border-radius: 0 0 10px 10px;
+  border: none;
+  background: #fff;
+  padding: 20px;
+}
+
+.select2-search--dropdown, .select2-container--default .select2-selection--single .select2-selection__clear {
+  display: none;
+}
+
+.select2-results__option {
+  padding: 0;
+  margin: 0 0 14px;
+  color: #2F2940;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "GolosText", sans-serif;
+}
+.select2-results__option:last-child {
+  margin: 0;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background: transparent;
+  color: #5A3FC3;
+}
+
+.select2-container--default .select2-results__option--selected {
+  background: transparent;
+  color: #6242E0;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: #fff;
+}
