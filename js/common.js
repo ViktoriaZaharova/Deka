@@ -554,3 +554,102 @@ $('.js-example-basic-single[name="procedure"]').select2({
   allowClear: true,
   width: '100%'
 });
+
+// collapse desktop catalog
+(function ($) {
+  const DESKTOP_BREAKPOINT = 992;
+
+  // Утилита debounce
+  function debounce(fn, ms) {
+    let t;
+    return function () {
+      const args = arguments;
+      clearTimeout(t);
+      t = setTimeout(() => fn.apply(this, args), ms);
+    };
+  }
+
+  // Возвращает селектор из данных кнопки (поддержка нескольких вариантов)
+  function getSelector($btn) {
+    return $btn.data('collapse') || $btn.attr('data-bs-target') || $btn.attr('href') || null;
+  }
+
+  // Инициализация состояний (open on desktop, closed on mobile)
+  function applyState() {
+    const isDesktop = $(window).width() >= DESKTOP_BREAKPOINT;
+    $('.catalog-accordion .catalog-item').each(function () {
+      const $item = $(this);
+      const $btn = $item.find('.catalog-item__btn').first();
+      const selector = getSelector($btn);
+      if (!selector) return;
+      // Ищем целевой блок внутри контейнера, чтобы не нарваться на одинаковые классы в других местах
+      const $target = $item.closest('.catalog-accordion').find(selector).first();
+      if (!$target || !$target.length) return;
+
+      // Если есть bootstrap Collapse — используем его, иначе fallback
+      if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+        let inst = bootstrap.Collapse.getInstance($target[0]);
+        if (!inst) inst = new bootstrap.Collapse($target[0], { toggle: false });
+
+        if (isDesktop) {
+          inst.show();
+          $btn.attr('aria-expanded', 'true');
+        } else {
+          inst.hide();
+          $btn.attr('aria-expanded', 'false');
+        }
+      } else {
+        if (isDesktop) {
+          $target.addClass('show');
+          $btn.attr('aria-expanded', 'true');
+        } else {
+          $target.removeClass('show');
+          $btn.attr('aria-expanded', 'false');
+        }
+      }
+    });
+  }
+
+  // Делегированный клик — надёжнее, не создаёт множества обработчиков
+  $(document).off('click.catalogCollapse').on('click.catalogCollapse', '.catalog-accordion .catalog-item__btn', function (e) {
+    e.preventDefault();
+    const $btn = $(this);
+    const selector = getSelector($btn);
+    if (!selector) return;
+    const $container = $btn.closest('.catalog-accordion');
+    const $target = $container.find(selector).first();
+    if (!$target.length) return;
+
+    // Toggle через bootstrap Collapse если есть
+    if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+      let inst = bootstrap.Collapse.getInstance($target[0]);
+      if (!inst) inst = new bootstrap.Collapse($target[0], { toggle: false });
+
+      const expanded = $btn.attr('aria-expanded') === 'true';
+      if (expanded) {
+        inst.hide();
+        $btn.attr('aria-expanded', 'false');
+      } else {
+        inst.show();
+        $btn.attr('aria-expanded', 'true');
+      }
+    } else {
+      // Фоллбек — просто toggle .show
+      const opened = $target.hasClass('show');
+      if (opened) {
+        $target.removeClass('show');
+        $btn.attr('aria-expanded', 'false');
+      } else {
+        $target.addClass('show');
+        $btn.attr('aria-expanded', 'true');
+      }
+    }
+  });
+
+  // Инициализация при загрузке и ресайзе (дебаунс)
+  $(document).ready(function () {
+    applyState();
+    $(window).on('resize.catalogCollapse', debounce(applyState, 150));
+  });
+
+})(jQuery);
