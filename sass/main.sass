@@ -741,7 +741,83 @@
     z-index: 2
     top: 20px
     right: 20px
-    fill: $light-grey
+    stroke: $light-grey
     display: none
     align-items: center
     justify-content: center        
+
+.category-card
+    width: 100%
+    height: 100%
+    min-height: 326px
+    position: relative
+    z-index: 1
+    overflow: hidden
+    &__body
+        max-width: 230px
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    .btn
+        margin: auto 0 0
+    .box-text
+        margin: 14px 0 20px    
+    &__img
+        position: absolute
+        bottom: 0
+        right: 0
+        z-index: -1
+        width: 206px
+        height: 100%
+        padding: 20px 0 0
+        display: flex
+        align-items: flex-end
+        justify-content: flex-end
+        &:after
+            content: ''
+            position: absolute
+            z-index: -1
+            width: 313px
+            height: 313px
+            background: #fff
+            border-radius: 50%
+            bottom: -103px
+            right: -103px
+
+.category-card-2
+    .category-card
+        &__img
+            padding: 22px 0 22px 8px
+
+
+// help page
+.help-card
+    flex-direction: row
+    align-items: stretch
+    justify-content: space-between
+    padding: 40px
+    &__body
+        max-width: 655px
+        width: calc( 100% - 522px )
+        padding: 0 20px 0 0
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    .btn
+        margin: auto 0 0
+    .box-text
+        margin: 20px 0    
+    &__img
+        width: 522px
+        height: 321px
+        border-radius: 20px   
+        @include d-flex
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 20px    
+    .attention-text
+        margin: 0 0 20px

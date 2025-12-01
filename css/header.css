@@ -254,6 +254,9 @@ header .list-social {
   left: auto !important;
   right: 50% !important;
 }
+.menu .dropdown:hover .dropdown-menu {
+  display: block;
+}
 .menu > li {
   margin: 0 25px 0 0;
 }

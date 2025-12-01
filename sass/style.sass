@@ -284,7 +284,7 @@ h5, .h5
   line-height: 18px
 
 .mb-10
-  margin-bottom: 10px  
+  margin-bottom: 10px
 
 .mb-14
   margin-bottom: 14px
@@ -299,7 +299,7 @@ h5, .h5
   margin-bottom: 40px
 
 .mb-60
-  margin-bottom: 60px  
+  margin-bottom: 60px
 
 .m-100
   margin: 100px 0
@@ -340,7 +340,7 @@ a.color-inherit
   background: $green
 
 .bg-blue
-  background: $blue  
+  background: $blue
 
 .text-decoration
   text-decoration: underline
@@ -575,7 +575,7 @@ a.color-inherit
 
 .nav-breadcrumb
   width: 100%
-  margin: 0 0 30px  
+  margin: 0 0 30px
 
 .breadcrumb
   margin: 0
@@ -602,33 +602,32 @@ a.color-inherit
       color: $violet
       fill: $violet
   span
-    color: $grey  
+    color: $grey
 
 .breadcrumb-item+.breadcrumb-item
-  padding: 0        
+  padding: 0
 
 .breadcrumb-item.active
-  color: $grey   
+  color: $grey
 
 .breadcrumb-item+.breadcrumb-item::before
   display: none
 
 .nav-pagination
   width: 100%
-  
 
 .pagination
   width: 100%
   display: flex
   align-items: stretch
-  justify-content: center 
+  justify-content: center
   font-size: 16px
   line-height: 24px
   li
     margin: 0 10px 0 0
     &:last-child
       margin: 0
-        
+
   .page-link
     width: 50px
     height: 50px
@@ -652,9 +651,6 @@ a.color-inherit
       background: $violet-active
       color: #fff
       fill: #fff
-
-
-
 
 //checkbox my
 .label-checkbox
@@ -693,13 +689,12 @@ a.color-inherit
 .inp-check
 //checkbox my end
 
-
 // select
 .select2-container--default .select2-selection--single
-  background: transparent 
+  background: transparent
   border: none
   border-bottom: 1px solid $stroke
-  border-radius: 0  
+  border-radius: 0
   height: 34px
   color: #fff
   padding: 0 0 10px
@@ -709,7 +704,7 @@ a.color-inherit
 
 .select2-container--default .select2-selection--single .select2-selection__rendered
   padding: 0 24px 0 0
-  color: #fff  
+  color: #fff
 
 .select2-container--default .select2-selection--single .select2-selection__arrow
   background: url('../img/select-arrow.svg') no-repeat right top
@@ -722,12 +717,12 @@ a.color-inherit
   @include d-flex
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b
-  display: none  
+  display: none
 
 .select2-container--open .select2-dropdown--below
   box-shadow: 0px 3px 14px 0px #29224624
   border-radius: 0 0 10px 10px
-  border: none  
+  border: none
   background: #fff
   padding: 20px
 
@@ -742,7 +737,7 @@ a.color-inherit
   font-weight: 500
   font-family: $default-font
   &:last-child
-    margin: 0  
+    margin: 0
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable
   background: transparent
@@ -753,7 +748,7 @@ a.color-inherit
   color: $violet-active
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder
-  color: #fff  
+  color: #fff
 
 .general-card
   width: 100%
@@ -766,4 +761,12 @@ a.color-inherit
   .btn
     margin: auto 0 0
 
-    
+.overlay
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  position: fixed
+  background: rgba($grey,0.4)
+  display: none
+  z-index: 9

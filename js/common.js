@@ -653,3 +653,42 @@ $('.js-example-basic-single[name="procedure"]').select2({
   });
 
 })(jQuery);
+
+
+
+// catalog mobile
+$(function () {
+
+  const $sidebar = $('.sidebar-catalog');
+  const $overlay = $('.overlay');
+
+  // открыть
+  $('.btn-catalog-mobile').on('click', function () {
+    $sidebar.addClass('active');
+    $overlay.fadeIn(200);
+  });
+
+  // закрыть
+  function closeSidebar() {
+    $sidebar.removeClass('active');
+    $overlay.fadeOut(200);
+  }
+
+  // клик по оверлею
+  $overlay.on('click', closeSidebar);
+
+  // кнопка закрытия
+  $(document).on('click', '.sidebar-catalog__close', closeSidebar);
+
+  // клик вне sidebar
+  $(document).on('click', function (e) {
+    if (
+      $sidebar.hasClass('active') &&
+      !$(e.target).closest('.sidebar-catalog').length &&
+      !$(e.target).closest('.btn-catalog-mobile').length
+    ) {
+      closeSidebar();
+    }
+  });
+
+});

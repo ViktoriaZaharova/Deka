@@ -1066,7 +1066,7 @@
   z-index: 2;
   top: 20px;
   right: 20px;
-  fill: #B6B0D6;
+  stroke: #B6B0D6;
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1074,4 +1074,126 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.category-card {
+  width: 100%;
+  height: 100%;
+  min-height: 326px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.category-card__body {
+  max-width: 230px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.category-card .btn {
+  margin: auto 0 0;
+}
+.category-card .box-text {
+  margin: 14px 0 20px;
+}
+.category-card__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 206px;
+  height: 100%;
+  padding: 20px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.category-card__img:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 313px;
+  height: 313px;
+  background: #fff;
+  border-radius: 50%;
+  bottom: -103px;
+  right: -103px;
+}
+
+.category-card-2 .category-card__img {
+  padding: 22px 0 22px 8px;
+}
+
+.help-card {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px;
+}
+.help-card__body {
+  max-width: 655px;
+  width: calc(100% - 522px);
+  padding: 0 20px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.help-card .btn {
+  margin: auto 0 0;
+}
+.help-card .box-text {
+  margin: 20px 0;
+}
+.help-card__img {
+  width: 522px;
+  height: 321px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.help-card__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.help-card .attention-text {
+  margin: 0 0 20px;
 }
