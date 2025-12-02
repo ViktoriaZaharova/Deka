@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deka</title>
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <!-- <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon"> -->
+  <link rel="icon" type="image/png" href="img/favicon/favicon-512x512.png" sizes="512x512">
+  <link rel="icon" type="image/png" href="img/favicon/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="img/favicon/favicon-180x180.png" sizes="180x180">
+  <link rel="icon" type="image/png" href="img/favicon/favicon-100x100.png" sizes="100x100">
+  <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+
+  <!-- add plugins css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/fancybox.css">
+  <link rel="stylesheet" href="css/select2.min.css">
+  <!-- add plugins css end -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex align-items-center flex-wrap">
+            <div class="dropdown location-box">
+              <button class="btn btn-location dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span class="btn-location__icon"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#navigation-icon"></use>
+                  </svg></span>
+                Санкт-Петербург
+                <span class="dropdown-arrow"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                  </svg></span>
+              </button>
+              <div class="dropdown-menu">
+                <ul class="my-ul location-list">
+                  <li><a class="dropdown-item" href="#">Москва</a></li>
+                  <li><a class="dropdown-item" href="#">Санкт-Петербург</a></li>
+                  <li><a class="dropdown-item" href="#">Новосибирск</a></li>
+                </ul>
+              </div>
+            </div>
+            <nav class="nav-menu">
+              <ul class="my-ul menu">
+                <li class="menu-item"><a href="catalog.html" class="menu-link">Каталог</a></li>
+                <li class="menu-item"><a href="reviews.html" class="menu-link">Отзывы</a></li>
+                <li class="menu-item dropdown"><a href="help.html" class="menu-link">Поддержка
+                    <span class="dropdown-arrow"><svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                      </svg></span>
+                  </a>
+                  <div class="dropdown-menu">
+                    <ul class="dropdown-menu-list my-ul">
+                      <li><a class="dropdown-item" href="education.html">Обучение</a></li>
+                      <li><a class="dropdown-item" href="service.html">Техническая поддержка и сервис</a></li>
+                      <li><a class="dropdown-item" href="marketing.html">Маркетинговая поддержка</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item"><a href="about.html" class="menu-link">О компании</a></li>
+                <li class="menu-item"><a href="contacts.html" class="menu-link">Контакты</a></li>
+                <li class="menu-item"><a href="search-models.html" class="menu-link">Ищем моделей</a></li>
+                <li class="menu-item dropdown"><a href="patients.html" class="menu-link">Пациентам <span
+                      class="dropdown-arrow"><svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                      </svg></span></a>
+                  <div class="dropdown-menu">
+                    <ul class="dropdown-menu-list my-ul">
+                      <li><a class="dropdown-item" href="gallery.html">Галерея До/после</a></li>
+                      <li><a class="dropdown-item" href="maps-procedure.html">Где сделать процедуру</a></li>
+                      <li><a class="dropdown-item" href="question.html">Вопрос-ответ</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+            <ul class="my-ul list-social">
+              <li><a href="#"><img src="img/icon-ru.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icon-dzen.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icon-tg.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icon-youtube.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icon-vk.svg" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex align-items-center flex-wrap">
+            <a href="index.html" class="logo logo-header">
+              <span class="logo-icon"><img src="img/logo-footer.svg" alt="DEKA"></span>
+              <span class="logo-description">Лазерное оборудование из Италии <br>
+                от официального дистрибьютора</span>
+            </a>
+
+
+
+            <div class="search-wrapper">
+              <form method="post" class="form-search">
+                <label><input type="text" placeholder="Поиск по каталогу" name="search"></label>
+                <button type="submit" class="form-search__btn"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#search-icon"></use>
+                  </svg></button>
+                <a href="#" class="form-search__btn-close"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#close-icon"></use>
+                  </svg></a>
+              </form>
+              <div class="search-result-box scrollbar-my">
+                <a href="#" class="search-result-box__link">Александритовый лазер MOTUS AX2 MOVEO</a>
+                <a href="#" class="search-result-box__link">Александритовый лазер MOTUS AX2 MOVEO Александритовый лазер
+                  MOTUS AX2 MOVEO</a>
+                <a href="#" class="search-result-box__link">Александритовый лазер MOTUS AX2 MOVEO</a>
+                <a href="#" class="search-result-box__link">Александритовый лазер MOTUS AX2 MOVEO</a>
+                <a href="#" class="search-result-box__link">Александритовый лазер MOTUS AX2 MOVEO Александритовый лазер
+                  MOTUS AX2 MOVEO</a>
+                <a href="#" class="search-result-box__link">Александритовый лазер MOTUS AX2 MOVEO Александритовый лазер
+                  MOTUS AX2 MOVEO</a>
+              </div>
+            </div>
+
+
+            <div class="header-contacts">
+              <a href="tel:+78002221841" class="phone header-contacts__link">8 (800) 222-18-41</a>
+              <a href="mailto:order@dekalaser.ru" class="mail header-contacts__link">order@dekalaser.ru</a>
+            </div>
+            <a href="#" class="btn btn-accent btn-callback" data-bs-toggle="modal"
+              data-bs-target="#callbackModal">Заказать обратный
+              звонок</a>
+            <a href="#" class="btn-search-mobile">
+              <svg class="svg-icon">
+                <use xlink:href="img/sprite.svg#search-icon"></use>
+              </svg>
+            </a>
+            <a href="basket.html" class="btn-basket">
+              <svg class="svg-icon">
+                <use xlink:href="img/sprite.svg#basket-icon"></use>
+              </svg>
+              <span class="btn-basket__count">10</span>
+            </a>
+
+            <div class="dropdown dropdown-burger">
+              <a href="#" class="btn-burger" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                <svg class="svg-icon btn-burger__icon-open">
+                  <use xlink:href="img/sprite.svg#burger-icon"></use>
+                </svg>
+                <svg class="svg-icon btn-burger__icon-close">
+                  <use xlink:href="img/sprite.svg#close-icon"></use>
+                </svg>
+              </a>
+
+              <div class="dropdown-menu-toggle dropdown-menu">
+                <div class="dropdown-menu-body w-100">
+                  <div class="row">
+                    <div class="col-12 d-block d-sm-none mb-20">
+                      <form method="post" class="form-search">
+                        <label><input type="text" placeholder="Поиск по каталогу" name="search"></label>
+                        <button type="submit" class="form-search__btn"><svg class="svg-icon">
+                            <use xlink:href="img/sprite.svg#search-icon"></use>
+                          </svg></button>
+                        <a href="#" class="form-search__btn-close"><svg class="svg-icon">
+                            <use xlink:href="img/sprite.svg#close-icon"></use>
+                          </svg></a>
+                      </form>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                      <div class="menu-footer-column">
+                        <button class="footer-title-btn" type="button" data-bs-toggle="collapse"
+                          data-bs-target="[data-collapse='sections1']">
+                          Разделы
+                          <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-top"></use>
+                            </svg></span>
+                        </button>
+
+
+                        <div class="collapse" data-collapse="sections1">
+                          <ul class="menu-footer-list my-ul">
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="catalog.html">Каталог</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="reviews.html">Отзывы</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link" href="about.html">О
+                                компании</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="contacts.html">Контакты</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="search-models.html">Ищем моделей</a></li>
+                            <li class="menu-footer-list__item dropdown"><a class="menu-footer-list__link"
+                                data-bs-toggle="dropdown" href="patients.html">Пациентам
+                                <span class="dropdown-arrow"><svg class="svg-icon">
+                                    <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                                  </svg></span>
+                              </a>
+                              <div class="dropdown-menu">
+                                <ul class="dropdown-menu-list my-ul">
+                                  <li><a class="dropdown-item" href="gallery.html">Галерея До/после</a></li>
+                                  <li><a class="dropdown-item" href="maps-procedure.html">Где сделать процедуру</a></li>
+                                  <li><a class="dropdown-item" href="question.html">Вопрос-ответ</a></li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="deka-expert.html">Deka Expert Club</a></li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="menu-footer-column">
+                        <button class="footer-title-btn h4" type="button" data-bs-toggle="collapse"
+                          data-bs-target="[data-collapse='sections3']">
+                          Поддержка
+                          <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-top"></use>
+                            </svg></span>
+                        </button>
+
+                        <div class="collapse" data-collapse="sections3">
+                          <ul class="menu-footer-list my-ul">
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="education.html">Обучение</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="service.html">Техническая поддержка <br>
+                                и сервис</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="marketing.html">Маркетинговая <br>поддержка</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                      <div class="menu-footer-column">
+                        <button class="footer-title-btn" type="button" data-bs-toggle="collapse"
+                          data-bs-target="[data-collapse='sections4']">
+                          Направления
+                          <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-top"></use>
+                            </svg></span>
+                        </button>
+
+
+                        <div class="collapse" data-collapse="sections4">
+                          <ul class="menu-footer-list my-ul">
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="estet-medical.html">Эстетическая медицина</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="gynecology.html">Гинекология</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="dermatology.html">Дерматология</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="phlebology.html">Флебология</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="accessories.html">Аксессуары</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="patients.html">Пациентам
+                              </a>
+                            </li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="deka-expert.html">Deka Expert Club</a></li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="menu-footer-column">
+                        <button class="footer-title-btn" type="button" data-bs-toggle="collapse"
+                          data-bs-target="[data-collapse='sections5']">
+                          Блог
+                          <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-top"></use>
+                            </svg></span>
+                        </button>
+
+
+                        <div class="collapse" data-collapse="sections5">
+                          <ul class="menu-footer-list my-ul">
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="news.html">Новости</a>
+                            </li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="articles.html">Статьи</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                      <div class="menu-footer-column">
+                        <button class="footer-title-btn" type="button" data-bs-toggle="collapse"
+                          data-bs-target="[data-collapse='sections6']">
+                          Оборудование
+                          <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-top"></use>
+                            </svg></span>
+                        </button>
+
+
+                        <div class="collapse" data-collapse="sections6">
+                          <ul class="menu-footer-list my-ul">
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="equipment1.html">Александритовые лазеры</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="equipment2.html">Для
+                                удаления сосудов</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="equipment3.html">Для
+                                омоложения кожи</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="equipment4.html">CO2
+                                лазеры</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="equipment5.html">Аппараты для эпиляции</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="equipment6.html">Аппараты для коррекции фигуры</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="equipment7.html">Диодные лазеры</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="equipment8.html">Многопрофильная платформа</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="equipment9.html">Неодимовые лазеры</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="equipment10.html">Аппараты для удаления тату</a></li>
+                            <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                                href="equipment11.html">Аппараты для флебологии</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-menu-footer w-100 d-block d-sm-none">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="header-contacts">
+                        <a href="tel:+78002221841" class="phone header-contacts__link">8 (800) 222-18-41</a>
+                        <a href="mailto:order@dekalaser.ru" class="mail header-contacts__link">order@dekalaser.ru</a>
+                      </div>
+                      <ul class="my-ul list-social">
+                        <li><a href="#"><img src="img/icon-ru.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/icon-dzen.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/icon-tg.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/icon-youtube.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/icon-vk.svg" alt=""></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex align-items-center flex-wrap">
+            <nav class="nav-menu-category">
+              <ul class="menu-category my-ul">
+                <li class="menu-category__item"><a href="estet-medical.html"
+                    class="menu-category__link active">Эстетическая
+                    медицина</a></li>
+                <li class="menu-category__item"><a href="gynecology.html" class="menu-category__link">Гинекология</a>
+                </li>
+                <li class="menu-category__item"><a href="dermatology.html" class="menu-category__link">Дерматология</a>
+                </li>
+                <li class="menu-category__item"><a href="#" class="menu-category__link">Флебология</a></li>
+                <li class="menu-category__item"><a href="#" class="menu-category__link">Аксессуары</a></li>
+                <li class="menu-category__item"><a href="#" class="menu-category__link">Deka Expert Club</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="page page-news page-article">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb" class="nav nav-breadcrumb">
+            <ol class="breadcrumb my-ul">
+              <li class="breadcrumb-item"><a href="index.html">Главная<svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg></a></li>
+              <li class="breadcrumb-item"><a href="blog.html">Блог<svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg></a></li>
+              <li class="breadcrumb-item"><a href="articles.html">Статьи<svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg></a></li>
+              <li class="breadcrumb-item active" aria-current="page">Виды лазерной эпиляции</li>
+            </ol>
+          </nav>
+
+          <div class="sidebar sidebar-blog w-100 mb-20 d-block d-lg-none">
+            <div class="tabs-wrapper">
+
+              <!-- Кнопка для мобильного -->
+              <a href="#" class="tabs-select-btn"><span>Статьи</span>
+                <svg class="svg-icon">
+                  <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                </svg>
+              </a>
+
+              <!-- Список табов -->
+
+              <ul class="my-ul list-categorey-blog">
+                <li><a href="blog.html" class="btn btn-pink">Все материалы</a></li>
+                <li><a href="news.html" class="btn btn-pink">Новости</a></li>
+                <li><a href="articles.html" class="btn btn-pink active">Статьи</a></li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+          <div class="sidebar sidebar-blog w-100">
+            <div class="tabs-wrapper">
+
+              <!-- Кнопка для мобильного -->
+              <a href="#" class="tabs-select-btn"><span>Все материалы</span>
+                <svg class="svg-icon">
+                  <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                </svg>
+              </a>
+
+              <!-- Список табов -->
+
+              <ul class="my-ul list-categorey-blog">
+                <li><a href="blog.html" class="btn btn-pink">Все материалы</a></li>
+                <li><a href="news.html" class="btn btn-pink">Новости</a></li>
+                <li><a href="articles.html" class="btn btn-pink active">Статьи</a></li>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-9 col-xl-10">
+          <div class="row">
+            <div class="col-12">
+              <div class="news-date">13.09.2022</div>
+
+              <h1 class="h2 mb-30">Виды лазерной эпиляции</h1>
+
+              <div class="box-text mb-40">
+                <p>Вопрос избавления от нежелательных волос на лице и на теле в последние десятилетия является
+                  актуальным для большинства женщин по всему миру, поэтому лазерная эпиляция, благодаря своей
+                  эффективности, получила признание и любовь огромного количества пациентов. На сегодняшний день
+                  доступны различные виды лазерной эпиляции, выполняемые на высокотехнологичном оборудовании.
+                  В данной статье мы расскажем подробнее об основных видах лазеров для эпиляции.</p>
+              </div>
+
+              <div class="article-type w-100 mb-20">
+                <div class="row">
+                  <div class="col-12 mb-20">
+                    <h3>Александритовый лазер</h3>
+                  </div>
+                  <div class="col-12 col-sm-8 col-md-5 mb-20">
+                    <div class="article-type__img general-img"><img src="img/article-img1.jpg" alt=""></div>
+                  </div>
+                  <div class="col-12 col-md-7 mb-20">
+                    <div class="article-type__body">
+                      <div class="box-text">
+                        <p>Длина волны, генерируемая данным типом лазеров, составляет 755 нм, а длительность импульсов
+                          варьируется в пределах от 0,25 до 300 мс. Частота импульсных повторений александритового
+                          лазера составляет 10 Гц, а за один импульс на ткани попадает энергия в 100 Дж/см². Данные
+                          параметры обеспечивают максимальное поглощение излучения меланином и минимальное поглощение
+                          гемоглобином.</p>
+                        <p>Многочисленные статистические исследования подтверждают, что применение александритового
+                          лазера способствует уменьшению волосяного покрова на 66% за первый месяц. Через три месяца
+                          данный показатель составляет 27%, а через полгода – 4%. Александритовый лазер одинаково
+                          эффективен как для удаления темных, так и светлых волос.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="article-type w-100 mb-20">
+                <div class="row">
+                  <div class="col-12 mb-20">
+                    <h3>Диодный лазер </h3>
+                  </div>
+                  <div class="col-12 col-sm-8 col-md-4 mb-20 order-md-1">
+                    <div class="article-type__img general-img"><img src="img/article-img2.jpg" alt=""></div>
+                  </div>
+                  <div class="col-12 col-md-8 mb-20">
+                    <div class="article-type__body">
+                      <div class="box-text">
+                        <p>Данный тип лазера работает в ближнем инфракрасном спектре излучения, длина волны составляет
+                          810 нм, при длительности импульсов от 5 до 30 мс. Частота вспышек диодного лазера составляет 2
+                          Гц, попадающая на ткани энергия составляет 60 Дж/см². Данные параметры обеспечивают
+                          усредненное поглощение излучения меланином.</p>
+                        <p>Диодный лазер эффективен при удалении светлых, рыжих волос, а также удалении волосяного
+                          покрова на смуглой и загорелой коже. Еще одним существенным преимуществом лазерной эпиляции
+                          при помощи диодных аппаратов является отсутствие вросших волос, даже спустя многие месяцы
+                          после окончания процедуры. Кроме того, кожа в полной степени сохраняет свою целостность, на
+                          ней не появляется каких-либо повреждений. Именно поэтому восстановительный период после
+                          диодной эпиляции максимально короткий.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="article-type w-100 mb-20">
+                <div class="row">
+                  <div class="col-12 mb-20">
+                    <h3>Неодимовый лазер</h3>
+                  </div>
+                  <div class="col-12 col-sm-8 col-md-5 mb-20">
+                    <div class="article-type__img general-img"><img src="img/article-img3.jpg" alt=""></div>
+                  </div>
+                  <div class="col-12 col-md-7 mb-20">
+                    <div class="article-type__body">
+                      <div class="box-text">
+                        <p>Среди оборудования для лазерной эпиляции выделяется неодимовый лазер или Nd:YAG, благодаря
+                          своим мощностным характеристикам. Длина волны, создаваемая неодимовым лазером, составляет 1080
+                          нм, что помогает ей глубоко проникать в кожу и активно воздействовать на волосяные фолликулы.
+                        </p>
+                        <p>Неодимовый лазер эффективно справляется с удалением светлых и темных волос, независимо от
+                          фототипа кожи пациента. Неодимовые лазеры также активно применяются в процедурах омоложения.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="article-type w-100 mb-20">
+                <div class="row">
+                  <div class="col-12 mb-20">
+                    <h3>Рубиновый лазер</h3>
+                  </div>
+
+                  <div class="col-12 mb-20">
+                    <div class="article-type__body">
+                      <div class="box-text">
+                        <p>Длина волны, излучаемая рубиновыми лазерами, составляет 694 нм. Длительность световых
+                          импульсов составляет 3 мс, поток энергии варьируется в пределах 40-60 Дж/см², частота лазера
+                          равна 1 Гц. При данных параметрах происходит максимальное поглощение создаваемого рубиновым
+                          лазером излучения меланином, но слабое поглощение гемоглобином. В связи с этим рубиновый лазер
+                          помогает получить хороший результат от эпиляции у пациентов с I и II типом кожи. Волосы на
+                          коже IV и V типов практически не подвергаются удалению.
+                        </p>
+                        <p>Однозначно ответить на вопрос, какой лазер для эпиляции является самым эффективным - не
+                          совсем корректно, т.к. каждый из них в той или иной степени больше ориентирован на
+                          определенный тип кожи. Несмотря на различия, все вышеописанные типы лазеров применяются в
+                          косметологических аппаратах для удаления нежелательных волос на теле. Расскажем подробнее,
+                          какие бывают виды лазерной эпиляции и благодаря каким достоинствам они получили столь широкое
+                          распространение.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="article-type w-100 mb-20">
+                <div class="row">
+                  <div class="col-12 mb-20">
+                    <h3>Элос эпиляция</h3>
+                  </div>
+
+                  <div class="col-12 mb-20">
+                    <div class="article-type__body">
+                      <div class="box-text">
+                        <p>E.L.O.S. или ЭЛОС (электрооптическая синергия) - это методика, сочетающая в себе
+                          высокочастотные световые вспышки и радиочастотное воздействие. Сочетание данных параметров
+                          позволяет получить впечатляющий эффект, независимо от фототипа кожи и цвета волос пациента. В
+                          E.L.O.S. применяется полихромный световой пучок со световыми волнами в диапазоне 580-980 нм.
+                          При E.L.O.S. эпиляции происходит разогрев стержня волоса, провоцирующий термическое
+                          повреждение фолликула и мелких кровеносных сосудов. Таким образом, при E.L.O.S. эпиляции корни
+                          волос, лишившись доступа к питанию, разрушаются. При этом повреждения эпителиальных тканей не
+                          происходит.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="article-type w-100 mb-20">
+                <div class="row">
+                  <div class="col-12 mb-20">
+                    <h3>Лазерная кул (Qool) эпиляция</h3>
+                  </div>
+
+                  <div class="col-12 mb-20">
+                    <div class="article-type__body">
+                      <div class="box-text">
+                        <p>При лазерной Qool (кул) эпиляции, применяется термическое воздействие низких температур, а не
+                          высоких, в отличии от классической. Qool (кул) эпиляция исключает травмирование эпителиальных
+                          тканей вокруг волосяных луковиц. Qool эпиляция осуществляется при помощи неодимового лазерного
+                          аппарата с длиной волны в 1064 нм. Кул-метод воздействует на гемоглобин на молекулярном
+                          уровне, в результате чего процессы роста волос сначала замедляются, а после прохождения курса
+                          перестают расти окончательно. Кул-эпиляция подходит для клиентов с любым фототипом кожи, и чем
+                          больше меланина сконцентрировано в волосках, тем результативнее будет эффект от Кул-эпиляции.
+                          Пациентам со светлыми или седыми волосами необходимо большее количество сеансов. Воздействие
+                          на кожу при процедуре кул-эпиляции практически не происходит.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="article-type w-100 mb-20">
+                <div class="row">
+                  <div class="col-12 mb-20">
+                    <h3>IPL</h3>
+                  </div>
+                  <div class="col-12 col-sm-8 col-md-5 mb-20 order-md-1">
+                    <div class="article-type__img general-img"><img src="img/article-img4.jpg" alt=""></div>
+                  </div>
+                  <div class="col-12 col-md-7 mb-20">
+                    <div class="article-type__body">
+                      <div class="box-text">
+                        <p>Данный метод эпиляции основан на применении IPL-систем. Длина волны излучения IPL-системы
+                          составляет 500-1200 нм. Световая энергия, создаваемая IPL, преобразуется в тепловую, что ведет
+                          к нагреванию фолликула и разрушению сосудистый сосочек, питающих волос. При применении данного
+                          метода нежелательные волосы выпадают в течение недели, а место расположения волосяной луковицы
+                          зарастает соединительной тканью. Различные длины световых волн поглощаются тканями в разной
+                          степени в зависимости от их окраски, поэтому фотоэпиляционный эффект от IPL в большинстве
+                          случаев определяется наличием в волосах меланина и правильным подбором параметров волн света.
+                        </p>
+                        <p></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 order-1 mb-20">
+                    <div class="box-text">
+                      <p>При процедурах IPL эпиляции используются максимально поглощаемые меланином и минимально другими
+                        пигментами длины волн. Данная выборочная схема называется селективной. При селективном
+                        фототермолизе 100% клеток волосяных луковиц, отвечающих за регенерацию, погибают и рост
+                        нежелательных волос прекращается.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="article-type w-100 mb-20">
+                <div class="row">
+                  <div class="col-12 mb-20">
+                    <h3>Аппараты для лазерной эпиляции в домашних условиях</h3>
+                  </div>
+
+                  <div class="col-12 mb-20">
+                    <div class="article-type__body">
+                      <div class="box-text">
+                        <p>На рынке аппаратов для лазерной эпиляции представлены модели для использования в домашних
+                          условиях. В связи с тем, что данные модели уступают по техническим характеристикам и мощности
+                          профессиональным аппаратам, избавление от нежелательных волос с их помощью происходит на
+                          небольшой период. Чтобы вовремя предупреждать появление нового волосяного покрова, сеансы
+                          лазерной эпиляции следует повторять каждые две недели.</p>
+                        <h5>При выборе аппарата для домашней лазерной эпиляции следует отталкиваться от фототипа вашей
+                          кожи и типа волос, а также от характеристик самого аппарата, таких как:</h5>
+                        <ul class="my-ul list-checked m-14">
+                          <li>длина волны луча</li>
+                          <li>охлаждающая опция</li>
+                          <li>площадь воздействия</li>
+                        </ul>
+
+
+                        <p>Но, даже имея под рукой аппарат для домашней лазерной эпиляции с высокими техническими
+                          характеристиками, неопытный человек вряд ли сможет эффективно им воспользоваться, поскольку
+                          даже непрофессиональный аппарат требует высокой точности выполнения процедуры.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+
+          </div>
+
+         
+
+          <div class="row">
+            <div class="col-12 col-sm-6 mb-20">
+              <nav class="nav nav-pagination">
+                <ul class="pagination my-ul justify-content-start">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true"><svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-left"></use>
+                        </svg></span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">...</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true"><svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg></span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="col-12 col-sm-6">
+              <a href="#" class="btn btn-accent ms-sm-auto btn-set-question" data-bs-toggle="modal"
+                data-bs-target="#callbackModal">Задать
+                вопрос</a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="read-also w-100">
+                <h2 class="mb-30">Читайте также</h2>
+
+                <div class="row">
+                  <div class="col-12 col-lg-6 mb-30">
+                    <div class="news-blog-card">
+                      <div class="news-blog-card__date">08.12.2022</div>
+                      <a href="article.html" class="news-blog-card__title h3">Состоялся 15-й Санкт-Петербургский
+                        венозный
+                        форум</a>
+                      <div class="box-text">
+                        <p>На выставке были представлены лазер Synchro FT с IPL фотонасадкой и многофункциональная
+                          платформа Luxea
+                          с сосудистой насадкой Sparks.</p>
+                      </div>
+                      <a href="article.html" class="link-arrow btn btn-accent"><svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-diagonal"></use>
+                        </svg></a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6 mb-30">
+                    <div class="news-blog-card">
+                      <div class="news-blog-card__date">08.12.2022</div>
+                      <a href="article.html" class="news-blog-card__title h3">Состоялся 15-й Санкт-Петербургский
+                        венозный
+                        форум</a>
+                      <div class="box-text">
+                        <p>На выставке были представлены лазер Synchro FT с IPL фотонасадкой и многофункциональная
+                          платформа Luxea
+                          с сосудистой насадкой Sparks.</p>
+                      </div>
+                      <a href="article.html" class="link-arrow btn btn-accent"><svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-diagonal"></use>
+                        </svg></a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6 mb-30">
+                    <div class="news-blog-card">
+                      <div class="news-blog-card__date">08.12.2022</div>
+                      <a href="article.html" class="news-blog-card__title h3">Состоялся 15-й Санкт-Петербургский
+                        венозный
+                        форум</a>
+                      <div class="box-text">
+                        <p>На выставке были представлены лазер Synchro FT с IPL фотонасадкой и многофункциональная
+                          платформа Luxea
+                          с сосудистой насадкой Sparks.</p>
+                      </div>
+                      <a href="article.html" class="link-arrow btn btn-accent"><svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-diagonal"></use>
+                        </svg></a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6 mb-30">
+                    <div class="news-blog-card">
+                      <div class="news-blog-card__date">08.12.2022</div>
+                      <a href="article.html" class="news-blog-card__title h3">Состоялся 15-й Санкт-Петербургский
+                        венозный
+                        форум</a>
+                      <div class="box-text">
+                        <p>На выставке были представлены лазер Synchro FT с IPL фотонасадкой и многофункциональная
+                          платформа Luxea
+                          с сосудистой насадкой Sparks.</p>
+                      </div>
+                      <a href="article.html" class="link-arrow btn btn-accent"><svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#arrow-diagonal"></use>
+                        </svg></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-12 col-sm-7 col-lg-4">
+            <a href="index.html" class="logo logo-footer">
+              <span class="logo-icon"><img src="img/logo-footer.svg" alt="DEKA"></span>
+              <span class="logo-description">Лазерное оборудование из Италии <br>
+                от официального дистрибьютора</span>
+            </a>
+
+            <ul class="my-ul list-social">
+              <li><a href="#"><img src="img/icon-ru.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icon-dzen.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icon-tg.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icon-youtube.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icon-vk.svg" alt=""></a></li>
+            </ul>
+
+            <a href="#" class="btn btn-accent mb-40" data-bs-toggle="modal" data-bs-target="#callbackModal">Заказать
+              звонок</a>
+
+            <div class="footer-address-box">
+              <p class="font-medium color-dark">DEKA в РФ</p>
+              <p>123100, г. Москва, улица Сергея Макеева, 7с2</p>
+              <div class="footer-address-wrapper"><a href="tel:+78003221841">8 (800) 322-18-41</a><a
+                  href="mailto:order@dekalaser.ru">order@dekalaser.ru</a></div>
+            </div>
+
+            <div class="footer-address-box">
+              <p class="font-medium color-dark">DEKA в Италии</p>
+              <p>17 – 50041 Calenzano, Firenze (Italy)</p>
+              <div class="footer-address-wrapper">
+                <div class="phone-column">
+                  <a href="tel:+39055.88.74.942">(+39) 055.88.74.942</a>
+                  <a href="tel:+39055.88.32.884">(+39) 055.88.32.884</a>
+                </div>
+                <a href="#">P.IVA 04190470486</a>
+              </div>
+            </div>
+
+            <div class="company-logos">
+              <a href="index.html" class="logo logo-footer company-logos-box">
+                <span class="logo-icon"><img src="img/directalab.png" alt="DEKA"></span>
+                <span class="logo-description">Терапевтическая космоцевтика</span>
+              </a>
+              <a href="index.html" class="logo logo-footer company-logos-box">
+                <span class="logo-icon"><img src="img/skinelly.png" alt="DEKA"></span>
+                <span class="logo-description">Инъекционная косметология <br>и гинекология</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-5 col-lg-8">
+            <div class="row">
+              <div class="col-12 col-lg-3 col-xl-4">
+                <div class="menu-footer-column">
+                  <button class="footer-title-btn" type="button" data-bs-toggle="collapse"
+                    data-bs-target="[data-collapse='sections1']">
+                    Разделы
+                    <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#arrow-top"></use>
+                      </svg></span>
+                  </button>
+
+
+                  <div class="collapse" data-collapse="sections1">
+                    <ul class="menu-footer-list my-ul">
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="catalog.html">Каталог</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="reviews.html">Отзывы</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link" href="about.html">О
+                          компании</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="contacts.html">Контакты</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="search-models.html">Ищем моделей</a></li>
+                      <li class="menu-footer-list__item dropdown"><a class="menu-footer-list__link"
+                          data-bs-toggle="dropdown" href="patients.html">Пациентам
+                          <span class="dropdown-arrow"><svg class="svg-icon">
+                              <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                            </svg></span>
+                        </a>
+                        <div class="dropdown-menu">
+                          <ul class="dropdown-menu-list my-ul">
+                            <li><a class="dropdown-item" href="gallery.html">Галерея До/после</a></li>
+                            <li><a class="dropdown-item" href="maps-procedure.html">Где сделать процедуру</a></li>
+                            <li><a class="dropdown-item" href="question.html">Вопрос-ответ</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="menu-footer-column">
+                  <button class="footer-title-btn" type="button" data-bs-toggle="collapse"
+                    data-bs-target="[data-collapse='sections2']">
+                    Пациентам
+                    <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#arrow-top"></use>
+                      </svg></span>
+                  </button>
+
+
+                  <div class="collapse" data-collapse="sections2">
+                    <ul class="menu-footer-list my-ul">
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="maps-procedure.html">Где сделать
+                          процедуру</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="menu-footer-column">
+                  <button class="footer-title-btn h4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="[data-collapse='sections3']">
+                    Поддержка
+                    <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#arrow-top"></use>
+                      </svg></span>
+                  </button>
+
+                  <div class="collapse" data-collapse="sections3">
+                    <ul class="menu-footer-list my-ul">
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="education.html">Обучение</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="service.html">Техническая поддержка
+                          и сервис</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="marketing.html">Маркетинговая поддержка</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="master-class.html">Записаться на мастер-класс</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="delivery.html">Доставка</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="payment.html">Оплата</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-3 col-xl-4">
+                <div class="menu-footer-column">
+                  <button class="footer-title-btn" type="button" data-bs-toggle="collapse"
+                    data-bs-target="[data-collapse='sections4']">
+                    Направления
+                    <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#arrow-top"></use>
+                      </svg></span>
+                  </button>
+
+
+                  <div class="collapse" data-collapse="sections4">
+                    <ul class="menu-footer-list my-ul">
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="estet-medical.html">Эстетическая медицина</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="gynecology.html">Гинекология</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="dermatology.html">Дерматология</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="phlebology.html">Флебология</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="accessories.html">Аксессуары</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link" href="deka-expert.html">Deka
+                          Expert Club</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="menu-footer-column">
+                  <button class="footer-title-btn" type="button" data-bs-toggle="collapse"
+                    data-bs-target="[data-collapse='sections5']">
+                    Блог
+                    <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#arrow-top"></use>
+                      </svg></span>
+                  </button>
+
+
+                  <div class="collapse" data-collapse="sections5">
+                    <ul class="menu-footer-list my-ul">
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link" href="news.html">Новости</a>
+                      </li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="articles.html">Статьи</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6 col-xl-4">
+                <div class="menu-footer-column">
+                  <button class="footer-title-btn" type="button" data-bs-toggle="collapse"
+                    data-bs-target="[data-collapse='sections6']">
+                    Оборудование
+                    <span class="footer-title-btn__arrow"><svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#arrow-top"></use>
+                      </svg></span>
+                  </button>
+
+
+                  <div class="collapse" data-collapse="sections6">
+                    <ul class="menu-footer-list my-ul">
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="equipment1.html">Александритовые лазеры</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link" href="equipment2.html">Для
+                          удаления сосудов</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link" href="equipment3.html">Для
+                          омоложения кожи</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link" href="equipment4.html">CO2
+                          лазеры</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="equipment5.html">Аппараты для эпиляции</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="equipment6.html">Аппараты для коррекции фигуры</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="equipment7.html">Диодные лазеры</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="equipment8.html">Многопрофильная платформа</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="equipment9.html">Неодимовые лазеры</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="equipment10.html">Аппараты для удаления тату</a></li>
+                      <li class="menu-footer-list__item"><a class="menu-footer-list__link"
+                          href="equipment11.html">Аппараты для флебологии</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-cookie">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Настоящий сайт использует cookie-файлы. Продолжая использование сайта, вы даете свое согласие на
+              обработку данных.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex align-items-center flex-wrap">
+            <div class="copyright">© 2023 DEKA</div>
+            <a href="#" class="link-politiks color-light-grey text-decoration m-auto" target="_blank">Политика
+              конфиденциальности</a>
+            <a href="#" class="link-developer color-light-grey" target="_blank">Разработка сайта — <span>Маркетинг на
+                100</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="overlay"></div>
+
+  <!-- add plugins js-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/fancybox.umd.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/select2.min.js"></script>
+  <!-- add plugins js end-->
+
+  <script src="js/common.js"></script>
+
+</body>
+
+</html>
