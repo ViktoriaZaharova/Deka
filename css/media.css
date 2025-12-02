@@ -453,6 +453,12 @@
   .category-card__img {
     max-width: 206px;
   }
+  .page-marketing {
+    margin: 30px 0 60px;
+  }
+  .marketing-result {
+    margin: 60px 0;
+  }
 }
 @media only screen and (max-width: 720px) {
   .header-fixed .header-contacts {
@@ -863,6 +869,7 @@
   }
   .form-callback [type=submit] {
     margin: 0 0 10px;
+    width: 100%;
   }
   .form-callback .label-checkbox {
     max-width: none;
@@ -1024,6 +1031,46 @@
   }
   .help-card .box-text {
     margin: 14px 0;
+  }
+  .nav-breadcrumb {
+    margin: 0 0 20px;
+  }
+  .breadcrumb a svg {
+    margin: 0 4px;
+  }
+  .marketing-image {
+    height: 168px;
+    max-width: 280px;
+  }
+  .marketing-result {
+    margin: 40px 0 20px;
+  }
+  .page-marketing {
+    margin: 20px 0 40px;
+  }
+  .marketing-result-box {
+    padding: 0;
+  }
+  .marketing-result-box::before {
+    display: none;
+  }
+  .marketing-result-box h5 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 0 14px;
+  }
+  .marketing-result-box h5::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    margin: 3px 10px 0 0;
+    background: url("../img/check-icon.svg") no-repeat center;
+    background-size: 100%;
   }
 }
 @media only screen and (min-width: 992px) {
