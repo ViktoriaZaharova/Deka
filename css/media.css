@@ -1013,7 +1013,7 @@
     margin: 20px 0;
   }
   .category-card {
-    min-height: 376px;
+    min-height: 400px;
   }
   .category-card__body {
     max-width: none;
