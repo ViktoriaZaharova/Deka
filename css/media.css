@@ -1013,7 +1013,7 @@
     margin: 20px 0;
   }
   .category-card {
-    min-height: 400px;
+    min-height: 380px;
   }
   .category-card__body {
     max-width: none;
@@ -1021,6 +1021,9 @@
   .category-card__img {
     max-width: 150px;
     height: 238px;
+  }
+  .category-card__img img {
+    max-height: 100%;
   }
   .category-card__img:after {
     width: 238px;

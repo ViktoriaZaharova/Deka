@@ -354,12 +354,12 @@
   line-height: 14px;
   color: #fff;
 }
-.list-labels li {
+.list-labels__item {
   margin: 0 10px 0 0;
   border-radius: 40px;
   padding: 10px 14px;
 }
-.list-labels li:last-child {
+.list-labels__item:last-child {
   margin: 0;
 }
 
@@ -1394,4 +1394,78 @@
   color: #B6B0D6;
   font-size: 12px;
   font-weight: 500;
+}
+
+.select-sorting {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 0 0 auto;
+  color: #5A3FC3;
+}
+.select-sorting .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #5A3FC3;
+}
+
+.card-product-row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: #fff;
+  border: 1px solid #E6DEF4;
+  border-radius: 20px;
+  padding: 30px;
+}
+.card-product-row__img {
+  position: relative;
+  z-index: 1;
+  width: 307px;
+  border-radius: 20px;
+  padding: 20px;
+  background: #F7F4FF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.card-product-row__img:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 50%;
+  z-index: -1;
+  width: 230px;
+  height: 230px;
+}
+.card-product-row__body {
+  width: calc(100% - 307px);
+  padding: 0 0 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.card-product-row .price-wraper {
+  margin: auto 0 20px;
 }

@@ -628,6 +628,12 @@ $('.js-example-basic-single[name="procedure"]').select2({
   width: '100%'
 });
 
+$('.js-example-basic-single[name="select-sorting"]').select2({
+  placeholder: "",
+  allowClear: true,
+  // width: '100%'
+});
+
 // collapse desktop catalog
 (function ($) {
   const DESKTOP_BREAKPOINT = 992;

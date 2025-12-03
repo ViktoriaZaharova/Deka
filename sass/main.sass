@@ -256,7 +256,7 @@
     font-weight: bold
     line-height: 14px
     color: #fff
-    li
+    &__item
         margin: 0 10px 0 0
         border-radius: 40px
         padding: 10px 14px
@@ -890,7 +890,7 @@
     background: $light-pink
     padding: 30px
     overflow: hidden
-    
+
 .gallery-news-slider
     .slick-prev
         left: 20px
@@ -956,3 +956,48 @@
         color: $light-grey
         font-size: 12px
         font-weight: 500
+
+// Alexandrite lasers page
+.select-sorting
+    width: fit-content
+    margin: 0 0 0 auto
+    color: $violet
+    .select2-container--default .select2-selection--single .select2-selection__rendered
+        color: $violet
+
+.card-product-row
+    width: 100%
+    display: flex
+    align-items: stretch
+    flex-wrap: wrap
+    background: #fff
+    border: 1px solid $stroke
+    border-radius: 20px
+    padding: 30px
+    &__img
+        position: relative
+        z-index: 1
+        width: 307px
+        border-radius: 20px
+        padding: 20px
+        background: $light-pink
+        @include d-flex
+        &:after
+            content: ''
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%,-50%)
+            background: #fff
+            border-radius: 50%
+            z-index: -1
+            width: 230px
+            height: 230px
+    &__body
+        width: calc( 100% - 307px )
+        padding: 0 0 0 40px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    .price-wraper
+        margin: auto 0  20px    
