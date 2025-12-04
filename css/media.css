@@ -466,6 +466,15 @@
   .gallery-news-slider {
     width: calc(100% + 15px);
   }
+  .instruction-box {
+    padding: 30px 30px 10px;
+  }
+  .card-product-row__img {
+    height: 396px;
+  }
+  .card-product-row__body {
+    padding: 0 0 0 30px;
+  }
 }
 @media only screen and (max-width: 720px) {
   .header-fixed .header-contacts {

@@ -1469,3 +1469,8 @@
 .card-product-row .price-wraper {
   margin: auto 0 20px;
 }
+
+.instruction-box {
+  padding: 40px 40px 20px;
+  height: auto;
+}
