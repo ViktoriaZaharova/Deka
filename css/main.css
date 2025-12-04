@@ -1642,3 +1642,74 @@
   line-height: 18px;
   color: #7A7194;
 }
+
+.faq-item {
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #E6DEF4;
+  overflow: hidden;
+  padding: 0 0 16px;
+}
+.faq-item .faq-icon {
+  background: #5A3FC3;
+  stroke: #fff;
+  fill: #fff;
+}
+
+.faq-btn {
+  padding: 30px 70px 14px 30px;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 36px;
+}
+.faq-btn.collapsed {
+  background: #F7F4FF;
+}
+.faq-btn.collapsed:hover .faq-icon {
+  background: #5A3FC3;
+  stroke: #fff;
+  fill: #fff;
+}
+
+.faq-body {
+  padding: 0 30px 0;
+  background: #F7F4FF;
+}
+
+.faq-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #F7F4FF;
+  position: absolute;
+  right: 30px;
+  top: 23px;
+  z-index: 1;
+  padding: 10px;
+  stroke: #5A3FC3;
+  fill: #5A3FC3;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.collapse.show + .faq-btn .faq-icon,
+.faq-btn.collapsed .faq-icon {
+  background: #fff;
+  fill: #5A3FC3;
+  stroke: #5A3FC3;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
