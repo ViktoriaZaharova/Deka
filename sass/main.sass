@@ -958,12 +958,34 @@
         font-weight: 500
 
 // Alexandrite lasers page
-.select-sorting
-    width: fit-content
-    margin: 0 0 0 auto
-    color: $violet
-    .select2-container--default .select2-selection--single .select2-selection__rendered
-        color: $violet
+.select-sorting + .select2-container--default
+    margin-left: auto !important
+
+    .select2-selection--single
+        color: $violet !important
+        border: none
+        font-size: 18px
+        font-weight: 500
+        line-height: 26px
+        display: flex
+        align-items: start
+        padding: 0
+        .select2-selection__rendered
+            border-bottom: 1px solid $violet
+            padding: 0 0 5px
+        .select2-selection__arrow
+            position: relative
+            z-index: 1
+            background: url('../img/select-arrow2.svg') no-repeat center
+            background-size: 100%
+            margin: 0 0 0 6px
+
+.select-sorting + .select2-container--default
+.select2-selection__rendered
+    color: $violet !important
+
+.select-sorting + .select2-container
+    width: fit-content !important
 
 .card-product-row
     width: 100%
@@ -993,6 +1015,8 @@
             z-index: -1
             width: 230px
             height: 230px
+        img
+            max-height: 100%
     &__body
         width: calc( 100% - 307px )
         padding: 0 0 0 40px

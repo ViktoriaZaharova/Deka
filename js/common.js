@@ -631,7 +631,7 @@ $('.js-example-basic-single[name="procedure"]').select2({
 $('.js-example-basic-single[name="select-sorting"]').select2({
   placeholder: "",
   allowClear: true,
-  // width: '100%'
+  width: '100%'
 });
 
 // collapse desktop catalog
