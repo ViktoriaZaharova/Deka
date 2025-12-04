@@ -770,3 +770,119 @@ $(function () {
   });
 
 });
+
+
+// doctors card
+$(function () {
+
+  const $cards = $('.doctors-col');
+  const $btn = $('.btn-toggle-doctors');
+
+  let initialCount;  // сколько показывать изначально
+  const loadCount = 4; // по 4 карточки догружаем
+
+  function updateView() {
+    const windowWidth = window.innerWidth;
+
+    // Определяем сколько показываем изначально
+    initialCount = windowWidth < 576 ? 4 : 8;
+
+    // Скрываем все карточки
+    $cards.hide();
+
+    // Показываем первые initialCount
+    $cards.slice(0, initialCount).show();
+
+    // Проверка нужно ли показывать кнопку
+    if ($cards.length > initialCount) {
+      $btn.show();
+    } else {
+      $btn.hide();
+    }
+  }
+
+  // вызов при загрузке
+  updateView();
+
+  // пересчёт при ресайзе
+  $(window).on('resize', function () {
+    updateView();
+  });
+
+  // обработчик "Показать ещё"
+  $btn.on('click', function (e) {
+    e.preventDefault();
+
+    const visibleCount = $cards.filter(':visible').length;
+
+    // Показываем следующие 4
+    $cards.slice(visibleCount, visibleCount + loadCount).fadeIn(200);
+
+    // если карточки закончились → скрыть кнопку
+    if (visibleCount + loadCount >= $cards.length) {
+      $btn.fadeOut(200);
+    }
+  });
+
+});
+
+
+// certificates card
+$(function () {
+
+  const $cards = $('.certificates-col');
+  const $btn = $('.btn-toggle-certificates');
+
+  let initialCount;
+  const loadCount = 4;
+
+  function updateView() {
+    const w = window.innerWidth;
+
+    // breakpoint logic
+    if (w < 576) {
+      initialCount = 2;  // mobile
+    } else if (w < 768) {
+      initialCount = 4;  // small tablet
+    } else {
+      initialCount = 8;  // desktop
+    }
+
+    // hide all
+    $cards.hide();
+
+    // show initial
+    $cards.slice(0, initialCount).show();
+
+    // show/hide button
+    if ($cards.length > initialCount) {
+      $btn.show();
+    } else {
+      $btn.hide();
+    }
+  }
+
+  // run on load
+  updateView();
+
+  // run on resize
+  $(window).on('resize', function () {
+    updateView();
+  });
+
+  // Load more
+  $btn.on('click', function (e) {
+    e.preventDefault();
+
+    const visibleCount = $cards.filter(':visible').length;
+
+    // show next N cards
+    $cards.slice(visibleCount, visibleCount + loadCount).fadeIn(200);
+
+    // hide button if nothing left
+    if (visibleCount + loadCount >= $cards.length) {
+      $btn.fadeOut(200);
+    }
+  });
+
+});

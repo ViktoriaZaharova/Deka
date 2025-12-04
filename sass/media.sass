@@ -90,6 +90,9 @@
     .row
         margin: 0 -12px
 
+    .mt-50
+        margin-top: 30px
+
     .m-100
         margin: 80px 0
 
@@ -406,11 +409,13 @@
 
     .card-product-row__img
         height: 396px
-        
+
     .card-product-row__body
         padding: 0 0 0 30px
 
-        
+    .page-about .about-company__video
+        height: 400px
+
 @media only screen and (max-width: 720px)
     .header-fixed .header-contacts
         margin: 0 14px 0 0
@@ -494,7 +499,7 @@
             width: 100%
         &__body
             width: 100%
-            padding: 14px 0 0    
+            padding: 14px 0 0
 
 @media only screen and (max-width: 576px)
     h1, .h1
@@ -964,29 +969,28 @@
         img
             border-radius: 4px
 
-
     .article-type
         margin-bottom: 10px
 
-    .card-product-row 
+    .card-product-row
         padding: 14px
         &__img
             height: 290px
             &:after
                 width: 200px
                 height: 200px
-        .price-wraper    
+        .price-wraper
             margin: 0 0 14px
         .btn-group
-            margin: 0 
+            margin: 0
             flex-direction: column
             align-items: flex-start
             .btn
                 margin: 0 0 10px
                 width: 100%
                 &:last-child
-                    margin: 0   
-        
+                    margin: 0
+
     .list-rating
         margin: 14px 0
         font-size: 14px
@@ -1008,20 +1012,36 @@
     .list-tags__item
         margin: 0 10px 10px 0
         &:last-child
-            margin: 0 
+            margin: 0
+
+    .list-tags
+        &__link
+            padding: 12px 20px   
+            height: auto     
 
     .select-sorting + .select2-container
         width: 100% !important
         margin: 20px 0 0
-    
+
     .select-sorting + .select2-container--default .select2-selection--single
-        font-size: 16px 
+        font-size: 16px
         line-height: 24px
 
     .select-sorting + .select2-container--default .select2-selection--single .select2-selection__arrow
         margin: 0
 
-        
+    .certificate-card__img
+        height: 324px
+        padding: 20px
+
+    .page-about
+        .about-company__video
+            height: 158px
+        .list-tags
+            margin: 0 0 20px  
+
+
+
 @media only screen and (max-width: 480px)
 
 @media only screen and (max-width: 420px)

@@ -835,7 +835,8 @@ a.color-inherit:hover {
   content: "";
   position: absolute;
   bottom: 0;
-  width: 650px;
+  width: 100%;
+  min-width: 650px;
   height: 249px;
   background: url("../img/video-bg.svg") no-repeat center;
   background-size: 100%;
@@ -1222,4 +1223,7 @@ a.color-inherit:hover {
 }
 .list-tags__item::last-child {
   margin: 0 0 20px;
+}
+.list-tags__link {
+  padding: 14px 24px;
 }
