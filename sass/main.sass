@@ -739,6 +739,15 @@
         min-width: 24px
         margin: 0 10px 0 0
 
+.btn-filter-mobile
+    fill: none
+    stroke: #fff
+    svg
+        fill: none
+        stroke: #fff
+    img
+        margin-right: 10px    
+
 .sidebar-catalog__close
     width: 24px
     height: 24px
@@ -1170,5 +1179,31 @@
     fill: $violet
     transition: .3s ease
 
-.collapse.show + .faq-btn .faq-icon,
-.faq-btn.collapsed .faq-icon
+// gallery page
+.gallery-card
+    padding: 20px
+    &__img
+        width: 100%
+        overflow: hidden
+        border-radius: 10px
+        img
+            border-radius: 10px
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+    &__body
+        width: 100%
+        padding: 14px 0 0
+    &__title
+        color: $dark
+        &:hover
+            color: $violet
+    &__doctor
+        padding: 14px 0 0
+        margin: 14px 0 0
+        width: 100%
+        border-top: 1px solid #fff
+        color: #6A5D81
+        span
+            font-weight: normal

@@ -357,6 +357,9 @@
   .page-catalog-v2 .btn-catalog-mobile {
     margin: 0;
   }
+  .list-checkbox {
+    padding: 14px 0 0;
+  }
 }
 @media only screen and (max-width: 768px) {
   .popular-category .product-card {
@@ -490,6 +493,9 @@
   .faq-body {
     padding: 0 20px;
     max-width: 680px;
+  }
+  .js-before-after {
+    height: 366px;
   }
 }
 @media only screen and (max-width: 720px) {
@@ -1255,6 +1261,22 @@
   .faq-icon {
     right: 20px;
     top: 20px;
+  }
+  .form-filter .btn-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form-filter .btn-group .btn {
+    width: 100%;
+    margin: 0 0 14px;
+  }
+  .form-filter .btn-group .btn:last-child {
+    margin: 0;
+  }
+  .js-before-after {
+    height: 302px;
   }
 }
 @media only screen and (min-width: 992px) {

@@ -908,3 +908,11 @@ $(function () {
     });
   });
 });
+
+
+
+$(window).on('load', function () {
+  $('.js-before-after').each(function () {
+    new Cocoen(this);
+  });
+});
