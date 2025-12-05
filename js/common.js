@@ -886,3 +886,25 @@ $(function () {
   });
 
 });
+
+
+// accordion faq
+$(function () {
+  $('.faq-item').each(function () {
+    const $item = $(this);
+    const $collapse = $item.find('.collapse');
+    // const $icon = $item.find('.faq-icon');
+
+    // Открыли
+    $collapse.on('show.bs.collapse', function () {
+      $item.addClass('open');
+      // $icon.text('×'); // или оставить '+' если делаешь rotate
+    });
+
+    // Закрыли
+    $collapse.on('hide.bs.collapse', function () {
+      $item.removeClass('open');
+      // $icon.text('+');
+    });
+  });
+});

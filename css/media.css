@@ -484,6 +484,13 @@
   .page-about .about-company__video {
     height: 400px;
   }
+  .faq-btn {
+    padding: 20px 80px 10px 20px;
+  }
+  .faq-body {
+    padding: 0 20px;
+    max-width: 680px;
+  }
 }
 @media only screen and (max-width: 720px) {
   .header-fixed .header-contacts {
@@ -1236,6 +1243,18 @@
   }
   .page-about .list-tags {
     margin: 0 0 20px;
+  }
+  .faq-btn {
+    padding: 20px 76px 10px 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .faq-body {
+    padding: 0 20px;
+  }
+  .faq-icon {
+    right: 20px;
+    top: 20px;
   }
 }
 @media only screen and (min-width: 992px) {
