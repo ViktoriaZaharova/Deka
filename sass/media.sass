@@ -305,6 +305,17 @@
     .list-checkbox
         padding: 14px 0 0
 
+    .form-footer
+        flex-wrap: wrap
+
+    .form-feedback [type=submit]
+        width: fit-content
+
+    .label-file-wrapper
+        max-width: none
+        width: 100%
+        margin: 0 0 20px
+
 @media only screen and (max-width: 768px)
     .popular-category
         .product-card
@@ -427,7 +438,10 @@
         max-width: 680px
 
     .js-before-after
-        height: 366px 
+        height: 366px
+
+    .map-box
+        height: 450px    
 
 @media only screen and (max-width: 720px)
     .header-fixed .header-contacts
@@ -513,6 +527,25 @@
         &__body
             width: 100%
             padding: 14px 0 0
+
+    .form-feedback
+        .label-checkbox
+            order: 1
+            margin: 10px 0 0
+        [type=submit]
+            width: 100%
+            margin: 0
+
+    .label-file-wrapper
+        flex-direction: column
+        align-items: flex-start
+
+    .label-file
+        max-width: none
+
+    .label-file-wrapper__description
+        max-width: none
+
 
 @media only screen and (max-width: 576px)
     h1, .h1
@@ -1029,8 +1062,8 @@
 
     .list-tags
         &__link
-            padding: 12px 20px   
-            height: auto     
+            padding: 12px 20px
+            height: auto
 
     .select-sorting + .select2-container
         width: 100% !important
@@ -1051,7 +1084,7 @@
         .about-company__video
             height: 158px
         .list-tags
-            margin: 0 0 20px  
+            margin: 0 0 20px
 
     .faq-btn
         padding: 20px 76px 10px 20px
@@ -1063,7 +1096,7 @@
 
     .faq-icon
         right: 20px
-        top: 20px  
+        top: 20px
 
     .form-filter
         .btn-group
@@ -1072,10 +1105,29 @@
                 width: 100%
                 margin: 0 0 14px
                 &:last-child
-                    margin: 0      
+                    margin: 0
 
     .js-before-after
-        height: 302px 
+        height: 302px
+
+    .list-checkbox-row li
+        width: 100%
+        margin: 0 0 10px
+        &:last-child
+            margin: 0
+
+    .form-feedback
+        .form-footer
+            margin: 0   
+
+    .contact-box
+        padding: 20px
+        &__body, .link
+            font-size: 14px
+            line-height: 22px
+            margin: 0 0 14px
+            &:last-child
+                margin: 0             
 
 @media only screen and (max-width: 480px)
 

@@ -746,7 +746,7 @@
         fill: none
         stroke: #fff
     img
-        margin-right: 10px    
+        margin-right: 10px
 
 .sidebar-catalog__close
     width: 24px
@@ -1207,3 +1207,78 @@
         color: #6A5D81
         span
             font-weight: normal
+
+// contacts page
+.contacts-tabs
+    li
+        margin: 0 20px 0 0
+        &:last-child
+            margin: 0
+
+.map-box
+    width: 100%
+    height: 550px
+    overflow: hidden
+
+.contact-box
+    width: 100%
+    height: 100%
+    border-radius: 10px
+    border: 1px solid $stroke
+    padding: 30px
+    &__head
+        display: flex
+        align-items: center
+        margin: 0 0 10px
+    &__icon
+        width: 30px
+        height: 30px
+        min-width: 30px
+        margin: 0 10px 0 0
+        border-radius: 50%
+        background: $light-pink
+        padding: 5px
+        fill: $violet
+    .link
+        color: $dark
+        font-size: 16px
+        font-weight: normal
+        &:hover
+            color: $violet
+    &__body
+        width: 100%
+        font-size: 16px
+        line-height: 24px
+        font-weight: normal
+        margin: 0 0 20px
+        &:last-child
+            margin: 0
+
+.form-feedback
+    max-width: 930px
+    .label-checkbox
+        max-width: 280px
+        margin: 0
+    [type="submit"]
+        margin: 0 0 0 40px
+
+    .form-footer
+        width: 100%
+        display: flex
+        align-items: center
+
+.dropdown-contact-tabs
+    .svg-icon
+        width: 24px
+        height: 24px
+        min-width: 24px
+        
+    .btn-tab-dropdown
+        padding: 0
+        height: auto
+        fill: $violet
+
+    .current-tab-text
+        border-bottom: 1px solid $violet
+        padding: 0 0 4px
+        color: $violet

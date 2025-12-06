@@ -353,6 +353,7 @@ h5, .h5
 
 .m-60
   margin: 60px 0
+  
 
 .mt-30
   margin-top: 30px
@@ -925,3 +926,66 @@ a.color-inherit
   background-size: 24px
   margin: 0
   transform: translate(-50%,-50%)
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link
+  background: $violet
+  color: #fff
+
+.label-file-wrapper
+  display: flex
+  align-items: center
+  max-width: 435px
+  margin: 0 auto 0 0
+  &__description
+    max-width: 240px
+    font-size: 12px
+    line-height: 18px
+    font-weight: 500
+    color: $stroke
+  &.file-loaded
+    flex-direction: column
+    align-items: flex-start  
+    .label-file-wrapper__description
+      max-width: none
+
+.label-file
+  cursor: pointer
+  font-weight: 500
+  font-size: 16px
+  line-height: 24px
+  display: flex
+  align-items: center
+  margin: 0 20px 0 0
+  max-width: 175px
+  [type='file']
+    display: none
+  &__icon
+    margin: 0 10px 0 0
+    width: 24px
+    height: 24px
+    @include d-flex
+
+.label-file-result
+  display: none
+  align-items: center
+  margin: 10px 0 0
+  font-weight: 500
+  &__name
+    margin: 0 5px 0 10px
+  .active
+    display: flex
+
+.list-checkbox-row
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  li
+    margin: 0 30px 30px 0
+    &:last-child
+      margin: 0 0 30px
+  .label-checkbox
+    font-size: 16px
+    font-weight: normal
+    line-height: 24px
+    max-width: none

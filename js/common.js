@@ -916,3 +916,53 @@ $(window).on('load', function () {
     new Cocoen(this);
   });
 });
+
+
+jQuery(function ($) {
+
+  // обработка клика по элементу dropdown
+  $('.contacts-tabs .dropdown-item').on('click', function () {
+    const target = $(this).data('tab-target'); // цель таба
+    const text = $(this).text();               // текст в "селекте"
+
+    // меняем название в кнопке селекта
+    $('.contacts-tabs .current-tab-text').text(text);
+
+    // включаем таб через Bootstrap API
+    const tabTrigger = new bootstrap.Tab($(`button[data-bs-target="${target}"]`)[0]);
+    tabTrigger.show();
+  });
+
+});
+
+
+// Выбор файла
+$(document).on('change', '.label-file input[type="file"]', function () {
+  const wrapper = $(this).closest('.label-file-wrapper');
+  const resultBlock = wrapper.find('.label-file-result');
+  const resultName = wrapper.find('.label-file-result__name');
+  const fileInput = this;
+
+  if (fileInput.files && fileInput.files.length > 0) {
+    const fileName = fileInput.files[0].name;
+
+    resultName.text(fileName);
+
+    wrapper.addClass('file-loaded');          // ← Добавляем класс wrapper
+    wrapper.find('.label-file').hide();
+    resultBlock.css('display', 'flex');
+  }
+});
+
+// Удаление файла
+$(document).on('click', '.label-file-result__delete', function (e) {
+  e.preventDefault();
+  const wrapper = $(this).closest('.label-file-wrapper');
+  const fileInput = wrapper.find('input[type="file"]');
+
+  fileInput.val('');                          // очищаем input
+  wrapper.removeClass('file-loaded');         // ← Убираем класс wrapper
+  wrapper.find('.label-file-result').hide();
+  wrapper.find('.label-file').show();
+});
+
