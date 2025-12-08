@@ -538,6 +538,10 @@ h5, .h5 {
   font-weight: 500;
 }
 
+.font-600 {
+  font-weight: 600;
+}
+
 .font-bold {
   font-weight: 700;
 }

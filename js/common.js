@@ -1009,3 +1009,15 @@ $(document).on('click', '.label-file-result__delete', function (e) {
   wrapper.find('.label-file').show();
 });
 
+// modal text hidden in mobile
+$(document).ready(function () {
+  $('.agreement-item .agreement-toggle').on('click', function () {
+    var item = $(this).closest('.agreement-item');
+
+    // для наглядности
+    item.toggleClass('open');
+
+    // контент
+    item.find('.agreement-content').slideToggle(250);
+  });
+});

@@ -133,3 +133,64 @@ footer
         &:hover
             color: $violet
             padding-left: 15px
+
+// modal
+.modal-body, .modal-header, .modal-footer
+    padding: 0
+    border: none
+    width: 100%
+    border-radius: 0
+    margin: 0
+
+.modal-dialog
+    max-width: 1320px
+
+.modal-content
+    background: transparent
+    border: none
+    border-radius: 0
+    position: relative
+    z-index: 1
+    padding: 0 24px
+    .btn-close
+        fill: #fff
+        stroke: #fff
+        opacity: 1
+        position: absolute
+        z-index: 3
+        right: -30px
+        top: -30px
+        margin: 0
+        padding: 0
+        width: 30px
+        height: 30px
+        background: transparent
+        @include d-flex
+
+.modal-dialog-scrollable .modal-content
+    overflow: visible
+
+#signModal
+    .small-text
+        max-width: 500px
+
+.agreement-toggle 
+    background: transparent
+    height: auto
+    padding: 0
+    color: #fff
+    border-radius: 0
+    margin: 0
+    padding: 0
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    text-align: left
+    .icon-chevron
+        width: 24px
+        height: 24px
+        fill: #fff
+        margin: 0 0 0 5px        
+
+.agreement-item.open .icon-chevron
+    transform: rotate(-180deg)

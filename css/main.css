@@ -523,6 +523,12 @@
 .form-callback .label-checkbox {
   max-width: 213px;
 }
+.form-callback .form-footer-reverse [type=submit] {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin: 0 0 0 30px;
+}
 
 .search-result-list {
   font-size: 22px;

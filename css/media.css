@@ -406,6 +406,19 @@
   .our-specialists-slider .doctor-card {
     width: 308px;
   }
+  #signModal .small-text {
+    max-width: none;
+  }
+  .form-callback .form-footer-reverse {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .form-callback .form-footer-reverse [type=submit] {
+    width: 100%;
+  }
+  .modal-content .btn-close {
+    right: 24px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .popular-category .product-card {
@@ -1437,6 +1450,19 @@
   }
   .our-specialists-slider .doctor-card {
     width: 100%;
+  }
+  .form-callback .form-footer-reverse [type=submit] {
+    margin: 0 0 10px;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .modal-content .btn-close {
+    width: 24px;
+    height: 24px;
+  }
+  .agreement-content {
+    display: none;
   }
 }
 @media only screen and (min-width: 992px) {
