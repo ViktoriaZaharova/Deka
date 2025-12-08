@@ -394,6 +394,18 @@
   .training-author-wrapper__text {
     max-width: 296px;
   }
+  .services-section__images {
+    margin: 0;
+  }
+  .services-section ul {
+    max-width: none;
+  }
+  .our-specialists-slider {
+    width: calc(100% + 15px);
+  }
+  .our-specialists-slider .doctor-card {
+    width: 308px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .popular-category .product-card {
@@ -1412,6 +1424,19 @@
   }
   .page-education .help-card__img {
     height: 168px;
+  }
+  .services-section__images img {
+    margin: 0 auto;
+    max-width: 280px;
+  }
+  .services-section__images img:last-child {
+    display: none;
+  }
+  .our-specialists-slider {
+    width: 100%;
+  }
+  .our-specialists-slider .doctor-card {
+    width: 100%;
   }
 }
 @media only screen and (min-width: 992px) {

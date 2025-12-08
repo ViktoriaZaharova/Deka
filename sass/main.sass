@@ -1370,3 +1370,38 @@
             margin: 0 0 14px
             &:last-child
                 margin: 0
+    .attention-text-v2
+        margin: 0 0 40px
+
+.services-section
+    .attention-text
+        margin: 0
+    ul
+        max-width: 530px
+    &__images
+        width: 100%
+        display: flex
+        align-items: flex-end
+        justify-content: center
+        position: relative
+        z-index: 1
+        max-width: 645px
+        margin: 0 0 0 auto
+        &::before
+            content: ''
+            position: absolute
+            z-index: -1
+            left: 0
+            bottom: 0
+            width: 100%
+            border-radius: 8px
+            height: 180px
+            background: $light-pink
+        img
+            margin: 0 16px 0 0
+            max-width: 225px
+            &:last-child
+                max-width: 285px
+                margin: 0    
+
+

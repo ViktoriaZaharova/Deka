@@ -267,6 +267,49 @@ $('.devices-slider').slick({
   ]
 });
 
+$('.our-specialists-slider').slick({
+  slidesToShow: 4,
+  dots: false,
+
+  prevArrow: '<button type="button" class="slick-prev btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
+  nextArrow: '<button type="button" class="slick-next btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        arrows: false,
+        infinite: true,
+        variableWidth: true,
+        autoplay: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        autoplay: true,
+        infinite: true,
+        variableWidth: true,
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        variableWidth: false,
+        dots: true,
+        autoplay: true,
+        infinite: true,
+      }
+    }
+  ]
+});
+
+
 // reviews loader text
 $(document).ready(function () {
   $('.reviews-read-more').on('click', function (e) {
