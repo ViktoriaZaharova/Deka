@@ -309,6 +309,41 @@ $('.our-specialists-slider').slick({
   ]
 });
 
+$('.article-product-slider').slick({
+  slidesToShow: 1,
+  fade: true,
+  dots: false,
+  arrows: false,
+  prevArrow: '<button type="button" class="slick-prev btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
+  nextArrow: '<button type="button" class="slick-next btn-pink slick-arrow-v2"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 1,
+        infinite: true,
+        autoplay: true,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        autoplay: true,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        dots: true,
+        autoplay: true,
+        infinite: true,
+      }
+    }
+  ]
+});
 
 // reviews loader text
 $(document).ready(function () {
@@ -954,13 +989,6 @@ $(function () {
 
 
 
-$(window).on('load', function () {
-  $('.js-before-after').each(function () {
-    new Cocoen(this);
-  });
-});
-
-
 jQuery(function ($) {
 
   // обработка клика по элементу dropdown
@@ -1019,5 +1047,12 @@ $(document).ready(function () {
 
     // контент
     item.find('.agreement-content').slideToggle(250);
+  });
+});
+
+
+$(window).on('load', function () {
+  $('.js-before-after').each(function () {
+    new Cocoen(this);
   });
 });

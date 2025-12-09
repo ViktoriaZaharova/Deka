@@ -1424,3 +1424,41 @@
         max-width: 480px
     .btn
         margin: 0 auto        
+
+.article-type
+    &__body
+        margin: 0
+    .gallery-card 
+        height: 100%    
+
+.blockquote-box
+    width: 100%
+    background: $light-pink
+    padding: 30px
+    border-radius: 20px
+    &__head
+        display: flex
+        align-items: flex-start
+    &__icon
+        min-width: 32px
+        width: 32px
+        height: 32px
+        border-radius: 50%
+        padding: 7px
+        background: $light-grey
+        @include d-flex
+    &__name
+        padding: 0 0 0 14px
+        .small-text
+            margin: 10px 0 0
+            max-width: 428px
+            color: $grey
+    &__body
+        width: 100%
+        padding: 16px 0 0 46px
+        color: $dark
+
+
+.article-product-slider
+    .devices-card
+        width: 100%
