@@ -264,6 +264,7 @@ button:hover, button:focus, .btn:hover, .btn:focus {
   padding: 12px 32px;
   font-size: 16px;
   font-weight: 500;
+  line-height: normal;
   height: 56px;
   border-radius: 8px;
   -webkit-transition: 0.3s ease;
@@ -520,6 +521,10 @@ h5, .h5 {
 
 .m-60 {
   margin: 60px 0;
+}
+
+.mt-10 {
+  margin-top: 10px;
 }
 
 .mt-30 {

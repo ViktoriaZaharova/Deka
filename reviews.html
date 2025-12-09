@@ -1145,7 +1145,57 @@
   </footer>
 
   <div class="overlay"></div>
+<div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#close-icon"></use>
+          </svg></button>
+        <div class="modal-body">
+           <div class="consultation-wrapper w-100">
+            <h3>Заказать обратный звонок</h3>
+            <div class="box-text mb-20">
+              <p>Оставьте контактные данные и мы свяжемся с вами в ближайшее время</p>
+            </div>
 
+            <form method="post" class="form-consultation w-100">
+              <div class="row align-items-end">
+                <div class="col-12 col-sm-6 col-lg-3 mb-20">
+                  <label>
+                    <input type="text" placeholder="Имя*" name="name" required>
+                  </label>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-20">
+                  <label>
+                    <input type="text" placeholder="Телефон*" name="phone" required>
+                  </label>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-20">
+                  <label>
+                    <input type="text" placeholder="E-mail*" name="mail" required>
+                  </label>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-20">
+                  <button type="submit" class="btn btn-accent">Заказать звонок</button>
+                </div>
+
+                <div class="col-12">
+                  <label class="label-checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <span class="label-checkbox__custom"></span>
+                    <span class="label-checkbox__text">Заполняя форму, вы принимаете условия <a href="#" target="_blank"
+                        class="text-decoration color-inherit">политики конфиденциальности</a></span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
   <!-- add plugins js-->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>

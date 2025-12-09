@@ -202,7 +202,7 @@ footer {
 }
 
 .modal-dialog {
-  max-width: 1320px;
+  max-width: 1368px;
 }
 
 .modal-content {
@@ -211,7 +211,7 @@ footer {
   border-radius: 0;
   position: relative;
   z-index: 1;
-  padding: 0 24px;
+  padding: 0 16px;
 }
 .modal-content .btn-close {
   fill: #fff;
@@ -219,7 +219,7 @@ footer {
   opacity: 1;
   position: absolute;
   z-index: 3;
-  right: -30px;
+  right: -6px;
   top: -30px;
   margin: 0;
   padding: 0;
@@ -264,11 +264,13 @@ footer {
           justify-content: flex-start;
   text-align: left;
 }
-.agreement-toggle .icon-chevron {
+
+.icon-chevron {
   width: 24px;
   height: 24px;
   fill: #fff;
   margin: 0 0 0 5px;
+  display: none;
 }
 
 .agreement-item.open .icon-chevron {
