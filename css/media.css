@@ -565,6 +565,16 @@
   .training-author-wrapper__photo {
     right: 140px;
   }
+  .page-error {
+    margin: 20px 0 80px;
+  }
+  .page-error h1 {
+    margin: 0 auto;
+  }
+  .page-error .box-text {
+    margin: 0 auto 40px;
+    max-width: 480px;
+  }
 }
 @media only screen and (max-width: 720px) {
   .header-fixed .header-contacts {
@@ -1463,6 +1473,18 @@
   }
   .agreement-content {
     display: none;
+  }
+  .page-error {
+    margin: 20px 0 40px;
+  }
+  .page-error h1 {
+    font-size: 128px;
+    line-height: 190px;
+    margin: 0 auto;
+  }
+  .page-error .box-text {
+    margin: 0 auto 20px;
+    max-width: 280px;
   }
 }
 @media only screen and (min-width: 992px) {

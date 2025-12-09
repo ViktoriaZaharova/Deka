@@ -2028,3 +2028,22 @@
   max-width: 285px;
   margin: 0;
 }
+
+.page-error {
+  margin: 50px 0 100px;
+  text-align: center;
+}
+.page-error h1 {
+  font-size: 200px;
+  line-height: 300px;
+  font-weight: normal;
+  margin: 0 auto;
+  color: #5A3FC3;
+}
+.page-error .box-text {
+  margin: 0 auto 40px;
+  max-width: 480px;
+}
+.page-error .btn {
+  margin: 0 auto;
+}
