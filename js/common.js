@@ -1056,3 +1056,19 @@ $(window).on('load', function () {
     new Cocoen(this);
   });
 });
+
+
+// amount
+$(document).on("click", ".amount-plus", function () {
+  const amount = $(this).closest(".amount");
+  let val = parseInt(amount.find(".amount-value").text());
+  val++;
+  amount.find(".amount-value").text(val);
+});
+
+$(document).on("click", ".amount-minus", function () {
+  const amount = $(this).closest(".amount");
+  let val = parseInt(amount.find(".amount-value").text());
+  if (val > 1) val--;
+  amount.find(".amount-value").text(val);
+});

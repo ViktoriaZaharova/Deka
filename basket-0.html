@@ -389,16 +389,25 @@
     </div>
   </header>
 
-  <div class="page page-error">
+  <div class="page page-basket-zero">
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1>404</h1>
-          <div class="box-text">
-            <p>Страница, которую вы ищете, не существует либо устарела.
-              Вы можете перейти на главную страницу</p>
+          <nav aria-label="breadcrumb" class="nav nav-breadcrumb">
+            <ol class="breadcrumb my-ul">
+              <li class="breadcrumb-item"><a href="index.html">Главная<svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg></a></li>
+              <li class="breadcrumb-item active" aria-current="page">Корзина</li>
+            </ol>
+          </nav>
+        </div>
+        <div class="col-12">
+          <h1 class="h2 mb-40">Корзина</h1>
+          <div class="box-text mb-30">
+            <p>В вашей корзине пока нет товаров. Вернитесь в каталог, чтобы осуществить покупки.</p>
           </div>
-          <a href="index.html" class="btn btn-accent">Вернуться на главную</a>
+          <a href="catalog.html" class="btn btn-accent">Вернуться в каталог</a>
         </div>
       </div>
 
@@ -737,7 +746,6 @@
       </div>
     </div>
   </div>
-
  <div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
@@ -788,6 +796,7 @@
       </div>
     </div>
   </div>
+
 
   <!-- add plugins js-->
   <script src="js/jquery.min.js"></script>

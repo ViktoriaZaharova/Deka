@@ -2103,3 +2103,139 @@
 .article-product-slider .devices-card {
   width: 100%;
 }
+
+.page-basket-zero {
+  margin: 30px 0 140px;
+}
+
+.basket-total {
+  width: 100%;
+  background: #F7F4FF;
+  border-radius: 10px;
+  padding: 30px;
+}
+.basket-total .btn {
+  margin: 30px 0 0;
+  width: 100%;
+}
+.basket-total__head {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 20px;
+}
+.basket-total__head h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+}
+.basket-total__body {
+  width: 100%;
+}
+.basket-total__sum {
+  color: #5A3FC3;
+}
+.basket-total__list li {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.basket-total__list li span {
+  font-weight: 500;
+}
+
+.basket-card-product {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 20px;
+  background: #fff;
+  border: 1px solid #E6DEF4;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+.basket-card-product__img {
+  width: 110px;
+  height: 110px;
+  min-width: 110px;
+  background: #F7F4FF;
+  border-radius: 10px;
+  padding: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.basket-card-product__img img {
+  max-height: 100%;
+}
+.basket-card-product__name {
+  padding: 0 20px;
+  max-width: 480px;
+  width: 100%;
+}
+.basket-card-product__footer {
+  width: calc(100% - 450px - 110px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.basket-card-product:last-child {
+  margin: 0;
+}
+.basket-card-product .price-wrapper {
+  width: 100%;
+  padding: 0 0 0 30px;
+}
+.basket-card-product .price-wrapper .small-text {
+  margin: 5px 0 0;
+}
+.basket-card-product__delete {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 20px;
+  stroke: #7A7194;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}

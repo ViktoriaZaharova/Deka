@@ -1539,6 +1539,12 @@
   .blockquote-box__body {
     padding: 14px 0 0;
   }
+  .page-basket-zero {
+    margin: 20px 0 80px;
+  }
+  .page-basket-zero h1 {
+    margin-bottom: 20px;
+  }
 }
 @media only screen and (min-width: 992px) {
   .collapse.d-lg-block {
