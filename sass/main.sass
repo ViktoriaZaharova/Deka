@@ -1520,12 +1520,12 @@
     &__name
         padding: 0 20px
         max-width: 480px
-        width: 100%  
+        width: 100%
     &__footer
         width: calc( 100% - 450px - 110px )
         display: flex
         align-items: center
-                  
+
     &:last-child
         margin: 0
     .price-wrapper
@@ -1542,3 +1542,63 @@
         right: 20px
         stroke: $grey
         @include d-flex
+
+.btn-return
+    margin: 20px 0 0 auto
+
+.tab-content-basket
+    margin: 30px 0 0
+
+.nav-tabs-basket
+    border: none
+    border-radius: 0
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    counter-reset: tab-counter
+    .nav-item
+        display: flex
+        align-items: center
+        &:after
+            content: ''
+            margin: 0 14px
+            width: 112px
+            height: 1px
+            display: block
+            background: $light-grey
+        &:last-child
+            &:after
+                display: none
+    .nav-link
+        padding: 0
+        border: none
+        border-radius: 0
+        display: flex
+        align-items: center
+        font-size: 18px
+        font-weight: 500
+        line-height: 26px
+        color: $light-grey
+        counter-increment: tab-counter
+        &:before
+            content: counter(tab-counter)
+            width: 40px
+            min-width: 40px
+            height: 40px
+            border-radius: 50%
+            font-size: 18px
+            font-weight: 600
+            line-height: 26px
+            color: #fff
+            margin: 0 14px 0 0
+            background: $light-grey
+            border-radius: 50%
+            transition: .3s ease
+            @include d-flex
+        &.active
+            color: $dark
+            &:before
+                background: $purple
+
+
+    

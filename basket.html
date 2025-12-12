@@ -389,7 +389,7 @@
     </div>
   </header>
 
-  <div class="page page-basket-zero">
+  <div class="page page-basket page-basket-zero">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -405,75 +405,135 @@
         <div class="col-12">
           <h1 class="h2 mb-40">Корзина</h1>
         </div>
+        <div class="col-12">
+          <ul class="nav nav-tabs nav-tabs-basket" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="1-tab" data-bs-toggle="tab" data-bs-target="#1" type="button"
+                role="tab" aria-controls="1" aria-selected="true">Состав заказа</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="2-tab" data-bs-toggle="tab" data-bs-target="#2" type="button" role="tab"
+                aria-controls="2" aria-selected="false">Оформление заказа</button>
+            </li>
+          </ul>
+          <div class="tab-content tab-content-basket">
+            <div class="tab-pane fade show active" id="1" role="tabpanel" aria-labelledby="1-tab">
+              <div class="row">
+
+                <div class="col-12 col-xl-9 mb-30">
+                  <div class="basket-card-product">
+                    <a href="product.html" class="basket-card-product__img"><img src="img/product1.png" alt=""></a>
+                    <a href="product.html" class="basket-card-product__name h5">Александритовый лазер MOTUS AX2
+                      MOVEO</a>
+                    <div class="basket-card-product__footer">
+                      <div class="amount">
+                        <button class="btn p-0 amount-minus"><img src="img/minus-icon.svg" alt=""></button>
+                        <span class="mx-3 amount-value">1</span>
+                        <button class="btn p-0 amount-plus"><img src="img/plus-icon.svg" alt=""></use>
+                          </svg></button>
+                      </div>
+                      <div class="price-wrapper">
+                        <div class="price h3">1 380 000 ₽</div>
+                      </div>
+                    </div>
+                    <a href="#" class="basket-card-product__delete"><svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#close-icon"></use>
+                      </svg></a>
+
+                  </div>
+
+                  <div class="basket-card-product">
+                    <a href="product.html" class="basket-card-product__img"><img src="img/product1.png" alt=""></a>
+                    <a href="product.html" class="basket-card-product__name h5">Александритовый лазер MOTUS AX2
+                      MOVEO</a>
+                    <div class="basket-card-product__footer">
+                      <div class="amount">
+                        <button class="btn p-0 amount-minus"><img src="img/minus-icon.svg" alt=""></button>
+                        <span class="mx-3 amount-value">1</span>
+                        <button class="btn p-0 amount-plus"><img src="img/plus-icon.svg" alt=""></use>
+                          </svg></button>
+                      </div>
+                      <div class="price-wrapper">
+                        <div class="price h3">2 760 000 ₽</div>
+                        <div class="small-text color-light-grey font-medium">1 380 000 ₽/ шт.</div>
+                      </div>
+                    </div>
+                    <a href="#" class="basket-card-product__delete"><svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#close-icon"></use>
+                      </svg></a>
+
+                  </div>
 
 
-        <div class="col-12 col-lg-8 col-xl-9 mb-30">
-          <div class="basket-card-product">
-            <a href="product.html" class="basket-card-product__img"><img src="img/product1.png" alt=""></a>
-            <a href="product.html" class="basket-card-product__name h5">Александритовый лазер MOTUS AX2 MOVEO</a>
-            <div class="basket-card-product__footer">
-              <div class="amount">
-                <button class="btn p-0 amount-minus"><img src="img/minus-icon.svg" alt=""></button>
-                <span class="mx-3 amount-value">1</span>
-                <button class="btn p-0 amount-plus"><img src="img/plus-icon.svg" alt=""></use>
-                  </svg></button>
-              </div>
-              <div class="price-wrapper">
-                <div class="price h3">1 380 000 ₽</div>
+                  <div class="btn-group">
+                    <a href="catalog.html" class="btn btn-accent">Вернуться в каталог</a>
+                    <a href="#" class="btn btn-border btn-clear-basket">Очистить корзину</a>
+                  </div>
+
+                </div>
+
+                <div class="col-12 col-xl-3">
+                  <div class="basket-total">
+                    <div class="basket-total__head">
+                      <h3>Итого:</h3>
+                      <h3 class="basket-total__sum">4 140 000 ₽</h3>
+                    </div>
+                    <div class="basket-total__body">
+                      <ul class="basket-total__list my-ul">
+                        <li>
+                          <p>Товаров</p><span>3</span>
+                        </li>
+                      </ul>
+
+                      <a href="#" class="btn btn-accent w-100 btn-place-order">Оформить заказ</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <a href="#" class="basket-card-product__delete"><svg class="svg-icon">
-              <use xlink:href="img/sprite.svg#close-icon"></use>
-            </svg></a>
+            <div class="tab-pane fade" id="2" role="tabpanel" aria-labelledby="2-tab">
+              <div class="row">
+                <div class="col-12">
+                  <div class="callback-wrapper w-100%">
+                    <div class="callback-wrapper__img"><img src="img/callback-img.png" alt=""></div>
+                    <div class="callback-wrapper__content">
+                      <h2>Оставьте свои контактные данные 
+и мы перезвоним вам для подтверждения заказа</h2>
+                      <div class="box-text mb-40">
+                        <p>Оставьте контактные данные и мы свяжемся с вами в ближайшее время</p>
+                      </div>
 
-          </div>
+                      <form method="post" class="form-callback">
+                        <label>
+                          <input type="text" placeholder="Имя*" name="name" required>
+                        </label>
+                        <label>
+                          <input type="text" placeholder="Телефон*" name="phone" required>
+                        </label>
+                        <label>
+                          <input type="text" placeholder="E-mail*" name="mail" required>
+                        </label>
+                        <div class="form-footer">
+                          <button type="submit" class="btn btn-accent">Получить консультацию</button>
+                          <label class="label-checkbox">
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-checkbox__custom"></span>
+                            <span class="label-checkbox__text">Заполняя форму, вы принимаете условия <a href="#"
+                                target="_blank" class="text-decoration color-inherit">политики
+                                конфиденциальности</a></span>
+                          </label>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
 
-          <div class="basket-card-product">
-            <a href="product.html" class="basket-card-product__img"><img src="img/product1.png" alt=""></a>
-            <a href="product.html" class="basket-card-product__name h5">Александритовый лазер MOTUS AX2 MOVEO</a>
-            <div class="basket-card-product__footer">
-              <div class="amount">
-                <button class="btn p-0 amount-minus"><img src="img/minus-icon.svg" alt=""></button>
-                <span class="mx-3 amount-value">1</span>
-                <button class="btn p-0 amount-plus"><img src="img/plus-icon.svg" alt=""></use>
-                  </svg></button>
-              </div>
-              <div class="price-wrapper">
-                <div class="price h3">2 760 000 ₽</div>
-                <div class="small-text color-light-grey font-medium">1 380 000 ₽/ шт.</div>
+                  <a href="basket.html" class="btn btn-accent btn-return">Вернуться в корзину</a>
+                </div>
               </div>
             </div>
-            <a href="#" class="basket-card-product__delete"><svg class="svg-icon">
-              <use xlink:href="img/sprite.svg#close-icon"></use>
-            </svg></a>
-            
           </div>
-
-
-          <div class="btn-group">
-            <a href="catalog.html" class="btn btn-accent">Вернуться в каталог</a>
-            <a href="#" class="btn btn-border btn-clear-basket">Очистить корзину</a>
-          </div>
-          
         </div>
 
-        <div class="col-12 col-lg-4 col-xl-3">
-          <div class="basket-total">
-            <div class="basket-total__head">
-              <h3>Итого:</h3>
-              <h3 class="basket-total__sum">4 140 000 ₽</h3>
-            </div>
-            <div class="basket-total__body">
-              <ul class="basket-total__list my-ul">
-                <li>
-                  <p>Товаров</p><span>3</span>
-                </li>
-              </ul>
-
-              <a href="#" class="btn btn-accent w-100 btn-place-order">Оформить заказ</a>
-            </div>
-          </div>
-        </div>
 
 
       </div>
