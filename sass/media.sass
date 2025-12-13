@@ -380,6 +380,12 @@
     .page-basket
         margin: 30px 0 80px
 
+    .sales-slider, .not-available-slider
+        width: calc( 100% + 30px )
+
+    .product-slider-accessories
+        max-width: none
+
 @media only screen and (max-width: 768px)
     .popular-category
         .product-card
@@ -520,6 +526,23 @@
         .box-text
             margin: 0 auto 40px
             max-width: 480px
+
+    .product-slider-item, .product-slider-accessories
+        height: 380px
+
+    .page-product-accessories
+        margin: 30px 0 60px
+
+    .video-section__video
+        height: 220px
+
+    .similar-models-card
+        padding: 20px
+        &__img
+            height: 224px
+            &::before
+                width: 200px
+                height: 200px
 
 @media only screen and (max-width: 720px)
     .header-fixed .header-contacts
@@ -1377,9 +1400,104 @@
                 margin: 0 0 10px
                 &:last-child
                     margin: 0
-                    
+
     .btn-return
         width: 100%
+
+    .sales-slider, .not-available-slider
+        width: 100%
+        .slide
+            margin: 0
+
+    .not-available-slider
+        .list-labels
+            display: flex
+
+    .not-available-card .sales-card__img
+        margin: 0 auto
+
+    .product-slider-accessories::before
+        width: 200px
+        height: 200px
+
+    .product-wrapper
+        padding: 20px
+        flex-direction: column
+        align-items: flex-start
+        margin: 0 0 30px
+
+    .product-wrapper-column
+        &-min
+            max-width: none
+        &-max
+            width: 100%
+            padding: 14px 0 0
+
+    .product-option
+        display: flex
+        align-items: center
+        &__text
+            margin: 0
+            width: calc( 100% - 60px )
+            padding: 0 0 0 20px
+            br
+                display: none
+
+    .nav-tabs
+        .nav-item
+            width: 100%
+            margin: 0 0 10px
+            &:last-child
+                margin: 0
+        .nav-link
+            width: 100%
+
+    .tab-content
+        margin: 20px 0 0
+
+    .list-characteristics__col
+        padding: 0
+        width: fit-content
+
+    .list-characteristics
+        &__head, &__body
+            padding: 14px 20px
+        &__head
+            .list-characteristics
+                &__col
+                    display: flex
+                    align-items: center
+                    &:after
+                        content: '/'
+                        margin: 0 2px
+                        display: inline-block
+                    &:last-child
+                        &:after
+                            display: none
+        &__body
+            flex-wrap: wrap
+            .list-characteristics
+                &__col
+                    width: 100%
+
+    .video-section__video
+        height: 158px
+
+    .similar-models-card__img
+        height: 176px
+        &::before
+            width: 160px
+            height: 160px
+
+    .similar-models-card
+        background-size: 110px
+        .price
+            margin: 14px 0 20px
+
+    .page-product-accessories
+        margin: 20px 0 40px
+
+
 @media only screen and (max-width: 480px)
 
 @media only screen and (max-width: 420px)
